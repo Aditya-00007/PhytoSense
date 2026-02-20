@@ -1,0 +1,12 @@
+[server]
+headless = true
+address = "0.0.0.0"
+port = 5000
+
+[theme]
+# Light theme with green accents
+primaryColor = "#4CAF50"  # Green
+backgroundColor = "#FFFFFF"  # White
+secondaryBackgroundColor = "#F0F8F0"  # Light green tint
+textColor = "#333333"  # Dark gray
+font = "sans serif"

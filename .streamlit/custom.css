@@ -1,0 +1,637 @@
+/* Custom CSS for the PhytoSense app */
+
+/* Main font and text styling */
+body {
+    font-family: 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+    letter-spacing: 0.01rem;
+    line-height: 1.6;
+}
+
+/* Card styling */
+.card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Status indicators */
+.status-healthy {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.status-warning {
+    color: #FF9800;
+    font-weight: bold;
+}
+
+.status-danger {
+    color: #F44336;
+    font-weight: bold;
+}
+
+/* Tab content styling */
+.tab-content {
+    padding: 15px;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #2E7D32;
+    /* Darker green for headings */
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    border-bottom: 2px solid #E8F5E9;
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+}
+
+/* Links */
+a {
+    color: #2E7D32;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #66BB6A;
+    text-decoration: underline;
+}
+
+/* Buttons */
+.stButton>button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.stButton>button:hover {
+    background-color: #66BB6A;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.stButton>button:active {
+    background-color: #2E7D32;
+    transform: translateY(0);
+}
+
+/* Form inputs */
+.stTextInput>div>div>input,
+.stNumberInput>div>div>input,
+.stTextArea>div>div>textarea {
+    border: 1px solid #BDBDBD;
+    border-radius: 4px;
+    padding: 0.5rem;
+    transition: border 0.3s ease;
+}
+
+.stTextInput>div>div>input:focus,
+.stNumberInput>div>div>input:focus,
+.stTextArea>div>div>textarea:focus {
+    border: 1px solid #4CAF50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+/* Selectbox */
+.stSelectbox>div>div {
+    border: 1px solid #BDBDBD;
+    border-radius: 4px;
+}
+
+.stSelectbox>div>div:focus-within {
+    border: 1px solid #4CAF50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+/* Progress bar */
+.stProgress>div>div>div {
+    background-color: #4CAF50;
+}
+
+/* Alerts and messages */
+.stAlert {
+    border-radius: 4px;
+    border-left-width: 10px;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.stSuccess {
+    background-color: #E8F5E9;
+    border-left-color: #4CAF50;
+}
+
+.stInfo {
+    background-color: #E1F5FE;
+    border-left-color: #03A9F4;
+}
+
+.stWarning {
+    background-color: #FFF8E1;
+    border-left-color: #FFC107;
+}
+
+.stError {
+    background-color: #FFEBEE;
+    border-left-color: #F44336;
+}
+
+/* Custom card styling */
+.card {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    border-top: 4px solid #4CAF50;
+}
+
+/* Dashboard tiles */
+.tile {
+    background-color: #F0F8F0;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tile-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #4CAF50;
+}
+
+.tile-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #2E7D32;
+}
+
+/* Sidebar styling */
+.sidebar .sidebar-content {
+    background-color: #F0F8F0;
+}
+
+/* Analysis results styling */
+.analysis-result {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.result-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.result-icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    color: #4CAF50;
+}
+
+.result-title {
+    font-weight: 600;
+    color: #2E7D32;
+    margin: 0;
+}
+
+.result-content {
+    color: #424242;
+    line-height: 1.6;
+}
+
+/* Plant disease status indicators */
+.status-healthy {
+    color: #4CAF50;
+    font-weight: 600;
+}
+
+.status-warning {
+    color: #FF9800;
+    font-weight: 600;
+}
+
+.status-danger {
+    color: #F44336;
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    color: #757575;
+    margin-top: 2rem;
+    border-top: 1px solid #E0E0E0;
+}
+
+/* Loading spinner */
+.stSpinner>div {
+    border-top-color: #4CAF50 !important;
+}
+
+/* Crop variety pills */
+.variety-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0.5rem 0 1.5rem 0;
+}
+
+.variety-pill {
+    background-color: #E8F5E9;
+    color: #2E7D32;
+    border-radius: 20px;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.9rem;
+    display: inline-block;
+    border: 1px solid #A5D6A7;
+}
+
+/* Fertilizer recommendation cards */
+.fertilizer-rec {
+    background-color: #F1F8E9;
+    border-radius: 8px;
+    padding: 1rem;
+    border-left: 4px solid #8BC34A;
+}
+
+.fertilizer-rec h4 {
+    color: #33691E;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.fertilizer-rec p {
+    margin: 0.3rem 0;
+    color: #424242;
+}
+
+/* Deficiency cards */
+.deficiency-card {
+    background-color: #FFF3E0;
+    border-radius: 8px;
+    padding: 1rem;
+    border-left: 4px solid #FF9800;
+}
+
+.deficiency-card h3 {
+    color: #E65100;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.deficiency-card p {
+    margin: 0.3rem 0;
+    color: #424242;
+}
+
+/* Disease detailed info */
+.detailed-info {
+    background-color: #F5F5F5;
+    border-radius: 6px;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+.detailed-info p {
+    margin: 0.4rem 0;
+}
+
+/* Structured crop report */
+.structured-report {
+    border: 1px solid #E0E0E0;
+    border-radius: 10px;
+    padding: 1.5rem;
+    background-color: #FCFCFC;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.structured-report h3 {
+    font-size: 1.25rem;
+    border-bottom: 2px solid #A5D6A7;
+    padding-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
+    color: #2E7D32;
+    /* Add section numbering style */
+    display: flex;
+    align-items: center;
+}
+
+.structured-report h3:first-child {
+    margin-top: 0;
+}
+
+.analysis-section {
+    margin-bottom: 0;
+    padding-bottom: 0.5rem;
+    border-bottom: none;
+}
+
+/* Section styling */
+.section-general {
+    border-left: 4px solid #4CAF50;
+    padding-left: 1rem;
+    background-color: #E8F5E9;
+    border-radius: 8px 8px 0 0;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0;
+}
+
+.section-disease {
+    border-left: 4px solid #F44336;
+    padding-left: 1rem;
+    background-color: #FFEBEE;
+    padding: 0.75rem 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.section-pest {
+    border-left: 4px solid #FF9800;
+    padding-left: 1rem;
+    background-color: #FFF3E0;
+    padding: 0.75rem 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.section-deficiency {
+    border-left: 4px solid #9C27B0;
+    padding-left: 1rem;
+    background-color: #F3E5F5;
+    padding: 0.75rem 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.section-assessment {
+    border-left: 4px solid #2196F3;
+    padding-left: 1rem;
+    background-color: #E1F5FE;
+    border-radius: 0 0 8px 8px;
+    padding: 0.75rem 1rem;
+    margin-top: 0;
+}
+
+/* Overall assessment box */
+.assessment-box {
+    background-color: #E8F5E9;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    border-left: 4px solid #4CAF50;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+/* Analysis results cardless version */
+.analysis-section .analysis-result {
+    margin-bottom: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 6px;
+    padding: 0.75rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.analysis-section .analysis-result:last-child {
+    margin-bottom: 0;
+}
+
+/* Connected sections without gaps */
+.structured-report .analysis-section {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+/* Ensure no margins between sections */
+.structured-report h3+.analysis-section {
+    margin-top: 0;
+}
+
+.structured-report .analysis-section+h3 {
+    margin-top: 0;
+}
+
+/* Animations */
+.fadeIn {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.slideIn {
+    animation: slideIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+   ========================================= */
+
+@media only screen and (max-width: 768px) {
+
+    /* 1. Global Typography & Spacing Reductions */
+    html {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.75rem !important;
+        line-height: 1.3 !important;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.5rem !important;
+        margin-top: 1rem !important;
+    }
+
+    h3 {
+        font-size: 1.25rem !important;
+    }
+
+    .block-container {
+        padding-top: 1rem !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    /* 2. Column Stacking */
+    /* Force Streamlit columns to stack vertically on mobile */
+    [data-testid="column"] {
+        width: 100% !important;
+        flex: 1 1 auto !important;
+        min-width: 100% !important;
+    }
+
+    /* 3. Navbar Transformation (Scrollable Chips/Pills) */
+    /* Target the navbar specifically using the marker class injected in app.py */
+    /* This overrides the global column stacking for the navbar only */
+    div:has(.sticky-navbar)+div [data-testid="stHorizontalBlock"],
+    div:has(> .stMarkdown > .sticky-navbar)+div [data-testid="stHorizontalBlock"] {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        gap: 8px !important;
+        padding-bottom: 5px !important;
+        -webkit-overflow-scrolling: touch;
+        width: auto !important;
+        margin-left: -1rem !important;
+        /* Counteract container padding */
+        margin-right: -1rem !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    /* Hide scrollbar */
+    div:has(.sticky-navbar)+div [data-testid="stHorizontalBlock"]::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Columns inside navbar should not stack */
+    div:has(.sticky-navbar)+div [data-testid="stHorizontalBlock"] [data-testid="column"] {
+        width: auto !important;
+        min-width: auto !important;
+        flex: 0 0 auto !important;
+        margin-bottom: 0 !important;
+    }
+
+    /* Style buttons as pills */
+    div:has(.sticky-navbar)+div [data-testid="stHorizontalBlock"] button {
+        border-radius: 50px !important;
+        padding: 8px 20px !important;
+        white-space: nowrap !important;
+        height: auto !important;
+        min-height: auto !important;
+        font-size: 0.9rem !important;
+        margin: 0 !important;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05) !important;
+    }
+
+    /* Active button styling is handled by type="primary", but ensure it pops */
+    div:has(.sticky-navbar)+div [data-testid="stHorizontalBlock"] button[kind="primary"] {
+        background-color: #4CAF50 !important;
+        color: white !important;
+        box-shadow: 0 2px 8px rgba(76, 175, 80, 0.4) !important;
+    }
+
+    /* 4. Card & Container Adjustments */
+    .auth-container,
+    .card,
+    .analysis-result,
+    .assessment-box,
+    .structured-report {
+        padding: 15px !important;
+        margin: 10px 0 !important;
+        border-radius: 12px !important;
+    }
+
+    /* Login Form Specifics */
+    .stTextInput input {
+        min-height: 44px;
+        /* Better touch target */
+    }
+
+    .stButton button {
+        width: 100%;
+        min-height: 48px;
+        /* Standard touch target size */
+        margin-top: 10px;
+    }
+
+    /* 5. Header Layout specific fixes */
+    /* Center the logo and text in header */
+    div[data-testid="stImage"] {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* 6. Feature List Alignment */
+    .feature-list,
+    .benefit-list {
+        padding-left: 0;
+    }
+
+    /* 7. Image Responsiveness */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* 8. Table/Data View */
+    .stDataFrame {
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+    }
+
+    /* 9. Hide Sidebar on mobile by default (Streamlit does this, but ensure trigger) */
+    /* Streamlit's sidebar is native and responsive already */
+
+    /* 10. Improve Camera Input on Mobile */
+    .stCamera {
+        border-radius: 12px;
+        overflow: hidden;
+    }
+}

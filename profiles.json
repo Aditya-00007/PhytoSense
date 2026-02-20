@@ -1,0 +1,17 @@
+{
+  "Sarthak": {
+    "name": "Sarthak Jadhav",
+    "farm_location": "Nashik,IN",
+    "farm_size": "3",
+    "farming_type": "Conventional",
+    "irrigation": "Drip",
+    "Water_Availability": "Medium",
+    "Income": "50000",
+    "primary_crops": "Tomato,onion",
+    "secondary_crops": "Wheat,rice",
+    "receive_weather_alerts": true,
+    "preferred_language": "Marathi",
+    "last_updated": "2026-02-18T08:51:20.932351",
+    "updated_at": "2026-02-18T03:21:20.934590"
+  }
+}

@@ -1,0 +1,232 @@
+/* Custom CSS for the PhytoSense app */
+
+/* Main font and text styling */
+body {
+    font-family: 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+    letter-spacing: 0.01rem;
+    line-height: 1.6;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #2E7D32; /* Darker green for headings */
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    border-bottom: 2px solid #E8F5E9;
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+}
+
+/* Links */
+a {
+    color: #2E7D32;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #66BB6A;
+    text-decoration: underline;
+}
+
+/* Buttons */
+.stButton > button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.stButton > button:hover {
+    background-color: #66BB6A;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.stButton > button:active {
+    background-color: #2E7D32;
+    transform: translateY(0);
+}
+
+/* Form inputs */
+.stTextInput > div > div > input,
+.stNumberInput > div > div > input,
+.stTextArea > div > div > textarea {
+    border: 1px solid #BDBDBD;
+    border-radius: 4px;
+    padding: 0.5rem;
+    transition: border 0.3s ease;
+}
+
+.stTextInput > div > div > input:focus,
+.stNumberInput > div > div > input:focus,
+.stTextArea > div > div > textarea:focus {
+    border: 1px solid #4CAF50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+/* Selectbox */
+.stSelectbox > div > div {
+    border: 1px solid #BDBDBD;
+    border-radius: 4px;
+}
+
+.stSelectbox > div > div:focus-within {
+    border: 1px solid #4CAF50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+/* Progress bar */
+.stProgress > div > div > div {
+    background-color: #4CAF50;
+}
+
+/* Alerts and messages */
+.stAlert {
+    border-radius: 4px;
+    border-left-width: 10px;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.stSuccess {
+    background-color: #E8F5E9;
+    border-left-color: #4CAF50;
+}
+
+.stInfo {
+    background-color: #E1F5FE;
+    border-left-color: #03A9F4;
+}
+
+.stWarning {
+    background-color: #FFF8E1;
+    border-left-color: #FFC107;
+}
+
+.stError {
+    background-color: #FFEBEE;
+    border-left-color: #F44336;
+}
+
+/* Custom card styling */
+.card {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    border-top: 4px solid #4CAF50;
+}
+
+/* Dashboard tiles */
+.tile {
+    background-color: #F0F8F0;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tile-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #4CAF50;
+}
+
+.tile-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #2E7D32;
+}
+
+/* Sidebar styling */
+.sidebar .sidebar-content {
+    background-color: #F0F8F0;
+}
+
+/* Analysis results styling */
+.analysis-result {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.result-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.result-icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    color: #4CAF50;
+}
+
+.result-title {
+    font-weight: 600;
+    color: #2E7D32;
+    margin: 0;
+}
+
+.result-content {
+    color: #424242;
+    line-height: 1.6;
+}
+
+/* Plant disease status indicators */
+.status-healthy {
+    color: #4CAF50;
+    font-weight: 600;
+}
+
+.status-warning {
+    color: #FF9800;
+    font-weight: 600;
+}
+
+.status-danger {
+    color: #F44336;
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    color: #757575;
+    margin-top: 2rem;
+    border-top: 1px solid #E0E0E0;
+}
+
+/* Loading spinner */
+.stSpinner > div {
+    border-top-color: #4CAF50 !important;
+}

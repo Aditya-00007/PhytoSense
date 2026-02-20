@@ -571,7 +571,7 @@ footer {
 
     /* Active button styling is handled by type="primary", but ensure it pops */
     div:has(.sticky-navbar)+div [data-testid="stHorizontalBlock"] button[kind="primary"] {
-        background-color: #4CAF50 !important;
+        background-color: #189d18 !important;
         color: white !important;
         box-shadow: 0 2px 8px rgba(76, 175, 80, 0.4) !important;
     }
@@ -594,7 +594,7 @@ footer {
     }
 
     .stButton button {
-        width: 100%;
+        width: 80%;
         min-height: 48px;
         /* Standard touch target size */
         margin-top: 10px;

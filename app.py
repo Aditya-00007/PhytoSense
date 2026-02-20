@@ -242,7 +242,7 @@ st.markdown("""
 
     /* Active Button (Primary) */
     div[data-testid="column"] button[kind="primary"] {
-        background-color: #4CAF50 !important;
+        background-color: #189d18 !important;
         color: white !important;
         font-weight: bold !important;
         border: none !important;

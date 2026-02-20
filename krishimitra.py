@@ -279,7 +279,7 @@ def show_chatbot_page():
 
     # Check Key
     # Priority: Session State > Secrets > Environment
-    api_key = st.session_state.get("GROQ_API_KEY") or st.secrets.get("GROQ_API_KEY") or os.environ.get("GROQ_API_KEY")
+    api_key =os.getenv("GROQ_API_KEY") or st.session_state.get("GROQ_API_KEY") or st.secrets.get("GROQ_API_KEY") or os.environ.get("GROQ_API_KEY")
     
     if not api_key:
         api_key_input = st.text_input(t("Enter Groq API Key to activate Krishi Mitra"), type="password")

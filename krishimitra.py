@@ -19,7 +19,14 @@ class KrishiMitra:
         self.history_file = "farmer_history.json"
         
         # Try to get API key from secrets or environment
-        self.api_key = st.secrets.get("GROQ_API_KEY") or os.environ.get("GROQ_API_KEY")
+        self.api_key = os.getenv("GROQ_API_KEY")
+
+        # If not found, safely try Streamlit secrets (local dev)
+        if not self.api_key:
+            try:
+                self.api_key = st.secrets["GROQ_API_KEY"]
+            except Exception:
+                self.api_key = None
         
         self.client = None
         if HAS_GROQ and self.api_key:

@@ -322,7 +322,7 @@ def get_current_growing_season():
     
     if 6 <= month <= 9:
         return "Kharif (Monsoon)"
-    elif 10 <= month <= 2:
+    elif month >= 10 or month <= 2:
         return "Rabi (Winter)"
     else:
         return "Zaid (Summer)"

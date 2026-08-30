@@ -207,3 +207,234 @@ def get_recommended_features(profile_data):
         recommended.append("organic_farming_resources")
     
     return recommended
+
+
+def is_location_india(location):
+    """
+    Determine if the location is in India.
+    """
+    if not location:
+        # Default to India as the application focuses on Maharashtra-specific agricultural data
+        return True
+    
+    location_lower = location.lower().strip()
+    
+    # Check for country name or code
+    if any(country in location_lower for country in ["india", "bharat"]):
+        return True
+    
+    # Check for country code suffix
+    if location_lower.endswith(",in") or location_lower.endswith(", in") or location_lower.endswith(" in"):
+        return True
+        
+    # Check if get_region_from_location returns a region (all of them are in Maharashtra, India)
+    if get_region_from_location(location) is not None:
+        return True
+        
+    # Check for major Indian states/cities
+    indian_places = [
+        "maharashtra", "pune", "mumbai", "nashik", "nagpur", "aurangabad", "latur", "delhi", "bangalore", 
+        "hyderabad", "chennai", "kolkata", "rajasthan", "gujarat", "punjab", "haryana", "uttar pradesh",
+        "madhya pradesh", "karnataka", "tamil nadu", "andhra pradesh", "telangana", "kerala", "bihar",
+        "west bengal", "assam", "odisha", "goa", "thane", "palghar", "raigad", "ratnagiri", "sindhudurg",
+        "satara", "sangli", "kolhapur", "solapur", "dhule", "nandurbar", "jalgaon", "jalna", "parbhani",
+        "hingoli", "nanded", "beed", "osmanabad", "wardha", "bhandara", "gondia", "chandrapur", "gadchiroli",
+        "yavatmal", "akola", "amravati", "buldhana", "washim"
+    ]
+    if any(place in location_lower for place in indian_places):
+        return True
+        
+    return False
+
+
+def is_location_southern_hemisphere(location):
+    """
+    Determine if the location is in the Southern Hemisphere.
+    """
+    if not location:
+        return False
+        
+    location_lower = location.lower().strip()
+    sh_countries = ["australia", "brazil", "south africa", "new zealand", "argentina", "chile", "peru", "angola", "mozambique", "indonesia"]
+    sh_codes = [",au", ", au", " au", ",br", ", br", " br", ",za", ", za", " za", ",nz", ", nz", " nz", ",ar", ", ar", " ar", ",cl", ", cl", " cl"]
+    
+    if any(country in location_lower for country in sh_countries):
+        return True
+    if any(location_lower.endswith(code) for code in sh_codes):
+        return True
+        
+    return False
+
+
+def get_season_details(location, month=None):
+    """
+    Determine season details based on farmer's location and current month.
+    
+    Returns:
+        dict: {
+            'season': str,
+            'color': str,
+            'icon': str,
+            'tips': list of str
+        }
+    """
+    from datetime import datetime
+    from language_support import t
+    
+    if month is None:
+        month = datetime.now().month
+        
+    # Check region/hemisphere
+    if is_location_india(location):
+        # Indian Season mapping
+        if 6 <= month <= 9:  # June - September
+            return {
+                "season": t("Monsoon (Kharif)"),
+                "color": "#2196F3",
+                "icon": "🌧️",
+                "tips": [
+                    t("Sow Kharif crops (Rice, Cotton, Soybean, Maize)"),
+                    t("Ensure proper drainage in fields to prevent waterlogging"),
+                    t("Use staking for vegetable crops to prevent rot"),
+                    t("Monitor for fungal diseases due to high humidity")
+                ]
+            }
+        elif 10 <= month <= 11:  # October - November
+            return {
+                "season": t("Post-monsoon (Autumn)"),
+                "color": "#FF5722",
+                "icon": "🍂",
+                "tips": [
+                    t("Harvest mature Kharif crops"),
+                    t("Prepare land and treat seeds for Rabi crops"),
+                    t("Apply pre-sowing irrigation"),
+                    t("Clean and store harvesting equipment")
+                ]
+            }
+        elif month == 12 or month <= 2:  # December - February
+            return {
+                "season": t("Winter (Rabi)"),
+                "color": "#00BCD4",
+                "icon": "❄️",
+                "tips": [
+                    t("Sow and manage Rabi crops (Wheat, Mustard, Potato)"),
+                    t("Apply light but regular irrigation"),
+                    t("Protect crops from cold waves or frost"),
+                    t("Watch for aphid infestations and powdery mildew")
+                ]
+            }
+        else:  # March - May (Zaid / Summer)
+            return {
+                "season": t("Summer (Zaid)"),
+                "color": "#FF9800",
+                "icon": "☀️",
+                "tips": [
+                    t("Apply mulch to conserve moisture and use shade nets"),
+                    t("Maintain regular irrigation for Zaid crops (cucumber, melons)"),
+                    t("Prepare fields for upcoming Kharif sowing"),
+                    t("Monitor soil moisture frequently during high heat")
+                ]
+            }
+            
+    elif is_location_southern_hemisphere(location):
+        # Southern Hemisphere temperate mapping
+        if month == 12 or month <= 2:  # Dec - Feb
+            return {
+                "season": t("Summer"),
+                "color": "#FF9800",
+                "icon": "☀️",
+                "tips": [
+                    t("Monitor for heat stress"),
+                    t("Increase irrigation frequency"),
+                    t("Apply mulch to retain moisture"),
+                    t("Watch for pest outbreaks")
+                ]
+            }
+        elif 3 <= month <= 5:  # Mar - May
+            return {
+                "season": t("Autumn"),
+                "color": "#FF5722",
+                "icon": "🍂",
+                "tips": [
+                    t("Harvest mature crops"),
+                    t("Plant cover crops"),
+                    t("Test and amend soil"),
+                    t("Clean and store equipment")
+                ]
+            }
+        elif 6 <= month <= 8:  # Jun - Aug
+            return {
+                "season": t("Winter"),
+                "color": "#2196F3",
+                "icon": "❄️",
+                "tips": [
+                    t("Protect sensitive plants"),
+                    t("Service farm equipment"),
+                    t("Plan next season's crops"),
+                    t("Take training courses")
+                ]
+            }
+        else:  # Sep - Nov
+            return {
+                "season": t("Spring"),
+                "color": "#6EDB3E",
+                "icon": "🌱",
+                "tips": [
+                    t("Prepare soil for planting"),
+                    t("Start summer crop seedlings"),
+                    t("Apply pre-emergent herbicides"),
+                    t("Check irrigation systems")
+                ]
+            }
+            
+    else:
+        # Northern Hemisphere temperate mapping (Default)
+        if 3 <= month <= 5:  # Mar - May
+            return {
+                "season": t("Spring"),
+                "color": "#6EDB3E",
+                "icon": "🌱",
+                "tips": [
+                    t("Prepare soil for planting"),
+                    t("Start summer crop seedlings"),
+                    t("Apply pre-emergent herbicides"),
+                    t("Check irrigation systems")
+                ]
+            }
+        elif 6 <= month <= 8:  # Jun - Aug
+            return {
+                "season": t("Summer"),
+                "color": "#FF9800",
+                "icon": "☀️",
+                "tips": [
+                    t("Monitor for heat stress"),
+                    t("Increase irrigation frequency"),
+                    t("Apply mulch to retain moisture"),
+                    t("Watch for pest outbreaks")
+                ]
+            }
+        elif 9 <= month <= 11:  # Sep - Nov
+            return {
+                "season": t("Fall"),
+                "color": "#FF5722",
+                "icon": "🍂",
+                "tips": [
+                    t("Harvest mature crops"),
+                    t("Plant cover crops"),
+                    t("Test and amend soil"),
+                    t("Clean and store equipment")
+                ]
+            }
+        else:  # Dec - Feb
+            return {
+                "season": t("Winter"),
+                "color": "#2196F3",
+                "icon": "❄️",
+                "tips": [
+                    t("Protect sensitive plants"),
+                    t("Service farm equipment"),
+                    t("Plan next season's crops"),
+                    t("Take training courses")
+                ]
+            }
+

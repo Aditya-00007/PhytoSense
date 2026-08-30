@@ -10,9 +10,9 @@ from language_support import initialize_language, show_language_selector, t, tra
 import weather_data_store
 
 # Weather API constants
-WEATHER_API_KEY = "f4923cb2515212f8108721ed67014dc5"  # Replace with your actual API key
+WEATHER_API_KEY = "f4923cb2515212f8108721ed67014dc5"  
 CACHE_DIR = "weather_data"
-WEATHER_CACHE_TTL = 3600  # Cache weather data for 1 hour (in seconds)
+WEATHER_CACHE_TTL = 3600 
 WEATHER_BASE_URL = "https://api.openweathermap.org/data/2.5"
 
 # Ensure cache directory exists

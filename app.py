@@ -18,7 +18,7 @@ from recommendations import get_preventive_measures, get_fertilizer_recommendati
 from utils import load_svg, get_example_images, generate_report_markdown, format_probability, save_uploaded_image
 from db_adapter import create_user, verify_user, update_user_profile, save_analysis, get_user_analyses, get_user_by_id, get_user_profile, save_session, get_active_session, clear_session, verify_forgot_password, reset_password
 from maharashtra import get_local_recommendations
-from profile_utils import get_profile_field, get_select_index
+from profile_utils import get_profile_field, get_select_index, get_season_details
 from soil_analyzer import analyze_soil, get_soil_details
 from model import load_model
 from plant_analysis import enhanced_analysis
@@ -1350,52 +1350,12 @@ def show_dashboard_page():
     with col2:
         st.markdown(f"### 📅 {t('Seasonal Summary')}")
 
-        now = datetime.now()
-        month = now.month
-
-        if 3 <= month <= 5:
-            season = t("Spring")
-            season_color = "#6EDB3E"
-            season_icon = "🌱"
-            season_tips = t_list([
-                "Prepare soil for planting",
-                "Start summer crop seedlings",
-                "Apply pre-emergent herbicides",
-                "Check irrigation systems"
-            ])
-
-        elif 6 <= month <= 8:
-            season = t("Summer")
-            season_color = "#FF9800"
-            season_icon = "☀️"
-            season_tips = t_list([
-                "Monitor for heat stress",
-                "Increase irrigation frequency",
-                "Apply mulch to retain moisture",
-                "Watch for pest outbreaks"
-            ])
-
-        elif 9 <= month <= 11:
-            season = t("Fall")
-            season_color = "#FF5722"
-            season_icon = "🍂"
-            season_tips = t_list([
-                "Harvest mature crops",
-                "Plant cover crops",
-                "Test and amend soil",
-                "Clean and store equipment"
-            ])
-
-        else:
-            season = t("Winter")
-            season_color = "#2196F3"
-            season_icon = "❄️"
-            season_tips = t_list([
-                "Protect sensitive plants",
-                "Service farm equipment",
-                "Plan next season's crops",
-                "Take training courses"
-            ])
+        location = get_profile_field(profile, 'farm_location', '')
+        season_details = get_season_details(location)
+        season = season_details["season"]
+        season_color = season_details["color"]
+        season_icon = season_details["icon"]
+        season_tips = season_details["tips"]
 
         st.markdown(f"""
         <div style='background-color:{season_color}; padding:10px; border-radius:5px; color:white; margin-bottom:15px;'>
@@ -3087,18 +3047,11 @@ def show_resources_page():
         # Seasonal best practices
         st.markdown(f"#### {t('Seasonal Best Practices')}")
         
-        # Determine current season (simplified)
-        now = datetime.now()
-        month = now.month
-        
-        if 3 <= month <= 5:  # Spring (March-May)
-            season = t("Spring")
-        elif 6 <= month <= 8:  # Summer (June-August)
-            season = t("Summer")
-        elif 9 <= month <= 11:  # Fall (September-November)
-            season = t("Fall")
-        else:  # Winter (December-February)
-            season = t("Winter")
+        # Determine current season dynamically based on location
+        profile = st.session_state.user_profile or {}
+        location = get_profile_field(profile, 'farm_location', '')
+        season_details = get_season_details(location)
+        season = season_details["season"]
         
         # Display practices for current season
         st.markdown(f"**{t('Current Season')}:** {season}")
@@ -3135,7 +3088,7 @@ def show_resources_page():
                 - {t('Clean and repair farm equipment and tools')}
                 - {t('Plan your season\'s crop layout and rotation')}
                 """)
-            elif season == t("Summer"):
+            elif season in [t("Summer"), t("Summer (Zaid)")]:
                 st.markdown(f"""
                 ## {t('Summer Best Practices (June-August)')}
                 
@@ -3167,7 +3120,7 @@ def show_resources_page():
                 - {t('Begin planning for fall planting')}
                 - {t('Maintain records of all farming activities')}
                 """)
-            elif season == t("Fall"):
+            elif season in [t("Fall"), t("Post-monsoon (Autumn)"), t("Autumn")]:
                 st.markdown(f"""
                 ## {t('Fall Best Practices (September-November)')}
                 
@@ -3198,7 +3151,30 @@ def show_resources_page():
                 - {t('Review the season\'s records and plan improvements')}
                 - {t('Attend agricultural training programs during off-season')}
                 """)
-            else:  # Winter
+            elif season == t("Monsoon (Kharif)"):
+                st.markdown(f"""
+                ## {t('Monsoon (Kharif) Best Practices (June-September)')}
+                
+                ### {t('Sowing & Planting')}
+                - {t('Sow Kharif crops (Rice, Cotton, Soybean, Maize) with onset of monsoon')}
+                - {t('Ensure seed treatment with bio-fertilizers (Azotobacter, Rhizobium)')}
+                - {t('Maintain proper row spacing to ensure adequate sunlight and ventilation')}
+                
+                ### {t('Water & Drainage Management')}
+                - {t('Create drainage channels to quickly evacuate excess rainwater and prevent waterlogging')}
+                - {t('Build farm ponds and adopt rainwater harvesting practices')}
+                - {t('Avoid irrigation during heavy rainfall periods')}
+                
+                ### {t('Pest & Disease Management')}
+                - {t('Watch closely for fungal infections, damping-off, and root rot')}
+                - {t('Apply copper oxychloride or bio-fungicides like Trichoderma viride if symptoms appear')}
+                - {t('Monitor for sucking pests (aphids, jassids, thrips) on young shoots')}
+                
+                ### {t('Soil & Nutrient Management')}
+                - {t('Apply split doses of nitrogen fertilizer after weeding when rain stops')}
+                - {t('Avoid applying fertilizers during heavy downpours to prevent leaching')}
+                """)
+            else:  # Winter / Winter (Rabi)
                 st.markdown(f"""
                 ## {t('Winter Best Practices (December-February)')}
                 

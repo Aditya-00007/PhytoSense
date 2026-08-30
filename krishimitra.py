@@ -129,22 +129,18 @@ class KrishiMitra:
         return "\n".join(context_parts)
 
     def get_crop_intelligence_context(self, crops_list):
-        """Retrieve specifically relevant crop variables"""
+        """Retrieve specifically relevant crop variables in a compact format"""
         context_str = ""
         found_data = False
         
         for crop in crops_list:
             clean_crop = crop.strip().upper().replace(" ", "_")
-            # 1. Try exact match
             var_name = f"{clean_crop}_WEATHER_INTELLIGENCE"
-            pass
             
-            # Simple fuzzy lookup in the module
             data_found = None
             if hasattr(weather_data_store, var_name):
                 data_found = getattr(weather_data_store, var_name)
             else:
-                # Try to find partial match in module attributes
                 for attr in dir(weather_data_store):
                     if attr.endswith("_WEATHER_INTELLIGENCE"):
                         base_name = attr.replace("_WEATHER_INTELLIGENCE", "")
@@ -154,13 +150,25 @@ class KrishiMitra:
             
             if data_found:
                 found_data = True
-                context_str += f"\n--- INTELLIGENCE FOR {crop.upper()} ---\n"
-                context_str += json.dumps(data_found, indent=2) + "\n"
+                context_str += f"\n--- {crop.upper()} ADVISORY RULES ---\n"
+                if "temperature_ranges" in data_found:
+                    context_str += "Temp thresholds:\n"
+                    for k, v in data_found["temperature_ranges"].items():
+                        context_str += f"- {k} ({v['range']}C): {v['impact']}. Actions: {', '.join(v['actions'][:2])}\n"
+                if "humidity_ranges" in data_found:
+                    context_str += "Humidity thresholds:\n"
+                    for k, v in data_found["humidity_ranges"].items():
+                        context_str += f"- {k} ({v['range']}%): {v['impact']}. Actions: {', '.join(v['actions'][:2])}\n"
+                if "rainfall_ranges" in data_found:
+                    context_str += "Rain thresholds:\n"
+                    for k, v in data_found["rainfall_ranges"].items():
+                        context_str += f"- {k} ({v['range']}mm): {v['impact']}. Actions: {', '.join(v['actions'][:2])}\n"
         
         if not found_data:
             return "No specific crop datasets found. Use general agricultural principles."
             
         return context_str
+
 
     def determine_intent(self, query):
         """Simple keyword matching for intent"""
@@ -195,9 +203,13 @@ class KrishiMitra:
         history_context = ""
         if "context_history" in st.session_state and st.session_state.context_history:
             history_context = "\n--- RECENT CONVERSATION HISTORY (Last 10 Days) ---\n"
-            # Limit to last 5 exchanges to avoid token overflow
-            for item in st.session_state.context_history[-5:]:
-                history_context += f"Farmer: {item['query']}\nKrishiMitra: {item['response']}\n"
+            # Limit to last 2 exchanges and truncate responses to prevent token overflow
+            for item in st.session_state.context_history[-2:]:
+                response_short = item['response']
+                if len(response_short) > 200:
+                    response_short = response_short[:200] + "..."
+                history_context += f"Farmer: {item['query']}\nKrishiMitra: {response_short}\n"
+
 
         # 2. System Prompt (Strict Language Control & Structured Output)
         system_context = f"""
@@ -262,14 +274,16 @@ Respond directly to the user's query: "{query}"
         # 3. Call Groq
         try:
             chat = self.client.chat.completions.create(
-                model="llama-3.1-8b-instant",
+                model="allam-2-7b",
                 messages=[
                     {"role": "system", "content": system_context},
                     {"role": "user", "content": query}
                 ],
+
                 temperature=0.7,
-                max_tokens=800,
+                max_tokens=400,
             )
+
             return chat.choices[0].message.content
         except Exception as e:
             return f"Error contacting AI: {str(e)}"

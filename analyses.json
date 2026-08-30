@@ -8836,5 +8836,5190 @@
         "previous_treatments": "no"
       }
     }
+  },
+  {
+    "id": 114,
+    "user_id": "Sarthak",
+    "timestamp": "2026-02-21T04:04:07.947526",
+    "analysis_type": "soil",
+    "image_path": "uploads\\7e7c483a-6f8e-45d4-bf24-8d98d73ae2db.jpg",
+    "results": {
+      "characteristics": "\n            - High sand content (>70%)\n            - Very low water retention\n            - Poor in organic matter and nutrients\n            - Excellent drainage (often excessive)\n            - May have salinity issues\n            - pH range: 7.0-8.5 (neutral to alkaline)\n            ",
+      "suitability": {
+        "onion": "Poor suitability for onions without significant amendments. Requires intensive management.",
+        "tomato": "Moderate suitability with irrigation, mulching, and nutrient management."
+      },
+      "recommendations": [
+        {
+          "name": "Wheat",
+          "score": 68,
+          "reasons": [
+            "\u2713 pH marginally suitable",
+            "\u2713 Within budget",
+            "\u2713 Attention level matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Temperature suitable",
+            "\u2713 Slightly exceeds duration",
+            "\u2713 Increasing price trend",
+            "\u2713 Medium market demand",
+            "\u2713 Moderate ROI potential (10.7%)"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 Drought risk"
+          ],
+          "details": {
+            "name": "Wheat",
+            "soil_types": [
+              "Loamy",
+              "Clay Loam",
+              "Silty",
+              "Black Soil",
+              "Alluvial Soil"
+            ],
+            "ph_range": [
+              6.0,
+              7.5
+            ],
+            "duration_months": 4,
+            "investment_per_acre": 15000,
+            "attention_level": "Medium",
+            "risk_factor": "Low",
+            "water_requirement": "Moderate",
+            "season": "Rabi",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              15,
+              25
+            ],
+            "rainfall_range": [
+              50,
+              150
+            ],
+            "weather_sensitivity": "Medium",
+            "market_volatility": "Low",
+            "profit_margin": "Medium"
+          },
+          "price_prediction": {
+            "current_price": 1895,
+            "predicted_price": 2098.04,
+            "confidence": 0.65,
+            "trend": "Increasing",
+            "demand": "Medium",
+            "roi_potential": 10.7,
+            "factors": {
+              "trend_impact": 1.1,
+              "weather_impact": 1.0,
+              "demand_impact": 1.0,
+              "seasonal_factor": 1.006497944456385
+            }
+          }
+        },
+        {
+          "name": "Potato",
+          "score": 47,
+          "reasons": [
+            "\u2713 Budget slightly low but possible",
+            "\u2713 Attention level moderately matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Temperature suitable",
+            "\u2713 Fits within time duration",
+            "\u2713 Medium market demand"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 pH may need adjustment",
+            "\u26a0 Drought risk"
+          ],
+          "details": {
+            "name": "Potato",
+            "soil_types": [
+              "Loamy",
+              "Sandy Loam",
+              "Alluvial Soil"
+            ],
+            "ph_range": [
+              5.0,
+              6.5
+            ],
+            "duration_months": 3,
+            "investment_per_acre": 22000,
+            "attention_level": "High",
+            "risk_factor": "Medium",
+            "water_requirement": "Moderate",
+            "season": "Rabi",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              15,
+              25
+            ],
+            "rainfall_range": [
+              40,
+              80
+            ],
+            "weather_sensitivity": "High",
+            "market_volatility": "Medium",
+            "profit_margin": "Medium"
+          },
+          "price_prediction": {
+            "current_price": 1398,
+            "predicted_price": 1241.11,
+            "confidence": 0.65,
+            "trend": "Decreasing",
+            "demand": "Medium",
+            "roi_potential": -11.2,
+            "factors": {
+              "trend_impact": 0.9,
+              "weather_impact": 1.0,
+              "demand_impact": 1.0,
+              "seasonal_factor": 0.9864175002773815
+            }
+          }
+        },
+        {
+          "name": "Tomato",
+          "score": 44,
+          "reasons": [
+            "\u2713 Attention level moderately matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Temperature suitable",
+            "\u2713 Fits within time duration",
+            "\u2713 Increasing price trend"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 pH may need adjustment",
+            "\u26a0 May exceed budget",
+            "\u26a0 Drought risk"
+          ],
+          "details": {
+            "name": "Tomato",
+            "soil_types": [
+              "Loamy",
+              "Sandy Loam",
+              "Red Soil",
+              "Black Soil"
+            ],
+            "ph_range": [
+              6.0,
+              6.8
+            ],
+            "duration_months": 3,
+            "investment_per_acre": 30000,
+            "attention_level": "Very High",
+            "risk_factor": "High",
+            "water_requirement": "High",
+            "season": "All seasons",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              20,
+              30
+            ],
+            "rainfall_range": [
+              40,
+              100
+            ],
+            "weather_sensitivity": "Very High",
+            "market_volatility": "High",
+            "profit_margin": "Very High"
+          },
+          "price_prediction": {
+            "current_price": 1742,
+            "predicted_price": 1525.33,
+            "confidence": 0.85,
+            "trend": "Increasing",
+            "demand": "Low",
+            "roi_potential": -12.4,
+            "factors": {
+              "trend_impact": 1.1,
+              "weather_impact": 1.0,
+              "demand_impact": 0.8,
+              "seasonal_factor": 0.9950224922799628
+            }
+          }
+        }
+      ],
+      "properties": {
+        "ph": "7.7",
+        "organic_matter": "Very Low",
+        "drainage": "Excessive",
+        "nitrogen": "Medium",
+        "phosphorus": "Medium",
+        "potassium": "Medium"
+      },
+      "farmer_inputs": {
+        "soil_depth": "Surface (0-10cm)",
+        "recent_rainfall": "None",
+        "sampling_location": "Nashik,IN",
+        "previous_crop": "Rice",
+        "interested_crops": [
+          "Potato",
+          "Tomato",
+          "Wheat"
+        ],
+        "budget": {
+          "amount": 19000,
+          "unit": "Per Acre"
+        },
+        "attention_level": "High (daily care)",
+        "risk_tolerance": "Low (prefer safe options)",
+        "time_duration": {
+          "value": 3,
+          "unit": "Months"
+        },
+        "organic_preference": true,
+        "irrigation_available": "Limited",
+        "market_preference": "Local market",
+        "labor_availability": "Adequate",
+        "weather_api_key": null
+      },
+      "weather_data": {
+        "current_temp": 26.15,
+        "forecast_3month": [
+          {
+            "month": "2026-02",
+            "avg_temp": 20.5,
+            "total_rain": 0,
+            "rain_days": 6
+          }
+        ],
+        "rainfall_prediction": {},
+        "season_suitability": {
+          "2026-02": {
+            "temp": "warm",
+            "rain": "dry",
+            "description": "warm and dry"
+          }
+        },
+        "extreme_events": [],
+        "summary": "Expect **stable temperatures** averaging around 20.5\u00b0C. Conditions will likely be **mostly dry**."
+      },
+      "market_data": {
+        "Wheat": {
+          "current_price": 1895,
+          "price_trend": "Increasing",
+          "demand": "Medium",
+          "forecast_3months": 2014,
+          "market_confidence": "Medium",
+          "seasonal_factor": 1.006497944456385
+        },
+        "Tomato": {
+          "current_price": 1742,
+          "price_trend": "Increasing",
+          "demand": "Low",
+          "forecast_3months": 2819,
+          "market_confidence": "High",
+          "seasonal_factor": 0.9950224922799628
+        },
+        "Potato": {
+          "current_price": 1398,
+          "price_trend": "Decreasing",
+          "demand": "Medium",
+          "forecast_3months": 1358,
+          "market_confidence": "Medium",
+          "seasonal_factor": 0.9864175002773815
+        }
+      }
+    }
+  },
+  {
+    "id": 115,
+    "user_id": "Sarthak",
+    "timestamp": "2026-02-21T05:22:42.793553",
+    "analysis_type": "plant",
+    "image_path": "uploads\\07f954da-6079-4aab-a706-4a37b031386b.jpg",
+    "results": {
+      "plant_info": {
+        "name": "Tomato",
+        "scientific_name": "Solanum lycopersicum",
+        "probability": 100.0
+      },
+      "water_content": {
+        "percentage": 78,
+        "status": "Optimal"
+      },
+      "diseases": {
+        "detected": true,
+        "diseases": [
+          {
+            "name": "Fusarium Wilt",
+            "confidence": 91.76345449228627,
+            "scientific_name": "Fusarium oxysporum f.sp. lycopersici",
+            "description": "Yellowing and wilting of lower leaves, often on one side of the plant, vascular discoloration",
+            "treatment": "Apply: Propiconazole, Thiophanate-methyl",
+            "detailed_info": {
+              "symptoms": "Yellowing and wilting of leaves, often on one side of the plant. Brown discoloration of vascular tissue when stems are cut",
+              "causes": "Soil-borne fungus Fusarium oxysporum enters through roots and blocks water transport",
+              "treatment": "Use biofertilizers like Pseudomonas fluorescens, Neem Cake + Farm Yard Manure (FYM)",
+              "prevention": "Plant resistant tomato varieties, practice crop rotation with non-host plants, remove and destroy infected plants"
+            }
+          }
+        ]
+      },
+      "pests": {
+        "detected": false,
+        "pests": []
+      },
+      "preventive_measures": [
+        "Maintain soil pH >7.0 which inhibits Fusarium growth",
+        "Use Trichoderma asperellum as biological control agent",
+        "Install reflective mulch to repel aphids and whiteflies (50% reduction)",
+        "Stake plants at 45\u00b0 angle for maximum sun exposure and air flow",
+        "Use floating row covers until flowering to prevent early pest damage",
+        "Record pest/disease occurrences to predict and prevent future outbreaks",
+        "Introduce beneficial insects 2 weeks before expected pest outbreaks",
+        "Implement strict sanitation: disinfect tools with 70% alcohol between plants"
+      ],
+      "fertilizer_recommendations": [
+        {
+          "type": "organic",
+          "name": "Compost Tea",
+          "npk": "Varies (typically 1-1-1)",
+          "description": "Liquid extract of compost containing beneficial microbes, nutrients, and organic compounds that improve soil biology and plant health.",
+          "application": "Apply as soil drench (5 gal/100 sq ft) or foliar spray (diluted 1:5) every 2-4 weeks.",
+          "conditions": "All plants, especially when microbial activity is desired",
+          "scientific_backing": "Research demonstrates 30-50% increase in beneficial soil microbes after application"
+        },
+        {
+          "type": "vegetative",
+          "name": "Calcium Nitrate",
+          "npk": "15-0-0 + 19% Ca",
+          "description": "Provides readily available nitrogen and prevents blossom end rot by supplying calcium during fruit development.",
+          "application": "Apply 1-2 tbsp/gal as foliar spray or 1 lb/100 sq ft as soil application every 2 weeks during fruiting.",
+          "conditions": "For fruiting stage, especially when blossom end rot is a concern",
+          "scientific_backing": "Reduces blossom end rot incidence by up to 80% in field trials"
+        },
+        {
+          "type": "flowering",
+          "name": "Phosphorus-Potassium Booster",
+          "npk": "3-15-15",
+          "description": "Lower nitrogen with higher phosphorus and potassium to encourage flowering and fruit development instead of excessive vegetative growth.",
+          "application": "Apply 1 lb/100 sq ft at first flower cluster formation and repeat every 3-4 weeks.",
+          "conditions": "When plants are transitioning from vegetative to flowering stage",
+          "scientific_backing": "Improves fruit set by 25-30% compared to high-nitrogen fertilizers"
+        }
+      ],
+      "plant_details": {
+        "crop_type": "Tomato",
+        "plant_age": "Vegetative",
+        "symptoms": "yellow leaves",
+        "planting_date": "2025-06-02",
+        "irrigation_method": "Drip",
+        "previous_treatments": null
+      }
+    }
+  },
+  {
+    "id": 116,
+    "user_id": "Sarthak",
+    "timestamp": "2026-02-21T05:26:52.897875",
+    "analysis_type": "soil",
+    "image_path": "uploads\\1f03ef4d-5d83-431a-8fe5-04ad4a976178.jpg",
+    "results": {
+      "characteristics": "\n            - High sand content (>70%)\n            - Very low water retention\n            - Poor in organic matter and nutrients\n            - Excellent drainage (often excessive)\n            - May have salinity issues\n            - pH range: 7.0-8.5 (neutral to alkaline)\n            ",
+      "suitability": {
+        "onion": "Poor suitability for onions without significant amendments. Requires intensive management.",
+        "tomato": "Moderate suitability with irrigation, mulching, and nutrient management."
+      },
+      "recommendations": [
+        {
+          "name": "Wheat",
+          "score": 62,
+          "reasons": [
+            "\u2713 pH marginally suitable",
+            "\u2713 Attention level matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Temperature suitable",
+            "\u2713 Rainfall suitable",
+            "\u2713 Slightly exceeds duration",
+            "\u2713 High market demand",
+            "\u2713 Moderate ROI potential (6.1%)"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 May exceed budget"
+          ],
+          "details": {
+            "name": "Wheat",
+            "soil_types": [
+              "Loamy",
+              "Clay Loam",
+              "Silty",
+              "Black Soil",
+              "Alluvial Soil"
+            ],
+            "ph_range": [
+              6.0,
+              7.5
+            ],
+            "duration_months": 4,
+            "investment_per_acre": 15000,
+            "attention_level": "Medium",
+            "risk_factor": "Low",
+            "water_requirement": "Moderate",
+            "season": "Rabi",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              15,
+              25
+            ],
+            "rainfall_range": [
+              50,
+              150
+            ],
+            "weather_sensitivity": "Medium",
+            "market_volatility": "Low",
+            "profit_margin": "Medium"
+          },
+          "price_prediction": {
+            "current_price": 2006,
+            "predicted_price": 2128.68,
+            "confidence": 0.45,
+            "trend": "Decreasing",
+            "demand": "High",
+            "roi_potential": 6.1,
+            "factors": {
+              "trend_impact": 0.9,
+              "weather_impact": 1.0,
+              "demand_impact": 1.2,
+              "seasonal_factor": 0.9825519452150634
+            }
+          }
+        },
+        {
+          "name": "Tomato",
+          "score": 59,
+          "reasons": [
+            "\u2713 Attention level moderately matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Temperature suitable",
+            "\u2713 Rainfall suitable",
+            "\u2713 Fits within time duration",
+            "\u2713 Increasing price trend",
+            "\u2713 Medium market demand",
+            "\u2713 Good ROI potential (25.3%)"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 pH may need adjustment",
+            "\u26a0 May exceed budget"
+          ],
+          "details": {
+            "name": "Tomato",
+            "soil_types": [
+              "Loamy",
+              "Sandy Loam",
+              "Red Soil",
+              "Black Soil"
+            ],
+            "ph_range": [
+              6.0,
+              6.8
+            ],
+            "duration_months": 3,
+            "investment_per_acre": 30000,
+            "attention_level": "Very High",
+            "risk_factor": "High",
+            "water_requirement": "High",
+            "season": "All seasons",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              20,
+              30
+            ],
+            "rainfall_range": [
+              40,
+              100
+            ],
+            "weather_sensitivity": "Very High",
+            "market_volatility": "High",
+            "profit_margin": "Very High"
+          },
+          "price_prediction": {
+            "current_price": 1664,
+            "predicted_price": 2084.89,
+            "confidence": 0.65,
+            "trend": "Increasing",
+            "demand": "Medium",
+            "roi_potential": 25.3,
+            "factors": {
+              "trend_impact": 1.1,
+              "weather_impact": 1.0,
+              "demand_impact": 1.0,
+              "seasonal_factor": 1.139035234207311
+            }
+          }
+        },
+        {
+          "name": "Onion",
+          "score": 56,
+          "reasons": [
+            "\u2713 Attention level moderately matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Temperature suitable",
+            "\u2713 Rainfall suitable",
+            "\u2713 Slightly exceeds duration",
+            "\u2713 Increasing price trend",
+            "\u2713 High market demand",
+            "\u2713 Good ROI potential (27.8%)"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 pH may need adjustment",
+            "\u26a0 May exceed budget"
+          ],
+          "details": {
+            "name": "Onion",
+            "soil_types": [
+              "Loamy",
+              "Silty",
+              "Black Soil",
+              "Red Soil"
+            ],
+            "ph_range": [
+              6.0,
+              7.0
+            ],
+            "duration_months": 4,
+            "investment_per_acre": 20000,
+            "attention_level": "High",
+            "risk_factor": "Medium",
+            "water_requirement": "Moderate",
+            "season": "Rabi",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              13,
+              35
+            ],
+            "rainfall_range": [
+              60,
+              100
+            ],
+            "weather_sensitivity": "Medium",
+            "market_volatility": "High",
+            "profit_margin": "High"
+          },
+          "price_prediction": {
+            "current_price": 2356,
+            "predicted_price": 3012.13,
+            "confidence": 0.45,
+            "trend": "Increasing",
+            "demand": "High",
+            "roi_potential": 27.8,
+            "factors": {
+              "trend_impact": 1.1,
+              "weather_impact": 1.0,
+              "demand_impact": 1.2,
+              "seasonal_factor": 0.9685568751556315
+            }
+          }
+        }
+      ],
+      "properties": {
+        "ph": "7.7",
+        "organic_matter": "Very Low",
+        "drainage": "Excessive",
+        "nitrogen": "Medium",
+        "phosphorus": "Medium",
+        "potassium": "Medium"
+      },
+      "farmer_inputs": {
+        "soil_depth": "Surface (0-10cm)",
+        "recent_rainfall": "None",
+        "sampling_location": "Nahik,IN",
+        "previous_crop": "Rice",
+        "interested_crops": [
+          "Tomato",
+          "Wheat",
+          "Onion"
+        ],
+        "budget": {
+          "amount": 10000,
+          "unit": "Per Acre"
+        },
+        "attention_level": "High (daily care)",
+        "risk_tolerance": "Medium (balanced approach)",
+        "time_duration": {
+          "value": 3,
+          "unit": "Months"
+        },
+        "organic_preference": true,
+        "irrigation_available": "Good",
+        "market_preference": "Local market",
+        "labor_availability": "Adequate",
+        "weather_api_key": null
+      },
+      "weather_data": {
+        "current_temp": 29,
+        "forecast_3month": [
+          {
+            "month": "2026-02",
+            "avg_temp": 22,
+            "total_rain": 47,
+            "rain_days": 5
+          },
+          {
+            "month": "2026-03",
+            "avg_temp": 38,
+            "total_rain": 21,
+            "rain_days": 12
+          },
+          {
+            "month": "2026-04",
+            "avg_temp": 33,
+            "total_rain": 7,
+            "rain_days": 15
+          }
+        ],
+        "rainfall_prediction": {},
+        "season_suitability": {
+          "2026-02": {
+            "temp": "cool",
+            "rain": "light",
+            "description": "cool and light"
+          },
+          "2026-03": {
+            "temp": "hot",
+            "rain": "dry",
+            "description": "hot and dry"
+          },
+          "2026-04": {
+            "temp": "hot",
+            "rain": "dry",
+            "description": "hot and dry"
+          }
+        },
+        "extreme_events": [],
+        "summary": "Next 3 months: Average temperature 31.0\u00b0C with low rainfall (approx 75mm total)."
+      },
+      "market_data": {
+        "Wheat": {
+          "current_price": 2006,
+          "price_trend": "Decreasing",
+          "demand": "High",
+          "forecast_3months": 2113,
+          "market_confidence": "Low",
+          "seasonal_factor": 0.9825519452150634
+        },
+        "Tomato": {
+          "current_price": 1664,
+          "price_trend": "Increasing",
+          "demand": "Medium",
+          "forecast_3months": 3190,
+          "market_confidence": "Medium",
+          "seasonal_factor": 1.139035234207311
+        },
+        "Onion": {
+          "current_price": 2356,
+          "price_trend": "Increasing",
+          "demand": "High",
+          "forecast_3months": 2460,
+          "market_confidence": "Low",
+          "seasonal_factor": 0.9685568751556315
+        }
+      }
+    }
+  },
+  {
+    "id": 117,
+    "user_id": "Sarthak",
+    "timestamp": "2026-02-21T05:56:39.522543",
+    "analysis_type": "plant",
+    "image_path": "uploads\\780c1c65-dbf5-4d52-b9aa-b9288e81a71e.jpg",
+    "results": {
+      "plant_info": {
+        "name": "Tomato",
+        "scientific_name": "Solanum lycopersicum",
+        "probability": 100.0
+      },
+      "water_content": {
+        "percentage": 78,
+        "status": "Optimal"
+      },
+      "diseases": {
+        "detected": true,
+        "diseases": [
+          {
+            "name": "Fusarium Wilt",
+            "confidence": 91.76345449228627,
+            "scientific_name": "Fusarium oxysporum f.sp. lycopersici",
+            "description": "Yellowing and wilting of lower leaves, often on one side of the plant, vascular discoloration",
+            "treatment": "Apply: Propiconazole, Thiophanate-methyl",
+            "detailed_info": {
+              "symptoms": "Yellowing and wilting of leaves, often on one side of the plant. Brown discoloration of vascular tissue when stems are cut",
+              "causes": "Soil-borne fungus Fusarium oxysporum enters through roots and blocks water transport",
+              "treatment": "Use biofertilizers like Pseudomonas fluorescens, Neem Cake + Farm Yard Manure (FYM)",
+              "prevention": "Plant resistant tomato varieties, practice crop rotation with non-host plants, remove and destroy infected plants"
+            }
+          }
+        ]
+      },
+      "pests": {
+        "detected": false,
+        "pests": []
+      },
+      "preventive_measures": [
+        "Solarize soil for 6 weeks at >45\u00b0C (reduces inoculum 90%)",
+        "Maintain soil pH >7.0 which inhibits Fusarium growth",
+        "Apply calcium nitrate foliar spray weekly to prevent blossom end rot",
+        "Use floating row covers until flowering to prevent early pest damage",
+        "Stake plants at 45\u00b0 angle for maximum sun exposure and air flow",
+        "Apply 2-3 inches of organic mulch (reduces soil-borne disease splash by 75%)",
+        "Monitor plants weekly with a 10x magnifier for early pest/disease detection",
+        "Maintain soil pH between 6.0-6.8 for optimal nutrient availability"
+      ],
+      "fertilizer_recommendations": [
+        {
+          "type": "general",
+          "name": "Balanced NPK (10-10-10)",
+          "npk": "10-10-10",
+          "description": "Provides equal parts nitrogen (N), phosphorus (P), and potassium (K). Nitrogen promotes leaf growth, phosphorus supports root and flower development, potassium enhances overall plant health.",
+          "application": "Apply 2-3 lbs per 100 sq ft before planting and side-dress during active growth. Water thoroughly after application.",
+          "conditions": "General purpose for most plants during vegetative growth",
+          "scientific_backing": "University studies show balanced NPK improves yield by 15-20% over unfertilized controls"
+        },
+        {
+          "type": "vegetative",
+          "name": "Calcium Nitrate",
+          "npk": "15-0-0 + 19% Ca",
+          "description": "Provides readily available nitrogen and prevents blossom end rot by supplying calcium during fruit development.",
+          "application": "Apply 1-2 tbsp/gal as foliar spray or 1 lb/100 sq ft as soil application every 2 weeks during fruiting.",
+          "conditions": "For fruiting stage, especially when blossom end rot is a concern",
+          "scientific_backing": "Reduces blossom end rot incidence by up to 80% in field trials"
+        },
+        {
+          "type": "flowering",
+          "name": "Phosphorus-Potassium Booster",
+          "npk": "3-15-15",
+          "description": "Lower nitrogen with higher phosphorus and potassium to encourage flowering and fruit development instead of excessive vegetative growth.",
+          "application": "Apply 1 lb/100 sq ft at first flower cluster formation and repeat every 3-4 weeks.",
+          "conditions": "When plants are transitioning from vegetative to flowering stage",
+          "scientific_backing": "Improves fruit set by 25-30% compared to high-nitrogen fertilizers"
+        }
+      ],
+      "plant_details": {
+        "crop_type": "Tomato",
+        "plant_age": "Fruiting",
+        "symptoms": "Yellow leaves",
+        "planting_date": "2026-02-03",
+        "irrigation_method": "Drip",
+        "previous_treatments": null
+      }
+    }
+  },
+  {
+    "id": 118,
+    "user_id": "Sarthak",
+    "timestamp": "2026-02-21T06:01:07.376320",
+    "analysis_type": "soil",
+    "image_path": "uploads\\7cf97483-7f50-4909-bc09-51ffd6d55937.jpg",
+    "results": {
+      "characteristics": "\n            - High sand content (>70%)\n            - Very low water retention\n            - Poor in organic matter and nutrients\n            - Excellent drainage (often excessive)\n            - May have salinity issues\n            - pH range: 7.0-8.5 (neutral to alkaline)\n            ",
+      "suitability": {
+        "onion": "Poor suitability for onions without significant amendments. Requires intensive management.",
+        "tomato": "Moderate suitability with irrigation, mulching, and nutrient management."
+      },
+      "recommendations": [
+        {
+          "name": "Wheat",
+          "score": 68,
+          "reasons": [
+            "\u2713 pH marginally suitable",
+            "\u2713 Within budget",
+            "\u2713 Attention level matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Temperature suitable",
+            "\u2713 Slightly exceeds duration",
+            "\u2713 Increasing price trend",
+            "\u2713 Medium market demand",
+            "\u2713 Moderate ROI potential (6.6%)"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 Drought risk"
+          ],
+          "details": {
+            "name": "Wheat",
+            "soil_types": [
+              "Loamy",
+              "Clay Loam",
+              "Silty",
+              "Black Soil",
+              "Alluvial Soil"
+            ],
+            "ph_range": [
+              6.0,
+              7.5
+            ],
+            "duration_months": 4,
+            "investment_per_acre": 15000,
+            "attention_level": "Medium",
+            "risk_factor": "Low",
+            "water_requirement": "Moderate",
+            "season": "Rabi",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              15,
+              25
+            ],
+            "rainfall_range": [
+              50,
+              150
+            ],
+            "weather_sensitivity": "Medium",
+            "market_volatility": "Low",
+            "profit_margin": "Medium"
+          },
+          "price_prediction": {
+            "current_price": 1857,
+            "predicted_price": 1979.95,
+            "confidence": 0.65,
+            "trend": "Increasing",
+            "demand": "Medium",
+            "roi_potential": 6.6,
+            "factors": {
+              "trend_impact": 1.1,
+              "weather_impact": 1.0,
+              "demand_impact": 1.0,
+              "seasonal_factor": 0.9692823056458255
+            }
+          }
+        },
+        {
+          "name": "Onion",
+          "score": 59,
+          "reasons": [
+            "\u2713 Within budget",
+            "\u2713 Attention level moderately matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Temperature suitable",
+            "\u2713 Slightly exceeds duration",
+            "\u2713 Increasing price trend",
+            "\u2713 High market demand",
+            "\u2713 Good ROI potential (48.3%)"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 pH may need adjustment",
+            "\u26a0 Drought risk"
+          ],
+          "details": {
+            "name": "Onion",
+            "soil_types": [
+              "Loamy",
+              "Silty",
+              "Black Soil",
+              "Red Soil"
+            ],
+            "ph_range": [
+              6.0,
+              7.0
+            ],
+            "duration_months": 4,
+            "investment_per_acre": 20000,
+            "attention_level": "High",
+            "risk_factor": "Medium",
+            "water_requirement": "Moderate",
+            "season": "Rabi",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              13,
+              35
+            ],
+            "rainfall_range": [
+              60,
+              100
+            ],
+            "weather_sensitivity": "Medium",
+            "market_volatility": "High",
+            "profit_margin": "High"
+          },
+          "price_prediction": {
+            "current_price": 2072,
+            "predicted_price": 3073.52,
+            "confidence": 0.45,
+            "trend": "Increasing",
+            "demand": "High",
+            "roi_potential": 48.3,
+            "factors": {
+              "trend_impact": 1.1,
+              "weather_impact": 1.0,
+              "demand_impact": 1.2,
+              "seasonal_factor": 1.12375744727014
+            }
+          }
+        },
+        {
+          "name": "Tomato",
+          "score": 42,
+          "reasons": [
+            "\u2713 Attention level moderately matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Temperature suitable",
+            "\u2713 Fits within time duration",
+            "\u2713 Stable price trend"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 pH may need adjustment",
+            "\u26a0 May exceed budget",
+            "\u26a0 Drought risk"
+          ],
+          "details": {
+            "name": "Tomato",
+            "soil_types": [
+              "Loamy",
+              "Sandy Loam",
+              "Red Soil",
+              "Black Soil"
+            ],
+            "ph_range": [
+              6.0,
+              6.8
+            ],
+            "duration_months": 3,
+            "investment_per_acre": 30000,
+            "attention_level": "Very High",
+            "risk_factor": "High",
+            "water_requirement": "High",
+            "season": "All seasons",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              20,
+              30
+            ],
+            "rainfall_range": [
+              40,
+              100
+            ],
+            "weather_sensitivity": "Very High",
+            "market_volatility": "High",
+            "profit_margin": "Very High"
+          },
+          "price_prediction": {
+            "current_price": 1660,
+            "predicted_price": 1521.32,
+            "confidence": 0.45,
+            "trend": "Stable",
+            "demand": "Low",
+            "roi_potential": -8.4,
+            "factors": {
+              "trend_impact": 1.0,
+              "weather_impact": 1.0,
+              "demand_impact": 0.8,
+              "seasonal_factor": 1.1455741402594792
+            }
+          }
+        }
+      ],
+      "properties": {
+        "ph": "7.7",
+        "organic_matter": "Very Low",
+        "drainage": "Excessive",
+        "nitrogen": "Medium",
+        "phosphorus": "Medium",
+        "potassium": "Medium"
+      },
+      "farmer_inputs": {
+        "soil_depth": "Surface (0-10cm)",
+        "recent_rainfall": "None",
+        "sampling_location": "Nashik,IN",
+        "previous_crop": "Rice",
+        "interested_crops": [
+          "Tomato",
+          "Wheat",
+          "Onion"
+        ],
+        "budget": {
+          "amount": 20000,
+          "unit": "Per Acre"
+        },
+        "attention_level": "High (daily care)",
+        "risk_tolerance": "Low (prefer safe options)",
+        "time_duration": {
+          "value": 3,
+          "unit": "Months"
+        },
+        "organic_preference": true,
+        "irrigation_available": "Good",
+        "market_preference": "Local market",
+        "labor_availability": "Adequate",
+        "weather_api_key": null
+      },
+      "weather_data": {
+        "current_temp": 30.6,
+        "forecast_3month": [
+          {
+            "month": "2026-02",
+            "avg_temp": 21.2,
+            "total_rain": 0,
+            "rain_days": 6
+          }
+        ],
+        "rainfall_prediction": {},
+        "season_suitability": {
+          "2026-02": {
+            "temp": "warm",
+            "rain": "dry",
+            "description": "warm and dry"
+          }
+        },
+        "extreme_events": [],
+        "summary": "Expect **stable temperatures** averaging around 21.2\u00b0C. Conditions will likely be **mostly dry**."
+      },
+      "market_data": {
+        "Wheat": {
+          "current_price": 1857,
+          "price_trend": "Increasing",
+          "demand": "Medium",
+          "forecast_3months": 2065,
+          "market_confidence": "Medium",
+          "seasonal_factor": 0.9692823056458255
+        },
+        "Tomato": {
+          "current_price": 1660,
+          "price_trend": "Stable",
+          "demand": "Low",
+          "forecast_3months": 3373,
+          "market_confidence": "Low",
+          "seasonal_factor": 1.1455741402594792
+        },
+        "Onion": {
+          "current_price": 2072,
+          "price_trend": "Increasing",
+          "demand": "High",
+          "forecast_3months": 1686,
+          "market_confidence": "Low",
+          "seasonal_factor": 1.12375744727014
+        }
+      }
+    }
+  },
+  {
+    "id": 119,
+    "user_id": "Sarthak",
+    "timestamp": "2026-02-21T06:23:02.076265",
+    "analysis_type": "plant",
+    "image_path": "uploads\\f8b1cff0-3161-4ce9-b02a-54865389774a.jpg",
+    "results": {
+      "plant_info": {
+        "name": "Tomato",
+        "scientific_name": "Solanum lycopersicum",
+        "probability": 100.0
+      },
+      "water_content": {
+        "percentage": 78,
+        "status": "Optimal"
+      },
+      "diseases": {
+        "detected": true,
+        "diseases": [
+          {
+            "name": "Fusarium Wilt",
+            "confidence": 91.76345449228627,
+            "scientific_name": "Fusarium oxysporum f.sp. lycopersici",
+            "description": "Yellowing and wilting of lower leaves, often on one side of the plant, vascular discoloration",
+            "treatment": "Apply: Propiconazole, Thiophanate-methyl",
+            "detailed_info": {
+              "symptoms": "Yellowing and wilting of leaves, often on one side of the plant. Brown discoloration of vascular tissue when stems are cut",
+              "causes": "Soil-borne fungus Fusarium oxysporum enters through roots and blocks water transport",
+              "treatment": "Use biofertilizers like Pseudomonas fluorescens, Neem Cake + Farm Yard Manure (FYM)",
+              "prevention": "Plant resistant tomato varieties, practice crop rotation with non-host plants, remove and destroy infected plants"
+            }
+          }
+        ]
+      },
+      "pests": {
+        "detected": false,
+        "pests": []
+      },
+      "preventive_measures": [
+        "Apply biofumigant crops like mustard before planting",
+        "Solarize soil for 6 weeks at >45\u00b0C (reduces inoculum 90%)",
+        "Prune to 2-3 main stems for optimal airflow (reduces disease pressure 30%)",
+        "Install reflective mulch to repel aphids and whiteflies (50% reduction)",
+        "Stake plants at 45\u00b0 angle for maximum sun exposure and air flow",
+        "Maintain soil pH between 6.0-6.8 for optimal nutrient availability",
+        "Monitor plants weekly with a 10x magnifier for early pest/disease detection",
+        "Water at the base in early morning (reduces leaf wetness duration by 60%)"
+      ],
+      "fertilizer_recommendations": [
+        {
+          "type": "organic",
+          "name": "Compost Tea",
+          "npk": "Varies (typically 1-1-1)",
+          "description": "Liquid extract of compost containing beneficial microbes, nutrients, and organic compounds that improve soil biology and plant health.",
+          "application": "Apply as soil drench (5 gal/100 sq ft) or foliar spray (diluted 1:5) every 2-4 weeks.",
+          "conditions": "All plants, especially when microbial activity is desired",
+          "scientific_backing": "Research demonstrates 30-50% increase in beneficial soil microbes after application"
+        },
+        {
+          "type": "vegetative",
+          "name": "Calcium Nitrate",
+          "npk": "15-0-0 + 19% Ca",
+          "description": "Provides readily available nitrogen and prevents blossom end rot by supplying calcium during fruit development.",
+          "application": "Apply 1-2 tbsp/gal as foliar spray or 1 lb/100 sq ft as soil application every 2 weeks during fruiting.",
+          "conditions": "For fruiting stage, especially when blossom end rot is a concern",
+          "scientific_backing": "Reduces blossom end rot incidence by up to 80% in field trials"
+        },
+        {
+          "type": "flowering",
+          "name": "Phosphorus-Potassium Booster",
+          "npk": "3-15-15",
+          "description": "Lower nitrogen with higher phosphorus and potassium to encourage flowering and fruit development instead of excessive vegetative growth.",
+          "application": "Apply 1 lb/100 sq ft at first flower cluster formation and repeat every 3-4 weeks.",
+          "conditions": "When plants are transitioning from vegetative to flowering stage",
+          "scientific_backing": "Improves fruit set by 25-30% compared to high-nitrogen fertilizers"
+        }
+      ],
+      "plant_details": {
+        "crop_type": "Tomato",
+        "plant_age": "Vegetative",
+        "symptoms": "yellow leaves",
+        "planting_date": "2025-06-02",
+        "irrigation_method": "Drip",
+        "previous_treatments": "urea"
+      }
+    }
+  },
+  {
+    "id": 120,
+    "user_id": "Sarthak",
+    "timestamp": "2026-02-21T06:55:18.288274",
+    "analysis_type": "plant",
+    "image_path": "uploads\\ef977d38-e652-4756-bcf3-6352b2647dd2.jpg",
+    "results": {
+      "plant_info": {
+        "name": "Tomato",
+        "scientific_name": "Solanum lycopersicum",
+        "probability": 100.0
+      },
+      "water_content": {
+        "percentage": 78,
+        "status": "Optimal"
+      },
+      "diseases": {
+        "detected": true,
+        "diseases": [
+          {
+            "name": "Fusarium Wilt",
+            "confidence": 91.76345449228627,
+            "scientific_name": "Fusarium oxysporum f.sp. lycopersici",
+            "description": "Yellowing and wilting of lower leaves, often on one side of the plant, vascular discoloration",
+            "treatment": "Apply: Propiconazole, Thiophanate-methyl",
+            "detailed_info": {
+              "symptoms": "Yellowing and wilting of leaves, often on one side of the plant. Brown discoloration of vascular tissue when stems are cut",
+              "causes": "Soil-borne fungus Fusarium oxysporum enters through roots and blocks water transport",
+              "treatment": "Use biofertilizers like Pseudomonas fluorescens, Neem Cake + Farm Yard Manure (FYM)",
+              "prevention": "Plant resistant tomato varieties, practice crop rotation with non-host plants, remove and destroy infected plants"
+            }
+          }
+        ]
+      },
+      "pests": {
+        "detected": false,
+        "pests": []
+      },
+      "preventive_measures": [
+        "Apply biofumigant crops like mustard before planting",
+        "Graft onto resistant rootstocks where available",
+        "Install reflective mulch to repel aphids and whiteflies (50% reduction)",
+        "Apply calcium nitrate foliar spray weekly to prevent blossom end rot",
+        "Stake plants at 45\u00b0 angle for maximum sun exposure and air flow",
+        "Implement strict sanitation: disinfect tools with 70% alcohol between plants",
+        "Water at the base in early morning (reduces leaf wetness duration by 60%)",
+        "Use drip irrigation instead of overhead (reduces disease spread by 40%)"
+      ],
+      "fertilizer_recommendations": [
+        {
+          "type": "organic",
+          "name": "Compost Tea",
+          "npk": "Varies (typically 1-1-1)",
+          "description": "Liquid extract of compost containing beneficial microbes, nutrients, and organic compounds that improve soil biology and plant health.",
+          "application": "Apply as soil drench (5 gal/100 sq ft) or foliar spray (diluted 1:5) every 2-4 weeks.",
+          "conditions": "All plants, especially when microbial activity is desired",
+          "scientific_backing": "Research demonstrates 30-50% increase in beneficial soil microbes after application"
+        },
+        {
+          "type": "vegetative",
+          "name": "Calcium Nitrate",
+          "npk": "15-0-0 + 19% Ca",
+          "description": "Provides readily available nitrogen and prevents blossom end rot by supplying calcium during fruit development.",
+          "application": "Apply 1-2 tbsp/gal as foliar spray or 1 lb/100 sq ft as soil application every 2 weeks during fruiting.",
+          "conditions": "For fruiting stage, especially when blossom end rot is a concern",
+          "scientific_backing": "Reduces blossom end rot incidence by up to 80% in field trials"
+        },
+        {
+          "type": "flowering",
+          "name": "Phosphorus-Potassium Booster",
+          "npk": "3-15-15",
+          "description": "Lower nitrogen with higher phosphorus and potassium to encourage flowering and fruit development instead of excessive vegetative growth.",
+          "application": "Apply 1 lb/100 sq ft at first flower cluster formation and repeat every 3-4 weeks.",
+          "conditions": "When plants are transitioning from vegetative to flowering stage",
+          "scientific_backing": "Improves fruit set by 25-30% compared to high-nitrogen fertilizers"
+        }
+      ],
+      "plant_details": {
+        "crop_type": "Tomato",
+        "plant_age": "Vegetative",
+        "symptoms": "yellow leaves",
+        "planting_date": "2025-06-02",
+        "irrigation_method": "Drip",
+        "previous_treatments": null
+      }
+    }
+  },
+  {
+    "id": 121,
+    "user_id": "Sarthak",
+    "timestamp": "2026-02-21T08:43:01.012563",
+    "analysis_type": "plant",
+    "image_path": "uploads\\a96b9c68-803d-4f92-8a7a-b4000ca896a6.jpg",
+    "results": {
+      "plant_info": {
+        "name": "\u091f\u094b\u092e\u0945\u091f\u094b",
+        "scientific_name": "",
+        "probability": 100.0
+      },
+      "water_content": {
+        "percentage": 78,
+        "status": "Optimal"
+      },
+      "diseases": {
+        "detected": true,
+        "diseases": [
+          {
+            "name": "Fusarium Wilt",
+            "confidence": 91.76345449228627,
+            "scientific_name": "Fusarium oxysporum f.sp. lycopersici",
+            "description": "Yellowing and wilting of lower leaves, often on one side of the plant, vascular discoloration",
+            "treatment": "Apply: Propiconazole, Thiophanate-methyl"
+          }
+        ]
+      },
+      "pests": {
+        "detected": false,
+        "pests": []
+      },
+      "preventive_measures": [
+        "Solarize soil for 6 weeks at >45\u00b0C (reduces inoculum 90%)",
+        "Use Trichoderma asperellum as biological control agent",
+        "Apply 2-3 inches of organic mulch (reduces soil-borne disease splash by 75%)",
+        "Use drip irrigation instead of overhead (reduces disease spread by 40%)",
+        "Water at the base in early morning (reduces leaf wetness duration by 60%)",
+        "Introduce beneficial insects 2 weeks before expected pest outbreaks",
+        "Record pest/disease occurrences to predict and prevent future outbreaks",
+        "Maintain soil pH between 6.0-6.8 for optimal nutrient availability"
+      ],
+      "fertilizer_recommendations": [
+        {
+          "type": "general",
+          "name": "Balanced NPK (10-10-10)",
+          "npk": "10-10-10",
+          "description": "Provides equal parts nitrogen (N), phosphorus (P), and potassium (K). Nitrogen promotes leaf growth, phosphorus supports root and flower development, potassium enhances overall plant health.",
+          "application": "Apply 2-3 lbs per 100 sq ft before planting and side-dress during active growth. Water thoroughly after application.",
+          "conditions": "General purpose for most plants during vegetative growth",
+          "scientific_backing": "University studies show balanced NPK improves yield by 15-20% over unfertilized controls"
+        },
+        {
+          "type": "mineral",
+          "name": "Rock Phosphate",
+          "npk": "0-20-0",
+          "description": "Slow-release source of phosphorus that becomes available over 2-3 years. Ideal for building long-term soil phosphorus reserves.",
+          "application": "Apply 5-10 lbs per 100 sq ft and incorporate into soil before planting. Does not dissolve in water.",
+          "conditions": "Soils testing low in phosphorus, perennial crops",
+          "scientific_backing": "Long-term studies show cumulative benefits over 3-5 year period"
+        },
+        {
+          "type": "organic",
+          "name": "Compost Tea",
+          "npk": "Varies (typically 1-1-1)",
+          "description": "Liquid extract of compost containing beneficial microbes, nutrients, and organic compounds that improve soil biology and plant health.",
+          "application": "Apply as soil drench (5 gal/100 sq ft) or foliar spray (diluted 1:5) every 2-4 weeks.",
+          "conditions": "All plants, especially when microbial activity is desired",
+          "scientific_backing": "Research demonstrates 30-50% increase in beneficial soil microbes after application"
+        }
+      ],
+      "plant_details": {
+        "crop_type": "\u091f\u094b\u092e\u0945\u091f\u094b",
+        "plant_age": "\u092d\u093e\u091c\u0940\u092a\u093e\u0932\u093e",
+        "symptoms": "yellow leaves",
+        "planting_date": "2025-06-02",
+        "irrigation_method": "\u0920\u093f\u092c\u0915",
+        "previous_treatments": null
+      }
+    }
+  },
+  {
+    "id": 122,
+    "user_id": "Sarthak",
+    "timestamp": "2026-02-21T09:04:21.770067",
+    "analysis_type": "plant",
+    "image_path": "uploads\\600f4f37-a997-4108-8126-0d4a80119d44.jpg",
+    "results": {
+      "plant_info": {
+        "name": "Tomato",
+        "scientific_name": "Solanum lycopersicum",
+        "probability": 100.0
+      },
+      "water_content": {
+        "percentage": 78,
+        "status": "Optimal"
+      },
+      "diseases": {
+        "detected": true,
+        "diseases": [
+          {
+            "name": "Fusarium Wilt",
+            "confidence": 91.76345449228627,
+            "scientific_name": "Fusarium oxysporum f.sp. lycopersici",
+            "description": "Yellowing and wilting of lower leaves, often on one side of the plant, vascular discoloration",
+            "treatment": "Apply: Propiconazole, Thiophanate-methyl",
+            "detailed_info": {
+              "symptoms": "Yellowing and wilting of leaves, often on one side of the plant. Brown discoloration of vascular tissue when stems are cut",
+              "causes": "Soil-borne fungus Fusarium oxysporum enters through roots and blocks water transport",
+              "treatment": "Use biofertilizers like Pseudomonas fluorescens, Neem Cake + Farm Yard Manure (FYM)",
+              "prevention": "Plant resistant tomato varieties, practice crop rotation with non-host plants, remove and destroy infected plants"
+            }
+          }
+        ]
+      },
+      "pests": {
+        "detected": false,
+        "pests": []
+      },
+      "preventive_measures": [
+        "Solarize soil for 6 weeks at >45\u00b0C (reduces inoculum 90%)",
+        "Use Trichoderma asperellum as biological control agent",
+        "Use floating row covers until flowering to prevent early pest damage",
+        "Apply calcium nitrate foliar spray weekly to prevent blossom end rot",
+        "Stake plants at 45\u00b0 angle for maximum sun exposure and air flow",
+        "Implement strict sanitation: disinfect tools with 70% alcohol between plants",
+        "Maintain optimal plant spacing for good air circulation (prevents 85% of fungal issues)",
+        "Introduce beneficial insects 2 weeks before expected pest outbreaks"
+      ],
+      "fertilizer_recommendations": [
+        {
+          "type": "organic",
+          "name": "Compost Tea",
+          "npk": "Varies (typically 1-1-1)",
+          "description": "Liquid extract of compost containing beneficial microbes, nutrients, and organic compounds that improve soil biology and plant health.",
+          "application": "Apply as soil drench (5 gal/100 sq ft) or foliar spray (diluted 1:5) every 2-4 weeks.",
+          "conditions": "All plants, especially when microbial activity is desired",
+          "scientific_backing": "Research demonstrates 30-50% increase in beneficial soil microbes after application"
+        },
+        {
+          "type": "vegetative",
+          "name": "Calcium Nitrate",
+          "npk": "15-0-0 + 19% Ca",
+          "description": "Provides readily available nitrogen and prevents blossom end rot by supplying calcium during fruit development.",
+          "application": "Apply 1-2 tbsp/gal as foliar spray or 1 lb/100 sq ft as soil application every 2 weeks during fruiting.",
+          "conditions": "For fruiting stage, especially when blossom end rot is a concern",
+          "scientific_backing": "Reduces blossom end rot incidence by up to 80% in field trials"
+        },
+        {
+          "type": "flowering",
+          "name": "Phosphorus-Potassium Booster",
+          "npk": "3-15-15",
+          "description": "Lower nitrogen with higher phosphorus and potassium to encourage flowering and fruit development instead of excessive vegetative growth.",
+          "application": "Apply 1 lb/100 sq ft at first flower cluster formation and repeat every 3-4 weeks.",
+          "conditions": "When plants are transitioning from vegetative to flowering stage",
+          "scientific_backing": "Improves fruit set by 25-30% compared to high-nitrogen fertilizers"
+        }
+      ],
+      "plant_details": {
+        "crop_type": "Tomato",
+        "plant_age": "Vegetative",
+        "symptoms": "yellow leaves",
+        "planting_date": "2025-06-02",
+        "irrigation_method": "Drip",
+        "previous_treatments": null
+      }
+    }
+  },
+  {
+    "id": 123,
+    "user_id": "Sarthak",
+    "timestamp": "2026-02-21T09:14:50.574633",
+    "analysis_type": "plant",
+    "image_path": "uploads\\26090e4d-727d-4159-aa2b-a5eff73f7a6d.jpg",
+    "results": {
+      "plant_info": {
+        "name": "Tomato",
+        "scientific_name": "Solanum lycopersicum",
+        "probability": 100.0
+      },
+      "water_content": {
+        "percentage": 78,
+        "status": "Optimal"
+      },
+      "diseases": {
+        "detected": true,
+        "diseases": [
+          {
+            "name": "Fusarium Wilt",
+            "confidence": 91.76345449228627,
+            "scientific_name": "Fusarium oxysporum f.sp. lycopersici",
+            "description": "Yellowing and wilting of lower leaves, often on one side of the plant, vascular discoloration",
+            "treatment": "Apply: Propiconazole, Thiophanate-methyl",
+            "detailed_info": {
+              "symptoms": "Yellowing and wilting of leaves, often on one side of the plant. Brown discoloration of vascular tissue when stems are cut",
+              "causes": "Soil-borne fungus Fusarium oxysporum enters through roots and blocks water transport",
+              "treatment": "Use biofertilizers like Pseudomonas fluorescens, Neem Cake + Farm Yard Manure (FYM)",
+              "prevention": "Plant resistant tomato varieties, practice crop rotation with non-host plants, remove and destroy infected plants"
+            }
+          }
+        ]
+      },
+      "pests": {
+        "detected": false,
+        "pests": []
+      },
+      "preventive_measures": [
+        "Maintain soil pH >7.0 which inhibits Fusarium growth",
+        "Graft onto resistant rootstocks where available",
+        "Prune to 2-3 main stems for optimal airflow (reduces disease pressure 30%)",
+        "Apply calcium nitrate foliar spray weekly to prevent blossom end rot",
+        "Install reflective mulch to repel aphids and whiteflies (50% reduction)",
+        "Maintain soil pH between 6.0-6.8 for optimal nutrient availability",
+        "Introduce beneficial insects 2 weeks before expected pest outbreaks",
+        "Implement strict sanitation: disinfect tools with 70% alcohol between plants"
+      ],
+      "fertilizer_recommendations": [
+        {
+          "type": "organic",
+          "name": "Compost Tea",
+          "npk": "Varies (typically 1-1-1)",
+          "description": "Liquid extract of compost containing beneficial microbes, nutrients, and organic compounds that improve soil biology and plant health.",
+          "application": "Apply as soil drench (5 gal/100 sq ft) or foliar spray (diluted 1:5) every 2-4 weeks.",
+          "conditions": "All plants, especially when microbial activity is desired",
+          "scientific_backing": "Research demonstrates 30-50% increase in beneficial soil microbes after application"
+        },
+        {
+          "type": "vegetative",
+          "name": "Calcium Nitrate",
+          "npk": "15-0-0 + 19% Ca",
+          "description": "Provides readily available nitrogen and prevents blossom end rot by supplying calcium during fruit development.",
+          "application": "Apply 1-2 tbsp/gal as foliar spray or 1 lb/100 sq ft as soil application every 2 weeks during fruiting.",
+          "conditions": "For fruiting stage, especially when blossom end rot is a concern",
+          "scientific_backing": "Reduces blossom end rot incidence by up to 80% in field trials"
+        },
+        {
+          "type": "flowering",
+          "name": "Phosphorus-Potassium Booster",
+          "npk": "3-15-15",
+          "description": "Lower nitrogen with higher phosphorus and potassium to encourage flowering and fruit development instead of excessive vegetative growth.",
+          "application": "Apply 1 lb/100 sq ft at first flower cluster formation and repeat every 3-4 weeks.",
+          "conditions": "When plants are transitioning from vegetative to flowering stage",
+          "scientific_backing": "Improves fruit set by 25-30% compared to high-nitrogen fertilizers"
+        }
+      ],
+      "plant_details": {
+        "crop_type": "Tomato",
+        "plant_age": "Vegetative",
+        "symptoms": "yellow leaves",
+        "planting_date": "2025-06-02",
+        "irrigation_method": "Drip",
+        "previous_treatments": "urea"
+      }
+    }
+  },
+  {
+    "id": 124,
+    "user_id": "Sarthak",
+    "timestamp": "2026-02-21T09:18:15.904757",
+    "analysis_type": "soil",
+    "image_path": "uploads\\bb9e5a50-f691-40fd-acf3-66baafb69022.jpg",
+    "results": {
+      "characteristics": "\n            - High sand content (>70%)\n            - Very low water retention\n            - Poor in organic matter and nutrients\n            - Excellent drainage (often excessive)\n            - May have salinity issues\n            - pH range: 7.0-8.5 (neutral to alkaline)\n            ",
+      "suitability": {
+        "onion": "Poor suitability for onions without significant amendments. Requires intensive management.",
+        "tomato": "Moderate suitability with irrigation, mulching, and nutrient management."
+      },
+      "recommendations": [
+        {
+          "name": "Wheat",
+          "score": 72,
+          "reasons": [
+            "\u2713 pH marginally suitable",
+            "\u2713 Within budget",
+            "\u2713 Attention level matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Temperature suitable",
+            "\u2713 Rainfall suitable",
+            "\u2713 Slightly exceeds duration",
+            "\u2713 High market demand",
+            "\u2713 Moderate ROI potential (6.8%)"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal"
+          ],
+          "details": {
+            "name": "Wheat",
+            "soil_types": [
+              "Loamy",
+              "Clay Loam",
+              "Silty",
+              "Black Soil",
+              "Alluvial Soil"
+            ],
+            "ph_range": [
+              6.0,
+              7.5
+            ],
+            "duration_months": 4,
+            "investment_per_acre": 15000,
+            "attention_level": "Medium",
+            "risk_factor": "Low",
+            "water_requirement": "Moderate",
+            "season": "Rabi",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              15,
+              25
+            ],
+            "rainfall_range": [
+              50,
+              150
+            ],
+            "weather_sensitivity": "Medium",
+            "market_volatility": "Low",
+            "profit_margin": "Medium"
+          },
+          "price_prediction": {
+            "current_price": 2069,
+            "predicted_price": 2210.64,
+            "confidence": 0.65,
+            "trend": "Decreasing",
+            "demand": "High",
+            "roi_potential": 6.8,
+            "factors": {
+              "trend_impact": 0.9,
+              "weather_impact": 1.0,
+              "demand_impact": 1.2,
+              "seasonal_factor": 0.9893148545323558
+            }
+          }
+        },
+        {
+          "name": "Tomato",
+          "score": 45,
+          "reasons": [
+            "\u2713 Attention level moderately matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Temperature marginally suitable",
+            "\u2713 Rainfall suitable",
+            "\u2713 Fits within time duration",
+            "\u2713 Medium market demand"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 pH may need adjustment",
+            "\u26a0 May exceed budget"
+          ],
+          "details": {
+            "name": "Tomato",
+            "soil_types": [
+              "Loamy",
+              "Sandy Loam",
+              "Red Soil",
+              "Black Soil"
+            ],
+            "ph_range": [
+              6.0,
+              6.8
+            ],
+            "duration_months": 3,
+            "investment_per_acre": 30000,
+            "attention_level": "Very High",
+            "risk_factor": "High",
+            "water_requirement": "High",
+            "season": "All seasons",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              20,
+              30
+            ],
+            "rainfall_range": [
+              40,
+              100
+            ],
+            "weather_sensitivity": "Very High",
+            "market_volatility": "High",
+            "profit_margin": "Very High"
+          },
+          "price_prediction": {
+            "current_price": 1864,
+            "predicted_price": 1760.71,
+            "confidence": 0.45,
+            "trend": "Decreasing",
+            "demand": "Medium",
+            "roi_potential": -5.5,
+            "factors": {
+              "trend_impact": 0.9,
+              "weather_impact": 1.0,
+              "demand_impact": 1.0,
+              "seasonal_factor": 1.049538398070371
+            }
+          }
+        }
+      ],
+      "properties": {
+        "ph": "7.7",
+        "organic_matter": "Very Low",
+        "drainage": "Excessive",
+        "nitrogen": "Medium",
+        "phosphorus": "Medium",
+        "potassium": "Medium"
+      },
+      "farmer_inputs": {
+        "soil_depth": "Surface (0-10cm)",
+        "recent_rainfall": "None",
+        "sampling_location": "",
+        "previous_crop": "None",
+        "interested_crops": [
+          "Tomato",
+          "Wheat"
+        ],
+        "budget": {
+          "amount": 20000,
+          "unit": "Per Acre"
+        },
+        "attention_level": "Medium (regular attention)",
+        "risk_tolerance": "Medium (balanced approach)",
+        "time_duration": {
+          "value": 3,
+          "unit": "Months"
+        },
+        "organic_preference": false,
+        "irrigation_available": "Good",
+        "market_preference": "Distant market",
+        "labor_availability": "Adequate",
+        "weather_api_key": null
+      },
+      "weather_data": {
+        "current_temp": 25,
+        "forecast_3month": [
+          {
+            "month": "2026-02",
+            "avg_temp": 16,
+            "total_rain": 46,
+            "rain_days": 5
+          },
+          {
+            "month": "2026-03",
+            "avg_temp": 32,
+            "total_rain": 15,
+            "rain_days": 15
+          },
+          {
+            "month": "2026-04",
+            "avg_temp": 32,
+            "total_rain": 26,
+            "rain_days": 7
+          }
+        ],
+        "rainfall_prediction": {},
+        "season_suitability": {
+          "2026-02": {
+            "temp": "cool",
+            "rain": "light",
+            "description": "cool and light"
+          },
+          "2026-03": {
+            "temp": "hot",
+            "rain": "dry",
+            "description": "hot and dry"
+          },
+          "2026-04": {
+            "temp": "hot",
+            "rain": "dry",
+            "description": "hot and dry"
+          }
+        },
+        "extreme_events": [],
+        "summary": "Next 3 months: Average temperature 26.7\u00b0C with low rainfall (approx 87mm total)."
+      },
+      "market_data": {
+        "Wheat": {
+          "current_price": 2069,
+          "price_trend": "Decreasing",
+          "demand": "High",
+          "forecast_3months": 2229,
+          "market_confidence": "Medium",
+          "seasonal_factor": 0.9893148545323558
+        },
+        "Tomato": {
+          "current_price": 1864,
+          "price_trend": "Decreasing",
+          "demand": "Medium",
+          "forecast_3months": 2128,
+          "market_confidence": "Low",
+          "seasonal_factor": 1.049538398070371
+        }
+      }
+    }
+  },
+  {
+    "id": 125,
+    "user_id": "Sarthak",
+    "timestamp": "2026-04-23T17:22:26.043349",
+    "analysis_type": "soil",
+    "image_path": "uploads\\248c17ff-3b28-4e9c-bf37-25192cc412ca.jpg",
+    "results": {
+      "characteristics": "\n            - High sand content (>70%)\n            - Very low water retention\n            - Poor in organic matter and nutrients\n            - Excellent drainage (often excessive)\n            - May have salinity issues\n            - pH range: 7.0-8.5 (neutral to alkaline)\n            ",
+      "suitability": {
+        "onion": "Poor suitability for onions without significant amendments. Requires intensive management.",
+        "tomato": "Moderate suitability with irrigation, mulching, and nutrient management."
+      },
+      "recommendations": [
+        {
+          "name": "Bitter Gourd",
+          "score": 54,
+          "reasons": [
+            "\u2713 Within budget",
+            "\u2713 Attention level matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Temperature suitable",
+            "\u2713 Fits within time duration"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 pH may need adjustment",
+            "\u26a0 Drought risk"
+          ],
+          "details": {
+            "name": "Bitter Gourd",
+            "soil_types": [
+              "Sandy Loam",
+              "Loamy",
+              "Silty Loam"
+            ],
+            "ph_range": [
+              6.0,
+              7.0
+            ],
+            "duration_months": 3,
+            "investment_per_acre": 18000,
+            "attention_level": "Medium",
+            "risk_factor": "Low",
+            "water_requirement": "Moderate",
+            "season": "Zaid",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              25,
+              35
+            ],
+            "rainfall_range": [
+              60,
+              100
+            ],
+            "weather_sensitivity": "Medium",
+            "market_volatility": "Low",
+            "profit_margin": "High"
+          },
+          "price_prediction": {
+            "current_price": 1690,
+            "predicted_price": 1195.57,
+            "confidence": 0.45,
+            "trend": "Decreasing",
+            "demand": "Low",
+            "roi_potential": -29.3,
+            "factors": {
+              "trend_impact": 0.9,
+              "weather_impact": 1.0,
+              "demand_impact": 0.8,
+              "seasonal_factor": 0.9825511411218257
+            }
+          }
+        },
+        {
+          "name": "Cabbage",
+          "score": 48,
+          "reasons": [
+            "\u2713 Budget slightly low but possible",
+            "\u2713 Attention level moderately matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Temperature marginally suitable",
+            "\u2713 Fits within time duration",
+            "\u2713 Increasing price trend",
+            "\u2713 Medium market demand"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 pH may need adjustment",
+            "\u26a0 Drought risk"
+          ],
+          "details": {
+            "name": "Cabbage",
+            "soil_types": [
+              "Sandy Loam",
+              "Loamy",
+              "Clay Loam"
+            ],
+            "ph_range": [
+              6.0,
+              6.8
+            ],
+            "duration_months": 3,
+            "investment_per_acre": 25000,
+            "attention_level": "High",
+            "risk_factor": "Medium",
+            "water_requirement": "High",
+            "season": "Winter",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              15,
+              25
+            ],
+            "rainfall_range": [
+              60,
+              100
+            ],
+            "weather_sensitivity": "High",
+            "market_volatility": "Medium",
+            "profit_margin": "Medium"
+          },
+          "price_prediction": {
+            "current_price": 1695,
+            "predicted_price": 1663.59,
+            "confidence": 0.85,
+            "trend": "Increasing",
+            "demand": "Medium",
+            "roi_potential": -1.9,
+            "factors": {
+              "trend_impact": 1.1,
+              "weather_impact": 1.0,
+              "demand_impact": 1.0,
+              "seasonal_factor": 0.892242340310001
+            }
+          }
+        },
+        {
+          "name": "Cucumber",
+          "score": 47,
+          "reasons": [
+            "\u2713 Budget slightly low but possible",
+            "\u2713 Attention level moderately matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Temperature suitable",
+            "\u2713 Fits within time duration",
+            "\u2713 Stable price trend"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 pH may need adjustment",
+            "\u26a0 Drought risk"
+          ],
+          "details": {
+            "name": "Cucumber",
+            "soil_types": [
+              "Sandy Loam",
+              "Loamy",
+              "Silty Loam"
+            ],
+            "ph_range": [
+              6.0,
+              7.0
+            ],
+            "duration_months": 2,
+            "investment_per_acre": 20000,
+            "attention_level": "High",
+            "risk_factor": "Medium",
+            "water_requirement": "High",
+            "season": "Summer",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              20,
+              30
+            ],
+            "rainfall_range": [
+              50,
+              80
+            ],
+            "weather_sensitivity": "High",
+            "market_volatility": "Medium",
+            "profit_margin": "Medium"
+          },
+          "price_prediction": {
+            "current_price": 1142,
+            "predicted_price": 825.06,
+            "confidence": 0.65,
+            "trend": "Stable",
+            "demand": "Low",
+            "roi_potential": -27.8,
+            "factors": {
+              "trend_impact": 1.0,
+              "weather_impact": 1.0,
+              "demand_impact": 0.8,
+              "seasonal_factor": 0.9030878584417569
+            }
+          }
+        },
+        {
+          "name": "Tomato",
+          "score": 45,
+          "reasons": [
+            "\u2713 Attention level moderately matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Temperature suitable",
+            "\u2713 Fits within time duration",
+            "\u2713 Stable price trend",
+            "\u2713 Medium market demand"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 pH may need adjustment",
+            "\u26a0 May exceed budget",
+            "\u26a0 Drought risk"
+          ],
+          "details": {
+            "name": "Tomato",
+            "soil_types": [
+              "Loamy",
+              "Sandy Loam",
+              "Red Soil",
+              "Black Soil"
+            ],
+            "ph_range": [
+              6.0,
+              6.8
+            ],
+            "duration_months": 3,
+            "investment_per_acre": 30000,
+            "attention_level": "Very High",
+            "risk_factor": "High",
+            "water_requirement": "High",
+            "season": "All seasons",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              20,
+              30
+            ],
+            "rainfall_range": [
+              40,
+              100
+            ],
+            "weather_sensitivity": "Very High",
+            "market_volatility": "High",
+            "profit_margin": "Very High"
+          },
+          "price_prediction": {
+            "current_price": 2745,
+            "predicted_price": 2565.39,
+            "confidence": 0.65,
+            "trend": "Stable",
+            "demand": "Medium",
+            "roi_potential": -6.5,
+            "factors": {
+              "trend_impact": 1.0,
+              "weather_impact": 1.0,
+              "demand_impact": 1.0,
+              "seasonal_factor": 0.934569762237894
+            }
+          }
+        }
+      ],
+      "properties": {
+        "ph": "7.7",
+        "organic_matter": "Very Low",
+        "drainage": "Excessive",
+        "nitrogen": "Medium",
+        "phosphorus": "Medium",
+        "potassium": "Medium"
+      },
+      "farmer_inputs": {
+        "soil_depth": "Surface (0-10cm)",
+        "recent_rainfall": "None",
+        "sampling_location": "Nashik,IN",
+        "previous_crop": "Wheat",
+        "interested_crops": [
+          "Cucumber",
+          "Bitter Gourd",
+          "Cabbage",
+          "Tomato"
+        ],
+        "budget": {
+          "amount": 19000,
+          "unit": "Per Acre"
+        },
+        "attention_level": "Low (weekly check-ins)",
+        "risk_tolerance": "Low (prefer safe options)",
+        "time_duration": {
+          "value": 3,
+          "unit": "Months"
+        },
+        "organic_preference": true,
+        "irrigation_available": "Limited",
+        "market_preference": "Local market",
+        "labor_availability": "Limited",
+        "weather_api_key": null
+      },
+      "weather_data": {
+        "current_temp": 30.06,
+        "forecast_3month": [
+          {
+            "month": "2026-04",
+            "avg_temp": 27.1,
+            "total_rain": 0,
+            "rain_days": 6
+          }
+        ],
+        "rainfall_prediction": {},
+        "season_suitability": {
+          "2026-04": {
+            "temp": "hot",
+            "rain": "dry",
+            "description": "hot and dry"
+          }
+        },
+        "extreme_events": [],
+        "summary": "Expect **stable temperatures** averaging around 27.1\u00b0C. Conditions will likely be **mostly dry**."
+      },
+      "market_data": {
+        "Tomato": {
+          "current_price": 2745,
+          "price_trend": "Stable",
+          "demand": "Medium",
+          "forecast_3months": 2309,
+          "market_confidence": "Medium",
+          "seasonal_factor": 0.934569762237894
+        },
+        "Cabbage": {
+          "current_price": 1695,
+          "price_trend": "Increasing",
+          "demand": "Medium",
+          "forecast_3months": 1989,
+          "market_confidence": "High",
+          "seasonal_factor": 0.892242340310001
+        },
+        "Cucumber": {
+          "current_price": 1142,
+          "price_trend": "Stable",
+          "demand": "Low",
+          "forecast_3months": 2747,
+          "market_confidence": "Medium",
+          "seasonal_factor": 0.9030878584417569
+        },
+        "Bitter Gourd": {
+          "current_price": 1690,
+          "price_trend": "Decreasing",
+          "demand": "Low",
+          "forecast_3months": 2545,
+          "market_confidence": "Low",
+          "seasonal_factor": 0.9825511411218257
+        }
+      }
+    }
+  },
+  {
+    "id": 126,
+    "user_id": "Sarthak",
+    "timestamp": "2026-04-23T17:26:07.249849",
+    "analysis_type": "plant",
+    "image_path": "uploads\\d97e86c5-3f1e-4f0b-a2a9-6edcb8a91f57.jpg",
+    "results": {
+      "plant_info": {
+        "name": "Tomato",
+        "scientific_name": "Solanum lycopersicum",
+        "probability": 100.0
+      },
+      "water_content": {
+        "percentage": 78,
+        "status": "Optimal"
+      },
+      "diseases": {
+        "detected": true,
+        "diseases": [
+          {
+            "name": "Fusarium Wilt",
+            "confidence": 91.76345449228627,
+            "scientific_name": "Fusarium oxysporum f.sp. lycopersici",
+            "description": "Yellowing and wilting of lower leaves, often on one side of the plant, vascular discoloration",
+            "treatment": "Apply: Propiconazole, Thiophanate-methyl",
+            "detailed_info": {
+              "symptoms": "Yellowing and wilting of leaves, often on one side of the plant. Brown discoloration of vascular tissue when stems are cut",
+              "causes": "Soil-borne fungus Fusarium oxysporum enters through roots and blocks water transport",
+              "treatment": "Use biofertilizers like Pseudomonas fluorescens, Neem Cake + Farm Yard Manure (FYM)",
+              "prevention": "Plant resistant tomato varieties, practice crop rotation with non-host plants, remove and destroy infected plants"
+            }
+          }
+        ]
+      },
+      "pests": {
+        "detected": false,
+        "pests": []
+      },
+      "preventive_measures": [
+        "Use Trichoderma asperellum as biological control agent",
+        "Solarize soil for 6 weeks at >45\u00b0C (reduces inoculum 90%)",
+        "Install reflective mulch to repel aphids and whiteflies (50% reduction)",
+        "Apply calcium nitrate foliar spray weekly to prevent blossom end rot",
+        "Prune to 2-3 main stems for optimal airflow (reduces disease pressure 30%)",
+        "Monitor plants weekly with a 10x magnifier for early pest/disease detection",
+        "Rotate crops following scientific rotation schedules (minimum 3-year cycle)",
+        "Implement strict sanitation: disinfect tools with 70% alcohol between plants"
+      ],
+      "fertilizer_recommendations": [
+        {
+          "type": "mineral",
+          "name": "Rock Phosphate",
+          "npk": "0-20-0",
+          "description": "Slow-release source of phosphorus that becomes available over 2-3 years. Ideal for building long-term soil phosphorus reserves.",
+          "application": "Apply 5-10 lbs per 100 sq ft and incorporate into soil before planting. Does not dissolve in water.",
+          "conditions": "Soils testing low in phosphorus, perennial crops",
+          "scientific_backing": "Long-term studies show cumulative benefits over 3-5 year period"
+        },
+        {
+          "type": "vegetative",
+          "name": "Calcium Nitrate",
+          "npk": "15-0-0 + 19% Ca",
+          "description": "Provides readily available nitrogen and prevents blossom end rot by supplying calcium during fruit development.",
+          "application": "Apply 1-2 tbsp/gal as foliar spray or 1 lb/100 sq ft as soil application every 2 weeks during fruiting.",
+          "conditions": "For fruiting stage, especially when blossom end rot is a concern",
+          "scientific_backing": "Reduces blossom end rot incidence by up to 80% in field trials"
+        },
+        {
+          "type": "flowering",
+          "name": "Phosphorus-Potassium Booster",
+          "npk": "3-15-15",
+          "description": "Lower nitrogen with higher phosphorus and potassium to encourage flowering and fruit development instead of excessive vegetative growth.",
+          "application": "Apply 1 lb/100 sq ft at first flower cluster formation and repeat every 3-4 weeks.",
+          "conditions": "When plants are transitioning from vegetative to flowering stage",
+          "scientific_backing": "Improves fruit set by 25-30% compared to high-nitrogen fertilizers"
+        }
+      ],
+      "plant_details": {
+        "crop_type": "Tomato",
+        "plant_age": "Flowering",
+        "symptoms": "Yellow Leaves",
+        "planting_date": "2026-03-02",
+        "irrigation_method": "Drip",
+        "previous_treatments": "no"
+      }
+    }
+  },
+  {
+    "id": 127,
+    "user_id": "Sarthak",
+    "timestamp": "2026-04-23T17:26:37.911459",
+    "analysis_type": "plant",
+    "image_path": "uploads\\325bdd89-1114-4542-9145-5014ed8e18af.jpg",
+    "results": {
+      "plant_info": {
+        "name": "Tomato",
+        "scientific_name": "Solanum lycopersicum",
+        "probability": 100.0
+      },
+      "water_content": {
+        "percentage": 78,
+        "status": "Optimal"
+      },
+      "diseases": {
+        "detected": false,
+        "diseases": [],
+        "healthy": true,
+        "health_confidence": 87.76345449228627
+      },
+      "pests": {
+        "detected": false,
+        "pests": []
+      },
+      "preventive_measures": [
+        "Use floating row covers until flowering to prevent early pest damage",
+        "Apply calcium nitrate foliar spray weekly to prevent blossom end rot",
+        "Stake plants at 45\u00b0 angle for maximum sun exposure and air flow",
+        "Rotate crops following scientific rotation schedules (minimum 3-year cycle)",
+        "Record pest/disease occurrences to predict and prevent future outbreaks",
+        "Use drip irrigation instead of overhead (reduces disease spread by 40%)",
+        "Maintain optimal plant spacing for good air circulation (prevents 85% of fungal issues)",
+        "Implement strict sanitation: disinfect tools with 70% alcohol between plants"
+      ],
+      "fertilizer_recommendations": [
+        {
+          "type": "general",
+          "name": "Balanced NPK (10-10-10)",
+          "npk": "10-10-10",
+          "description": "Provides equal parts nitrogen (N), phosphorus (P), and potassium (K). Nitrogen promotes leaf growth, phosphorus supports root and flower development, potassium enhances overall plant health.",
+          "application": "Apply 2-3 lbs per 100 sq ft before planting and side-dress during active growth. Water thoroughly after application.",
+          "conditions": "General purpose for most plants during vegetative growth",
+          "scientific_backing": "University studies show balanced NPK improves yield by 15-20% over unfertilized controls"
+        },
+        {
+          "type": "vegetative",
+          "name": "Calcium Nitrate",
+          "npk": "15-0-0 + 19% Ca",
+          "description": "Provides readily available nitrogen and prevents blossom end rot by supplying calcium during fruit development.",
+          "application": "Apply 1-2 tbsp/gal as foliar spray or 1 lb/100 sq ft as soil application every 2 weeks during fruiting.",
+          "conditions": "For fruiting stage, especially when blossom end rot is a concern",
+          "scientific_backing": "Reduces blossom end rot incidence by up to 80% in field trials"
+        },
+        {
+          "type": "flowering",
+          "name": "Phosphorus-Potassium Booster",
+          "npk": "3-15-15",
+          "description": "Lower nitrogen with higher phosphorus and potassium to encourage flowering and fruit development instead of excessive vegetative growth.",
+          "application": "Apply 1 lb/100 sq ft at first flower cluster formation and repeat every 3-4 weeks.",
+          "conditions": "When plants are transitioning from vegetative to flowering stage",
+          "scientific_backing": "Improves fruit set by 25-30% compared to high-nitrogen fertilizers"
+        }
+      ],
+      "plant_details": {
+        "crop_type": "Tomato",
+        "plant_age": "Flowering",
+        "symptoms": null,
+        "planting_date": "2026-03-02",
+        "irrigation_method": "Drip",
+        "previous_treatments": "no"
+      }
+    }
+  },
+  {
+    "id": 128,
+    "user_id": "Sarthak",
+    "timestamp": "2026-04-24T05:18:32.518342",
+    "analysis_type": "plant",
+    "image_path": "uploads\\e994455b-06c6-42d6-875c-f7a8aef61f4c.jpg",
+    "results": {
+      "plant_info": {
+        "name": "Potato",
+        "scientific_name": "Solanum tuberosum",
+        "probability": 100.0
+      },
+      "water_content": {
+        "percentage": 60,
+        "status": "Low"
+      },
+      "diseases": {
+        "detected": false,
+        "diseases": []
+      },
+      "pests": {
+        "detected": false,
+        "pests": []
+      },
+      "preventive_measures": [
+        "Hill soil 6-8 inches around stems when plants are 12 inches tall",
+        "Plant trap crops of radishes to lure Colorado potato beetles away",
+        "Harvest 2 weeks after vine death for optimal tuber maturity",
+        "Maintain optimal plant spacing for good air circulation (prevents 85% of fungal issues)",
+        "Rotate crops following scientific rotation schedules (minimum 3-year cycle)",
+        "Maintain soil pH between 6.0-6.8 for optimal nutrient availability",
+        "Monitor plants weekly with a 10x magnifier for early pest/disease detection",
+        "Implement strict sanitation: disinfect tools with 70% alcohol between plants"
+      ],
+      "fertilizer_recommendations": [
+        {
+          "type": "general",
+          "name": "Balanced NPK (10-10-10)",
+          "npk": "10-10-10",
+          "description": "Provides equal parts nitrogen (N), phosphorus (P), and potassium (K). Nitrogen promotes leaf growth, phosphorus supports root and flower development, potassium enhances overall plant health.",
+          "application": "Apply 2-3 lbs per 100 sq ft before planting and side-dress during active growth. Water thoroughly after application.",
+          "conditions": "General purpose for most plants during vegetative growth",
+          "scientific_backing": "University studies show balanced NPK improves yield by 15-20% over unfertilized controls"
+        },
+        {
+          "type": "mineral",
+          "name": "Rock Phosphate",
+          "npk": "0-20-0",
+          "description": "Slow-release source of phosphorus that becomes available over 2-3 years. Ideal for building long-term soil phosphorus reserves.",
+          "application": "Apply 5-10 lbs per 100 sq ft and incorporate into soil before planting. Does not dissolve in water.",
+          "conditions": "Soils testing low in phosphorus, perennial crops",
+          "scientific_backing": "Long-term studies show cumulative benefits over 3-5 year period"
+        },
+        {
+          "type": "organic",
+          "name": "Compost Tea",
+          "npk": "Varies (typically 1-1-1)",
+          "description": "Liquid extract of compost containing beneficial microbes, nutrients, and organic compounds that improve soil biology and plant health.",
+          "application": "Apply as soil drench (5 gal/100 sq ft) or foliar spray (diluted 1:5) every 2-4 weeks.",
+          "conditions": "All plants, especially when microbial activity is desired",
+          "scientific_backing": "Research demonstrates 30-50% increase in beneficial soil microbes after application"
+        }
+      ],
+      "plant_details": {
+        "crop_type": "Potato",
+        "plant_age": "Seedling",
+        "symptoms": null,
+        "planting_date": "2026-02-04",
+        "irrigation_method": "Flood",
+        "previous_treatments": null
+      }
+    }
+  },
+  {
+    "id": 129,
+    "user_id": "Sarthak",
+    "timestamp": "2026-04-24T06:53:49.773229",
+    "analysis_type": "plant",
+    "image_path": "uploads\\62d07765-d646-4b47-a631-285261780948.jpg",
+    "results": {
+      "plant_info": {
+        "name": "Tomato",
+        "scientific_name": "Solanum lycopersicum",
+        "probability": 100.0
+      },
+      "water_content": {
+        "percentage": 78,
+        "status": "Optimal"
+      },
+      "diseases": {
+        "detected": false,
+        "diseases": [],
+        "healthy": true,
+        "health_confidence": 87.76345449228627
+      },
+      "pests": {
+        "detected": false,
+        "pests": []
+      },
+      "preventive_measures": [
+        "Prune to 2-3 main stems for optimal airflow (reduces disease pressure 30%)",
+        "Stake plants at 45\u00b0 angle for maximum sun exposure and air flow",
+        "Use floating row covers until flowering to prevent early pest damage",
+        "Water at the base in early morning (reduces leaf wetness duration by 60%)",
+        "Monitor plants weekly with a 10x magnifier for early pest/disease detection",
+        "Implement strict sanitation: disinfect tools with 70% alcohol between plants",
+        "Maintain optimal plant spacing for good air circulation (prevents 85% of fungal issues)",
+        "Record pest/disease occurrences to predict and prevent future outbreaks"
+      ],
+      "fertilizer_recommendations": [
+        {
+          "type": "mineral",
+          "name": "Rock Phosphate",
+          "npk": "0-20-0",
+          "description": "Slow-release source of phosphorus that becomes available over 2-3 years. Ideal for building long-term soil phosphorus reserves.",
+          "application": "Apply 5-10 lbs per 100 sq ft and incorporate into soil before planting. Does not dissolve in water.",
+          "conditions": "Soils testing low in phosphorus, perennial crops",
+          "scientific_backing": "Long-term studies show cumulative benefits over 3-5 year period"
+        },
+        {
+          "type": "vegetative",
+          "name": "Calcium Nitrate",
+          "npk": "15-0-0 + 19% Ca",
+          "description": "Provides readily available nitrogen and prevents blossom end rot by supplying calcium during fruit development.",
+          "application": "Apply 1-2 tbsp/gal as foliar spray or 1 lb/100 sq ft as soil application every 2 weeks during fruiting.",
+          "conditions": "For fruiting stage, especially when blossom end rot is a concern",
+          "scientific_backing": "Reduces blossom end rot incidence by up to 80% in field trials"
+        },
+        {
+          "type": "flowering",
+          "name": "Phosphorus-Potassium Booster",
+          "npk": "3-15-15",
+          "description": "Lower nitrogen with higher phosphorus and potassium to encourage flowering and fruit development instead of excessive vegetative growth.",
+          "application": "Apply 1 lb/100 sq ft at first flower cluster formation and repeat every 3-4 weeks.",
+          "conditions": "When plants are transitioning from vegetative to flowering stage",
+          "scientific_backing": "Improves fruit set by 25-30% compared to high-nitrogen fertilizers"
+        }
+      ],
+      "plant_details": {
+        "crop_type": "Tomato",
+        "plant_age": "Flowering",
+        "symptoms": null,
+        "planting_date": "2026-02-04",
+        "irrigation_method": "Drip",
+        "previous_treatments": null
+      }
+    }
+  },
+  {
+    "id": 130,
+    "user_id": "Sarthak",
+    "timestamp": "2026-04-24T06:54:24.856601",
+    "analysis_type": "plant",
+    "image_path": "uploads\\f9123875-29a5-4f5f-bc4c-4a70b7f22cf0.jpg",
+    "results": {
+      "plant_info": {
+        "name": "Tomato",
+        "scientific_name": "Solanum lycopersicum",
+        "probability": 100.0
+      },
+      "water_content": {
+        "percentage": 78,
+        "status": "Optimal"
+      },
+      "diseases": {
+        "detected": true,
+        "diseases": [
+          {
+            "name": "Fusarium Wilt",
+            "confidence": 91.76345449228627,
+            "scientific_name": "Fusarium oxysporum f.sp. lycopersici",
+            "description": "Yellowing and wilting of lower leaves, often on one side of the plant, vascular discoloration",
+            "treatment": "Apply: Propiconazole, Thiophanate-methyl",
+            "detailed_info": {
+              "symptoms": "Yellowing and wilting of leaves, often on one side of the plant. Brown discoloration of vascular tissue when stems are cut",
+              "causes": "Soil-borne fungus Fusarium oxysporum enters through roots and blocks water transport",
+              "treatment": "Use biofertilizers like Pseudomonas fluorescens, Neem Cake + Farm Yard Manure (FYM)",
+              "prevention": "Plant resistant tomato varieties, practice crop rotation with non-host plants, remove and destroy infected plants"
+            }
+          }
+        ]
+      },
+      "pests": {
+        "detected": false,
+        "pests": []
+      },
+      "preventive_measures": [
+        "Graft onto resistant rootstocks where available",
+        "Maintain soil pH >7.0 which inhibits Fusarium growth",
+        "Prune to 2-3 main stems for optimal airflow (reduces disease pressure 30%)",
+        "Stake plants at 45\u00b0 angle for maximum sun exposure and air flow",
+        "Apply calcium nitrate foliar spray weekly to prevent blossom end rot",
+        "Maintain soil pH between 6.0-6.8 for optimal nutrient availability",
+        "Use drip irrigation instead of overhead (reduces disease spread by 40%)",
+        "Water at the base in early morning (reduces leaf wetness duration by 60%)"
+      ],
+      "fertilizer_recommendations": [
+        {
+          "type": "mineral",
+          "name": "Rock Phosphate",
+          "npk": "0-20-0",
+          "description": "Slow-release source of phosphorus that becomes available over 2-3 years. Ideal for building long-term soil phosphorus reserves.",
+          "application": "Apply 5-10 lbs per 100 sq ft and incorporate into soil before planting. Does not dissolve in water.",
+          "conditions": "Soils testing low in phosphorus, perennial crops",
+          "scientific_backing": "Long-term studies show cumulative benefits over 3-5 year period"
+        },
+        {
+          "type": "vegetative",
+          "name": "Calcium Nitrate",
+          "npk": "15-0-0 + 19% Ca",
+          "description": "Provides readily available nitrogen and prevents blossom end rot by supplying calcium during fruit development.",
+          "application": "Apply 1-2 tbsp/gal as foliar spray or 1 lb/100 sq ft as soil application every 2 weeks during fruiting.",
+          "conditions": "For fruiting stage, especially when blossom end rot is a concern",
+          "scientific_backing": "Reduces blossom end rot incidence by up to 80% in field trials"
+        },
+        {
+          "type": "flowering",
+          "name": "Phosphorus-Potassium Booster",
+          "npk": "3-15-15",
+          "description": "Lower nitrogen with higher phosphorus and potassium to encourage flowering and fruit development instead of excessive vegetative growth.",
+          "application": "Apply 1 lb/100 sq ft at first flower cluster formation and repeat every 3-4 weeks.",
+          "conditions": "When plants are transitioning from vegetative to flowering stage",
+          "scientific_backing": "Improves fruit set by 25-30% compared to high-nitrogen fertilizers"
+        }
+      ],
+      "plant_details": {
+        "crop_type": "Tomato",
+        "plant_age": "Flowering",
+        "symptoms": "Yellow leaves",
+        "planting_date": "2026-02-04",
+        "irrigation_method": "Drip",
+        "previous_treatments": null
+      }
+    }
+  },
+  {
+    "id": 131,
+    "user_id": "Sarthak",
+    "timestamp": "2026-04-24T06:56:12.595822",
+    "analysis_type": "soil",
+    "image_path": "uploads\\1b04e8a0-2043-4f1f-a355-a27074c3747b.jpg",
+    "results": {
+      "characteristics": "\n            - High sand content (>70%)\n            - Very low water retention\n            - Poor in organic matter and nutrients\n            - Excellent drainage (often excessive)\n            - May have salinity issues\n            - pH range: 7.0-8.5 (neutral to alkaline)\n            ",
+      "suitability": {
+        "onion": "Poor suitability for onions without significant amendments. Requires intensive management.",
+        "tomato": "Moderate suitability with irrigation, mulching, and nutrient management."
+      },
+      "recommendations": [
+        {
+          "name": "Wheat",
+          "score": 60,
+          "reasons": [
+            "\u2713 pH marginally suitable",
+            "\u2713 Within budget",
+            "\u2713 Attention level matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Rainfall marginally suitable",
+            "\u2713 Slightly exceeds duration",
+            "\u2713 High market demand",
+            "\u2713 Moderate ROI potential (6.7%)"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 Temperature may be suboptimal"
+          ],
+          "details": {
+            "name": "Wheat",
+            "soil_types": [
+              "Loamy",
+              "Clay Loam",
+              "Silty",
+              "Black Soil",
+              "Alluvial Soil"
+            ],
+            "ph_range": [
+              6.0,
+              7.5
+            ],
+            "duration_months": 4,
+            "investment_per_acre": 15000,
+            "attention_level": "Medium",
+            "risk_factor": "Low",
+            "water_requirement": "Moderate",
+            "season": "Rabi",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              15,
+              25
+            ],
+            "rainfall_range": [
+              50,
+              150
+            ],
+            "weather_sensitivity": "Medium",
+            "market_volatility": "Low",
+            "profit_margin": "Medium"
+          },
+          "price_prediction": {
+            "current_price": 1954,
+            "predicted_price": 2085.43,
+            "confidence": 0.65,
+            "trend": "Decreasing",
+            "demand": "High",
+            "roi_potential": 6.7,
+            "factors": {
+              "trend_impact": 0.9,
+              "weather_impact": 1.0,
+              "demand_impact": 1.2,
+              "seasonal_factor": 0.988207081241823
+            }
+          }
+        },
+        {
+          "name": "Corn",
+          "score": 52,
+          "reasons": [
+            "\u2713 Budget slightly low but possible",
+            "\u2713 Attention level matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Temperature marginally suitable",
+            "\u2713 Rainfall suitable",
+            "\u2713 Fits within time duration"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 pH may need adjustment"
+          ],
+          "details": {
+            "name": "Corn",
+            "soil_types": [
+              "Loamy",
+              "Sandy Loam",
+              "Alluvial Soil",
+              "Red Soil"
+            ],
+            "ph_range": [
+              5.8,
+              7.0
+            ],
+            "duration_months": 3,
+            "investment_per_acre": 18000,
+            "attention_level": "Medium",
+            "risk_factor": "Medium",
+            "water_requirement": "Moderate",
+            "season": "Kharif",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              18,
+              32
+            ],
+            "rainfall_range": [
+              50,
+              200
+            ],
+            "weather_sensitivity": "Medium",
+            "market_volatility": "Medium",
+            "profit_margin": "Medium"
+          },
+          "price_prediction": {
+            "current_price": 1730,
+            "predicted_price": 1491.39,
+            "confidence": 0.45,
+            "trend": "Decreasing",
+            "demand": "Low",
+            "roi_potential": -13.8,
+            "factors": {
+              "trend_impact": 0.9,
+              "weather_impact": 1.0,
+              "demand_impact": 0.8,
+              "seasonal_factor": 1.1973226123869534
+            }
+          }
+        },
+        {
+          "name": "Tomato",
+          "score": 37,
+          "reasons": [
+            "\u2713 Attention level moderately matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Fits within time duration",
+            "\u2713 Stable price trend",
+            "\u2713 Medium market demand"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 pH may need adjustment",
+            "\u26a0 May exceed budget",
+            "\u26a0 Temperature may be suboptimal",
+            "\u26a0 Excess rainfall risk"
+          ],
+          "details": {
+            "name": "Tomato",
+            "soil_types": [
+              "Loamy",
+              "Sandy Loam",
+              "Red Soil",
+              "Black Soil"
+            ],
+            "ph_range": [
+              6.0,
+              6.8
+            ],
+            "duration_months": 3,
+            "investment_per_acre": 30000,
+            "attention_level": "Very High",
+            "risk_factor": "High",
+            "water_requirement": "High",
+            "season": "All seasons",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              20,
+              30
+            ],
+            "rainfall_range": [
+              40,
+              100
+            ],
+            "weather_sensitivity": "Very High",
+            "market_volatility": "High",
+            "profit_margin": "Very High"
+          },
+          "price_prediction": {
+            "current_price": 2818,
+            "predicted_price": 2511.55,
+            "confidence": 0.85,
+            "trend": "Stable",
+            "demand": "Medium",
+            "roi_potential": -10.9,
+            "factors": {
+              "trend_impact": 1.0,
+              "weather_impact": 1.0,
+              "demand_impact": 1.0,
+              "seasonal_factor": 0.8912512066412193
+            }
+          }
+        }
+      ],
+      "properties": {
+        "ph": "7.7",
+        "organic_matter": "Very Low",
+        "drainage": "Excessive",
+        "nitrogen": "Medium",
+        "phosphorus": "Medium",
+        "potassium": "Medium"
+      },
+      "farmer_inputs": {
+        "soil_depth": "Surface (0-10cm)",
+        "recent_rainfall": "Light",
+        "sampling_location": "Traain",
+        "previous_crop": "Wheat",
+        "interested_crops": [
+          "Tomato",
+          "Wheat",
+          "Corn"
+        ],
+        "budget": {
+          "amount": 15000,
+          "unit": "Per Acre"
+        },
+        "attention_level": "Low (weekly check-ins)",
+        "risk_tolerance": "Low (prefer safe options)",
+        "time_duration": {
+          "value": 3,
+          "unit": "Months"
+        },
+        "organic_preference": true,
+        "irrigation_available": "Good",
+        "market_preference": "Export quality",
+        "labor_availability": "Adequate",
+        "weather_api_key": null
+      },
+      "weather_data": {
+        "current_temp": 30,
+        "forecast_3month": [
+          {
+            "month": "2026-04",
+            "avg_temp": 35,
+            "total_rain": 17,
+            "rain_days": 7
+          },
+          {
+            "month": "2026-05",
+            "avg_temp": 38,
+            "total_rain": 2,
+            "rain_days": 14
+          },
+          {
+            "month": "2026-06",
+            "avg_temp": 28,
+            "total_rain": 164,
+            "rain_days": 16
+          }
+        ],
+        "rainfall_prediction": {},
+        "season_suitability": {
+          "2026-04": {
+            "temp": "hot",
+            "rain": "dry",
+            "description": "hot and dry"
+          },
+          "2026-05": {
+            "temp": "hot",
+            "rain": "dry",
+            "description": "hot and dry"
+          },
+          "2026-06": {
+            "temp": "hot",
+            "rain": "heavy",
+            "description": "hot and heavy"
+          }
+        },
+        "extreme_events": [],
+        "summary": "Next 3 months: Average temperature 33.7\u00b0C with low rainfall (approx 183mm total)."
+      },
+      "market_data": {
+        "Wheat": {
+          "current_price": 1954,
+          "price_trend": "Decreasing",
+          "demand": "High",
+          "forecast_3months": 2323,
+          "market_confidence": "Medium",
+          "seasonal_factor": 0.988207081241823
+        },
+        "Corn": {
+          "current_price": 1730,
+          "price_trend": "Decreasing",
+          "demand": "Low",
+          "forecast_3months": 2094,
+          "market_confidence": "Low",
+          "seasonal_factor": 1.1973226123869534
+        },
+        "Tomato": {
+          "current_price": 2818,
+          "price_trend": "Stable",
+          "demand": "Medium",
+          "forecast_3months": 2790,
+          "market_confidence": "High",
+          "seasonal_factor": 0.8912512066412193
+        }
+      }
+    }
+  },
+  {
+    "id": 132,
+    "user_id": "Sarthak",
+    "timestamp": "2026-04-24T07:02:04.350096",
+    "analysis_type": "plant",
+    "image_path": "uploads\\f259cc71-22e7-476a-bafb-429b73be2c45.jpg",
+    "results": {
+      "plant_info": {
+        "name": "Tomato",
+        "scientific_name": "Solanum lycopersicum",
+        "probability": 100.0
+      },
+      "water_content": {
+        "percentage": 78,
+        "status": "Optimal"
+      },
+      "diseases": {
+        "detected": false,
+        "diseases": [],
+        "healthy": true,
+        "health_confidence": 87.76345449228627
+      },
+      "pests": {
+        "detected": false,
+        "pests": []
+      },
+      "preventive_measures": [
+        "Stake plants at 45\u00b0 angle for maximum sun exposure and air flow",
+        "Apply calcium nitrate foliar spray weekly to prevent blossom end rot",
+        "Install reflective mulch to repel aphids and whiteflies (50% reduction)",
+        "Rotate crops following scientific rotation schedules (minimum 3-year cycle)",
+        "Apply 2-3 inches of organic mulch (reduces soil-borne disease splash by 75%)",
+        "Implement strict sanitation: disinfect tools with 70% alcohol between plants",
+        "Maintain optimal plant spacing for good air circulation (prevents 85% of fungal issues)",
+        "Maintain soil pH between 6.0-6.8 for optimal nutrient availability"
+      ],
+      "fertilizer_recommendations": [
+        {
+          "type": "general",
+          "name": "Balanced NPK (10-10-10)",
+          "npk": "10-10-10",
+          "description": "Provides equal parts nitrogen (N), phosphorus (P), and potassium (K). Nitrogen promotes leaf growth, phosphorus supports root and flower development, potassium enhances overall plant health.",
+          "application": "Apply 2-3 lbs per 100 sq ft before planting and side-dress during active growth. Water thoroughly after application.",
+          "conditions": "General purpose for most plants during vegetative growth",
+          "scientific_backing": "University studies show balanced NPK improves yield by 15-20% over unfertilized controls"
+        },
+        {
+          "type": "vegetative",
+          "name": "Calcium Nitrate",
+          "npk": "15-0-0 + 19% Ca",
+          "description": "Provides readily available nitrogen and prevents blossom end rot by supplying calcium during fruit development.",
+          "application": "Apply 1-2 tbsp/gal as foliar spray or 1 lb/100 sq ft as soil application every 2 weeks during fruiting.",
+          "conditions": "For fruiting stage, especially when blossom end rot is a concern",
+          "scientific_backing": "Reduces blossom end rot incidence by up to 80% in field trials"
+        },
+        {
+          "type": "flowering",
+          "name": "Phosphorus-Potassium Booster",
+          "npk": "3-15-15",
+          "description": "Lower nitrogen with higher phosphorus and potassium to encourage flowering and fruit development instead of excessive vegetative growth.",
+          "application": "Apply 1 lb/100 sq ft at first flower cluster formation and repeat every 3-4 weeks.",
+          "conditions": "When plants are transitioning from vegetative to flowering stage",
+          "scientific_backing": "Improves fruit set by 25-30% compared to high-nitrogen fertilizers"
+        }
+      ],
+      "plant_details": {
+        "crop_type": "Tomato",
+        "plant_age": "Vegetative",
+        "symptoms": null,
+        "planting_date": "2026-01-07",
+        "irrigation_method": "Drip",
+        "previous_treatments": null
+      }
+    }
+  },
+  {
+    "id": 133,
+    "user_id": "Sarthak",
+    "timestamp": "2026-04-24T07:02:35.707935",
+    "analysis_type": "plant",
+    "image_path": "uploads\\3dac5a43-08bc-462e-8006-e71232fbc0b0.jpg",
+    "results": {
+      "plant_info": {
+        "name": "Tomato",
+        "scientific_name": "Solanum lycopersicum",
+        "probability": 100.0
+      },
+      "water_content": {
+        "percentage": 78,
+        "status": "Optimal"
+      },
+      "diseases": {
+        "detected": true,
+        "diseases": [
+          {
+            "name": "Fusarium Wilt",
+            "confidence": 91.76345449228627,
+            "scientific_name": "Fusarium oxysporum f.sp. lycopersici",
+            "description": "Yellowing and wilting of lower leaves, often on one side of the plant, vascular discoloration",
+            "treatment": "Apply: Propiconazole, Thiophanate-methyl",
+            "detailed_info": {
+              "symptoms": "Yellowing and wilting of leaves, often on one side of the plant. Brown discoloration of vascular tissue when stems are cut",
+              "causes": "Soil-borne fungus Fusarium oxysporum enters through roots and blocks water transport",
+              "treatment": "Use biofertilizers like Pseudomonas fluorescens, Neem Cake + Farm Yard Manure (FYM)",
+              "prevention": "Plant resistant tomato varieties, practice crop rotation with non-host plants, remove and destroy infected plants"
+            }
+          }
+        ]
+      },
+      "pests": {
+        "detected": false,
+        "pests": []
+      },
+      "preventive_measures": [
+        "Apply biofumigant crops like mustard before planting",
+        "Solarize soil for 6 weeks at >45\u00b0C (reduces inoculum 90%)",
+        "Install reflective mulch to repel aphids and whiteflies (50% reduction)",
+        "Use floating row covers until flowering to prevent early pest damage",
+        "Prune to 2-3 main stems for optimal airflow (reduces disease pressure 30%)",
+        "Rotate crops following scientific rotation schedules (minimum 3-year cycle)",
+        "Maintain optimal plant spacing for good air circulation (prevents 85% of fungal issues)",
+        "Monitor plants weekly with a 10x magnifier for early pest/disease detection"
+      ],
+      "fertilizer_recommendations": [
+        {
+          "type": "organic",
+          "name": "Compost Tea",
+          "npk": "Varies (typically 1-1-1)",
+          "description": "Liquid extract of compost containing beneficial microbes, nutrients, and organic compounds that improve soil biology and plant health.",
+          "application": "Apply as soil drench (5 gal/100 sq ft) or foliar spray (diluted 1:5) every 2-4 weeks.",
+          "conditions": "All plants, especially when microbial activity is desired",
+          "scientific_backing": "Research demonstrates 30-50% increase in beneficial soil microbes after application"
+        },
+        {
+          "type": "vegetative",
+          "name": "Calcium Nitrate",
+          "npk": "15-0-0 + 19% Ca",
+          "description": "Provides readily available nitrogen and prevents blossom end rot by supplying calcium during fruit development.",
+          "application": "Apply 1-2 tbsp/gal as foliar spray or 1 lb/100 sq ft as soil application every 2 weeks during fruiting.",
+          "conditions": "For fruiting stage, especially when blossom end rot is a concern",
+          "scientific_backing": "Reduces blossom end rot incidence by up to 80% in field trials"
+        },
+        {
+          "type": "flowering",
+          "name": "Phosphorus-Potassium Booster",
+          "npk": "3-15-15",
+          "description": "Lower nitrogen with higher phosphorus and potassium to encourage flowering and fruit development instead of excessive vegetative growth.",
+          "application": "Apply 1 lb/100 sq ft at first flower cluster formation and repeat every 3-4 weeks.",
+          "conditions": "When plants are transitioning from vegetative to flowering stage",
+          "scientific_backing": "Improves fruit set by 25-30% compared to high-nitrogen fertilizers"
+        }
+      ],
+      "plant_details": {
+        "crop_type": "Tomato",
+        "plant_age": "Vegetative",
+        "symptoms": "yellow leaves",
+        "planting_date": "2026-01-07",
+        "irrigation_method": "Drip",
+        "previous_treatments": null
+      }
+    }
+  },
+  {
+    "id": 134,
+    "user_id": "Sarthak",
+    "timestamp": "2026-04-24T07:05:55.248021",
+    "analysis_type": "soil",
+    "image_path": "uploads\\6036c226-37bf-48d5-a71c-56c46c456891.jpg",
+    "results": {
+      "characteristics": "\n            - High sand content (>70%)\n            - Very low water retention\n            - Poor in organic matter and nutrients\n            - Excellent drainage (often excessive)\n            - May have salinity issues\n            - pH range: 7.0-8.5 (neutral to alkaline)\n            ",
+      "suitability": {
+        "onion": "Poor suitability for onions without significant amendments. Requires intensive management.",
+        "tomato": "Moderate suitability with irrigation, mulching, and nutrient management."
+      },
+      "recommendations": [
+        {
+          "name": "Wheat",
+          "score": 57,
+          "reasons": [
+            "\u2713 pH marginally suitable",
+            "\u2713 Within budget",
+            "\u2713 Attention level matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Rainfall marginally suitable",
+            "\u2713 Slightly exceeds duration",
+            "\u2713 High market demand"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 Temperature may be suboptimal"
+          ],
+          "details": {
+            "name": "Wheat",
+            "soil_types": [
+              "Loamy",
+              "Clay Loam",
+              "Silty",
+              "Black Soil",
+              "Alluvial Soil"
+            ],
+            "ph_range": [
+              6.0,
+              7.5
+            ],
+            "duration_months": 4,
+            "investment_per_acre": 15000,
+            "attention_level": "Medium",
+            "risk_factor": "Low",
+            "water_requirement": "Moderate",
+            "season": "Rabi",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              15,
+              25
+            ],
+            "rainfall_range": [
+              50,
+              150
+            ],
+            "weather_sensitivity": "Medium",
+            "market_volatility": "Low",
+            "profit_margin": "Medium"
+          },
+          "price_prediction": {
+            "current_price": 2097,
+            "predicted_price": 1835.74,
+            "confidence": 0.85,
+            "trend": "Decreasing",
+            "demand": "High",
+            "roi_potential": -12.5,
+            "factors": {
+              "trend_impact": 0.9,
+              "weather_impact": 1.0,
+              "demand_impact": 1.2,
+              "seasonal_factor": 0.8105655872548478
+            }
+          }
+        },
+        {
+          "name": "Cabbage",
+          "score": 47,
+          "reasons": [
+            "\u2713 Budget slightly low but possible",
+            "\u2713 Attention level moderately matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Fits within time duration",
+            "\u2713 Stable price trend",
+            "\u2713 High market demand",
+            "\u2713 Moderate ROI potential (8.4%)"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 pH may need adjustment",
+            "\u26a0 Temperature may be suboptimal",
+            "\u26a0 Excess rainfall risk"
+          ],
+          "details": {
+            "name": "Cabbage",
+            "soil_types": [
+              "Sandy Loam",
+              "Loamy",
+              "Clay Loam"
+            ],
+            "ph_range": [
+              6.0,
+              6.8
+            ],
+            "duration_months": 3,
+            "investment_per_acre": 25000,
+            "attention_level": "High",
+            "risk_factor": "Medium",
+            "water_requirement": "High",
+            "season": "Winter",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              15,
+              25
+            ],
+            "rainfall_range": [
+              60,
+              100
+            ],
+            "weather_sensitivity": "High",
+            "market_volatility": "Medium",
+            "profit_margin": "Medium"
+          },
+          "price_prediction": {
+            "current_price": 1701,
+            "predicted_price": 1844.24,
+            "confidence": 0.45,
+            "trend": "Stable",
+            "demand": "High",
+            "roi_potential": 8.4,
+            "factors": {
+              "trend_impact": 1.0,
+              "weather_impact": 1.0,
+              "demand_impact": 1.2,
+              "seasonal_factor": 0.9035078780211122
+            }
+          }
+        },
+        {
+          "name": "Potato",
+          "score": 46,
+          "reasons": [
+            "\u2713 Budget slightly low but possible",
+            "\u2713 Attention level moderately matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Fits within time duration",
+            "\u2713 High market demand",
+            "\u2713 Good ROI potential (21.3%)"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 pH may need adjustment",
+            "\u26a0 Temperature may be suboptimal",
+            "\u26a0 Excess rainfall risk"
+          ],
+          "details": {
+            "name": "Potato",
+            "soil_types": [
+              "Loamy",
+              "Sandy Loam",
+              "Alluvial Soil"
+            ],
+            "ph_range": [
+              5.0,
+              6.5
+            ],
+            "duration_months": 3,
+            "investment_per_acre": 22000,
+            "attention_level": "High",
+            "risk_factor": "Medium",
+            "water_requirement": "Moderate",
+            "season": "Rabi",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              15,
+              25
+            ],
+            "rainfall_range": [
+              40,
+              80
+            ],
+            "weather_sensitivity": "High",
+            "market_volatility": "Medium",
+            "profit_margin": "Medium"
+          },
+          "price_prediction": {
+            "current_price": 1357,
+            "predicted_price": 1646.34,
+            "confidence": 0.65,
+            "trend": "Decreasing",
+            "demand": "High",
+            "roi_potential": 21.3,
+            "factors": {
+              "trend_impact": 0.9,
+              "weather_impact": 1.0,
+              "demand_impact": 1.2,
+              "seasonal_factor": 1.123354620502243
+            }
+          }
+        },
+        {
+          "name": "Tomato",
+          "score": 34,
+          "reasons": [
+            "\u2713 Attention level moderately matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Fits within time duration",
+            "\u2713 Medium market demand"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 pH may need adjustment",
+            "\u26a0 May exceed budget",
+            "\u26a0 Temperature may be suboptimal",
+            "\u26a0 Excess rainfall risk"
+          ],
+          "details": {
+            "name": "Tomato",
+            "soil_types": [
+              "Loamy",
+              "Sandy Loam",
+              "Red Soil",
+              "Black Soil"
+            ],
+            "ph_range": [
+              6.0,
+              6.8
+            ],
+            "duration_months": 3,
+            "investment_per_acre": 30000,
+            "attention_level": "Very High",
+            "risk_factor": "High",
+            "water_requirement": "High",
+            "season": "All seasons",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              20,
+              30
+            ],
+            "rainfall_range": [
+              40,
+              100
+            ],
+            "weather_sensitivity": "Very High",
+            "market_volatility": "High",
+            "profit_margin": "Very High"
+          },
+          "price_prediction": {
+            "current_price": 2807,
+            "predicted_price": 2153.71,
+            "confidence": 0.65,
+            "trend": "Decreasing",
+            "demand": "Medium",
+            "roi_potential": -23.3,
+            "factors": {
+              "trend_impact": 0.9,
+              "weather_impact": 1.0,
+              "demand_impact": 1.0,
+              "seasonal_factor": 0.8525153116352262
+            }
+          }
+        }
+      ],
+      "properties": {
+        "ph": "7.7",
+        "organic_matter": "Very Low",
+        "drainage": "Excessive",
+        "nitrogen": "Medium",
+        "phosphorus": "Medium",
+        "potassium": "Medium"
+      },
+      "farmer_inputs": {
+        "soil_depth": "Surface (0-10cm)",
+        "recent_rainfall": "None",
+        "sampling_location": "",
+        "previous_crop": "None",
+        "interested_crops": [
+          "Potato",
+          "Wheat",
+          "Cabbage",
+          "Tomato"
+        ],
+        "budget": {
+          "amount": 19000,
+          "unit": "Per Acre"
+        },
+        "attention_level": "Low (weekly check-ins)",
+        "risk_tolerance": "Low (prefer safe options)",
+        "time_duration": {
+          "value": 3,
+          "unit": "Months"
+        },
+        "organic_preference": true,
+        "irrigation_available": "Limited",
+        "market_preference": "Local market",
+        "labor_availability": "Limited",
+        "weather_api_key": null
+      },
+      "weather_data": {
+        "current_temp": 24,
+        "forecast_3month": [
+          {
+            "month": "2026-04",
+            "avg_temp": 40,
+            "total_rain": 24,
+            "rain_days": 10
+          },
+          {
+            "month": "2026-05",
+            "avg_temp": 36,
+            "total_rain": 11,
+            "rain_days": 10
+          },
+          {
+            "month": "2026-06",
+            "avg_temp": 31,
+            "total_rain": 150,
+            "rain_days": 25
+          }
+        ],
+        "rainfall_prediction": {},
+        "season_suitability": {
+          "2026-04": {
+            "temp": "hot",
+            "rain": "dry",
+            "description": "hot and dry"
+          },
+          "2026-05": {
+            "temp": "hot",
+            "rain": "dry",
+            "description": "hot and dry"
+          },
+          "2026-06": {
+            "temp": "hot",
+            "rain": "heavy",
+            "description": "hot and heavy"
+          }
+        },
+        "extreme_events": [],
+        "summary": "Next 3 months: Average temperature 35.7\u00b0C with low rainfall (approx 185mm total)."
+      },
+      "market_data": {
+        "Wheat": {
+          "current_price": 2097,
+          "price_trend": "Decreasing",
+          "demand": "High",
+          "forecast_3months": 2186,
+          "market_confidence": "High",
+          "seasonal_factor": 0.8105655872548478
+        },
+        "Tomato": {
+          "current_price": 2807,
+          "price_trend": "Decreasing",
+          "demand": "Medium",
+          "forecast_3months": 2484,
+          "market_confidence": "Medium",
+          "seasonal_factor": 0.8525153116352262
+        },
+        "Potato": {
+          "current_price": 1357,
+          "price_trend": "Decreasing",
+          "demand": "High",
+          "forecast_3months": 1682,
+          "market_confidence": "Medium",
+          "seasonal_factor": 1.123354620502243
+        },
+        "Cabbage": {
+          "current_price": 1701,
+          "price_trend": "Stable",
+          "demand": "High",
+          "forecast_3months": 1970,
+          "market_confidence": "Low",
+          "seasonal_factor": 0.9035078780211122
+        }
+      }
+    }
+  },
+  {
+    "id": 135,
+    "user_id": "Sarthak",
+    "timestamp": "2026-04-24T07:25:58.601718",
+    "analysis_type": "plant",
+    "image_path": "uploads\\612e01d8-0ef6-484d-8feb-412275623f39.jpg",
+    "results": {
+      "plant_info": {
+        "name": "Tomato",
+        "scientific_name": "Solanum lycopersicum",
+        "probability": 100.0
+      },
+      "water_content": {
+        "percentage": 78,
+        "status": "Optimal"
+      },
+      "diseases": {
+        "detected": false,
+        "diseases": [],
+        "healthy": true,
+        "health_confidence": 87.76345449228627
+      },
+      "pests": {
+        "detected": false,
+        "pests": []
+      },
+      "preventive_measures": [
+        "Stake plants at 45\u00b0 angle for maximum sun exposure and air flow",
+        "Apply calcium nitrate foliar spray weekly to prevent blossom end rot",
+        "Prune to 2-3 main stems for optimal airflow (reduces disease pressure 30%)",
+        "Maintain optimal plant spacing for good air circulation (prevents 85% of fungal issues)",
+        "Maintain soil pH between 6.0-6.8 for optimal nutrient availability",
+        "Record pest/disease occurrences to predict and prevent future outbreaks",
+        "Monitor plants weekly with a 10x magnifier for early pest/disease detection",
+        "Apply 2-3 inches of organic mulch (reduces soil-borne disease splash by 75%)"
+      ],
+      "fertilizer_recommendations": [
+        {
+          "type": "mineral",
+          "name": "Rock Phosphate",
+          "npk": "0-20-0",
+          "description": "Slow-release source of phosphorus that becomes available over 2-3 years. Ideal for building long-term soil phosphorus reserves.",
+          "application": "Apply 5-10 lbs per 100 sq ft and incorporate into soil before planting. Does not dissolve in water.",
+          "conditions": "Soils testing low in phosphorus, perennial crops",
+          "scientific_backing": "Long-term studies show cumulative benefits over 3-5 year period"
+        },
+        {
+          "type": "vegetative",
+          "name": "Calcium Nitrate",
+          "npk": "15-0-0 + 19% Ca",
+          "description": "Provides readily available nitrogen and prevents blossom end rot by supplying calcium during fruit development.",
+          "application": "Apply 1-2 tbsp/gal as foliar spray or 1 lb/100 sq ft as soil application every 2 weeks during fruiting.",
+          "conditions": "For fruiting stage, especially when blossom end rot is a concern",
+          "scientific_backing": "Reduces blossom end rot incidence by up to 80% in field trials"
+        },
+        {
+          "type": "flowering",
+          "name": "Phosphorus-Potassium Booster",
+          "npk": "3-15-15",
+          "description": "Lower nitrogen with higher phosphorus and potassium to encourage flowering and fruit development instead of excessive vegetative growth.",
+          "application": "Apply 1 lb/100 sq ft at first flower cluster formation and repeat every 3-4 weeks.",
+          "conditions": "When plants are transitioning from vegetative to flowering stage",
+          "scientific_backing": "Improves fruit set by 25-30% compared to high-nitrogen fertilizers"
+        }
+      ],
+      "plant_details": {
+        "crop_type": "Tomato",
+        "plant_age": "Vegetative",
+        "symptoms": null,
+        "planting_date": "2026-02-08",
+        "irrigation_method": "Drip",
+        "previous_treatments": null
+      }
+    }
+  },
+  {
+    "id": 136,
+    "user_id": "Sarthak",
+    "timestamp": "2026-04-24T07:26:47.251007",
+    "analysis_type": "plant",
+    "image_path": "uploads\\28539c3a-df64-408d-ab1b-d166d828867c.jpg",
+    "results": {
+      "plant_info": {
+        "name": "Tomato",
+        "scientific_name": "Solanum lycopersicum",
+        "probability": 100.0
+      },
+      "water_content": {
+        "percentage": 78,
+        "status": "Optimal"
+      },
+      "diseases": {
+        "detected": true,
+        "diseases": [
+          {
+            "name": "Fusarium Wilt",
+            "confidence": 91.76345449228627,
+            "scientific_name": "Fusarium oxysporum f.sp. lycopersici",
+            "description": "Yellowing and wilting of lower leaves, often on one side of the plant, vascular discoloration",
+            "treatment": "Apply: Propiconazole, Thiophanate-methyl",
+            "detailed_info": {
+              "symptoms": "Yellowing and wilting of leaves, often on one side of the plant. Brown discoloration of vascular tissue when stems are cut",
+              "causes": "Soil-borne fungus Fusarium oxysporum enters through roots and blocks water transport",
+              "treatment": "Use biofertilizers like Pseudomonas fluorescens, Neem Cake + Farm Yard Manure (FYM)",
+              "prevention": "Plant resistant tomato varieties, practice crop rotation with non-host plants, remove and destroy infected plants"
+            }
+          }
+        ]
+      },
+      "pests": {
+        "detected": false,
+        "pests": []
+      },
+      "preventive_measures": [
+        "Apply biofumigant crops like mustard before planting",
+        "Solarize soil for 6 weeks at >45\u00b0C (reduces inoculum 90%)",
+        "Prune to 2-3 main stems for optimal airflow (reduces disease pressure 30%)",
+        "Use floating row covers until flowering to prevent early pest damage",
+        "Apply calcium nitrate foliar spray weekly to prevent blossom end rot",
+        "Implement strict sanitation: disinfect tools with 70% alcohol between plants",
+        "Introduce beneficial insects 2 weeks before expected pest outbreaks",
+        "Maintain optimal plant spacing for good air circulation (prevents 85% of fungal issues)"
+      ],
+      "fertilizer_recommendations": [
+        {
+          "type": "general",
+          "name": "Balanced NPK (10-10-10)",
+          "npk": "10-10-10",
+          "description": "Provides equal parts nitrogen (N), phosphorus (P), and potassium (K). Nitrogen promotes leaf growth, phosphorus supports root and flower development, potassium enhances overall plant health.",
+          "application": "Apply 2-3 lbs per 100 sq ft before planting and side-dress during active growth. Water thoroughly after application.",
+          "conditions": "General purpose for most plants during vegetative growth",
+          "scientific_backing": "University studies show balanced NPK improves yield by 15-20% over unfertilized controls"
+        },
+        {
+          "type": "vegetative",
+          "name": "Calcium Nitrate",
+          "npk": "15-0-0 + 19% Ca",
+          "description": "Provides readily available nitrogen and prevents blossom end rot by supplying calcium during fruit development.",
+          "application": "Apply 1-2 tbsp/gal as foliar spray or 1 lb/100 sq ft as soil application every 2 weeks during fruiting.",
+          "conditions": "For fruiting stage, especially when blossom end rot is a concern",
+          "scientific_backing": "Reduces blossom end rot incidence by up to 80% in field trials"
+        },
+        {
+          "type": "flowering",
+          "name": "Phosphorus-Potassium Booster",
+          "npk": "3-15-15",
+          "description": "Lower nitrogen with higher phosphorus and potassium to encourage flowering and fruit development instead of excessive vegetative growth.",
+          "application": "Apply 1 lb/100 sq ft at first flower cluster formation and repeat every 3-4 weeks.",
+          "conditions": "When plants are transitioning from vegetative to flowering stage",
+          "scientific_backing": "Improves fruit set by 25-30% compared to high-nitrogen fertilizers"
+        }
+      ],
+      "plant_details": {
+        "crop_type": "Tomato",
+        "plant_age": "Vegetative",
+        "symptoms": "yellow leaves",
+        "planting_date": "2026-02-08",
+        "irrigation_method": "Drip",
+        "previous_treatments": null
+      }
+    }
+  },
+  {
+    "id": 137,
+    "user_id": "Sarthak",
+    "timestamp": "2026-04-24T07:28:53.252367",
+    "analysis_type": "soil",
+    "image_path": "uploads\\61b3a5f7-aae1-47cb-9006-e64524f62a00.jpg",
+    "results": {
+      "characteristics": "\n            - Sandy to loamy texture\n            - Low water retention capacity\n            - Rich in iron oxides (gives red color)\n            - Low organic matter content\n            - Good drainage\n            - pH range: 5.5-6.8 (slightly acidic)\n            ",
+      "suitability": {
+        "onion": "Moderately suitable for onions. Requires additional organic matter and regular irrigation.",
+        "tomato": "Well-suited for tomatoes with proper fertilization and irrigation management."
+      },
+      "recommendations": [
+        {
+          "name": "Soybean",
+          "score": 62,
+          "reasons": [
+            "\u2713 pH within optimal range",
+            "\u2713 Attention level matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Fits within time duration",
+            "\u2713 Stable price trend",
+            "\u2713 High market demand",
+            "\u2713 Moderate ROI potential (5.5%)"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 May exceed budget",
+            "\u26a0 Temperature may be suboptimal",
+            "\u26a0 Excess rainfall risk"
+          ],
+          "details": {
+            "name": "Soybean",
+            "soil_types": [
+              "Loamy",
+              "Silty",
+              "Black Soil"
+            ],
+            "ph_range": [
+              6.0,
+              7.0
+            ],
+            "duration_months": 3,
+            "investment_per_acre": 12000,
+            "attention_level": "Medium",
+            "risk_factor": "Medium",
+            "water_requirement": "Moderate",
+            "season": "Kharif",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              20,
+              30
+            ],
+            "rainfall_range": [
+              40,
+              120
+            ],
+            "weather_sensitivity": "Medium",
+            "market_volatility": "Medium",
+            "profit_margin": "High"
+          },
+          "price_prediction": {
+            "current_price": 3749,
+            "predicted_price": 3956.08,
+            "confidence": 0.45,
+            "trend": "Stable",
+            "demand": "High",
+            "roi_potential": 5.5,
+            "factors": {
+              "trend_impact": 1.0,
+              "weather_impact": 1.0,
+              "demand_impact": 1.2,
+              "seasonal_factor": 0.8793632201021274
+            }
+          }
+        },
+        {
+          "name": "Wheat",
+          "score": 59,
+          "reasons": [
+            "\u2713 pH within optimal range",
+            "\u2713 Attention level matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Slightly exceeds duration",
+            "\u2713 Increasing price trend",
+            "\u2713 High market demand",
+            "\u2713 Moderate ROI potential (12.1%)"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 May exceed budget",
+            "\u26a0 Temperature may be suboptimal",
+            "\u26a0 Excess rainfall risk"
+          ],
+          "details": {
+            "name": "Wheat",
+            "soil_types": [
+              "Loamy",
+              "Clay Loam",
+              "Silty",
+              "Black Soil",
+              "Alluvial Soil"
+            ],
+            "ph_range": [
+              6.0,
+              7.5
+            ],
+            "duration_months": 4,
+            "investment_per_acre": 15000,
+            "attention_level": "Medium",
+            "risk_factor": "Low",
+            "water_requirement": "Moderate",
+            "season": "Rabi",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              15,
+              25
+            ],
+            "rainfall_range": [
+              50,
+              150
+            ],
+            "weather_sensitivity": "Medium",
+            "market_volatility": "Low",
+            "profit_margin": "Medium"
+          },
+          "price_prediction": {
+            "current_price": 2050,
+            "predicted_price": 2297.72,
+            "confidence": 0.85,
+            "trend": "Increasing",
+            "demand": "High",
+            "roi_potential": 12.1,
+            "factors": {
+              "trend_impact": 1.1,
+              "weather_impact": 1.0,
+              "demand_impact": 1.2,
+              "seasonal_factor": 0.8491186871515469
+            }
+          }
+        },
+        {
+          "name": "Tomato",
+          "score": 49,
+          "reasons": [
+            "\u2713 pH within optimal range",
+            "\u2713 Attention level moderately matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Fits within time duration",
+            "\u2713 Medium market demand"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 May exceed budget",
+            "\u26a0 Temperature may be suboptimal",
+            "\u26a0 Excess rainfall risk"
+          ],
+          "details": {
+            "name": "Tomato",
+            "soil_types": [
+              "Loamy",
+              "Sandy Loam",
+              "Red Soil",
+              "Black Soil"
+            ],
+            "ph_range": [
+              6.0,
+              6.8
+            ],
+            "duration_months": 3,
+            "investment_per_acre": 30000,
+            "attention_level": "Very High",
+            "risk_factor": "High",
+            "water_requirement": "High",
+            "season": "All seasons",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              20,
+              30
+            ],
+            "rainfall_range": [
+              40,
+              100
+            ],
+            "weather_sensitivity": "Very High",
+            "market_volatility": "High",
+            "profit_margin": "Very High"
+          },
+          "price_prediction": {
+            "current_price": 2114,
+            "predicted_price": 1615.96,
+            "confidence": 0.85,
+            "trend": "Decreasing",
+            "demand": "Medium",
+            "roi_potential": -23.6,
+            "factors": {
+              "trend_impact": 0.9,
+              "weather_impact": 1.0,
+              "demand_impact": 1.0,
+              "seasonal_factor": 0.8493429692092445
+            }
+          }
+        }
+      ],
+      "properties": {
+        "ph": "6.2",
+        "organic_matter": "Low",
+        "drainage": "Good",
+        "nitrogen": "Medium",
+        "phosphorus": "Medium",
+        "potassium": "Medium"
+      },
+      "farmer_inputs": {
+        "soil_depth": "Surface (0-10cm)",
+        "recent_rainfall": "None",
+        "sampling_location": "",
+        "previous_crop": "None",
+        "interested_crops": [
+          "Tomato",
+          "Wheat",
+          "Soybean"
+        ],
+        "budget": {
+          "amount": 0,
+          "unit": "Per Acre"
+        },
+        "attention_level": "Low (weekly check-ins)",
+        "risk_tolerance": "Low (prefer safe options)",
+        "time_duration": {
+          "value": 3,
+          "unit": "Months"
+        },
+        "organic_preference": false,
+        "irrigation_available": "Limited",
+        "market_preference": "Local market",
+        "labor_availability": "Limited",
+        "weather_api_key": null
+      },
+      "weather_data": {
+        "current_temp": 32,
+        "forecast_3month": [
+          {
+            "month": "2026-04",
+            "avg_temp": 40,
+            "total_rain": 15,
+            "rain_days": 15
+          },
+          {
+            "month": "2026-05",
+            "avg_temp": 39,
+            "total_rain": 26,
+            "rain_days": 5
+          },
+          {
+            "month": "2026-06",
+            "avg_temp": 29,
+            "total_rain": 181,
+            "rain_days": 23
+          }
+        ],
+        "rainfall_prediction": {},
+        "season_suitability": {
+          "2026-04": {
+            "temp": "hot",
+            "rain": "dry",
+            "description": "hot and dry"
+          },
+          "2026-05": {
+            "temp": "hot",
+            "rain": "dry",
+            "description": "hot and dry"
+          },
+          "2026-06": {
+            "temp": "hot",
+            "rain": "heavy",
+            "description": "hot and heavy"
+          }
+        },
+        "extreme_events": [],
+        "summary": "Next 3 months: Average temperature 36.0\u00b0C with moderate rainfall (approx 222mm total)."
+      },
+      "market_data": {
+        "Wheat": {
+          "current_price": 2050,
+          "price_trend": "Increasing",
+          "demand": "High",
+          "forecast_3months": 2378,
+          "market_confidence": "High",
+          "seasonal_factor": 0.8491186871515469
+        },
+        "Soybean": {
+          "current_price": 3749,
+          "price_trend": "Stable",
+          "demand": "High",
+          "forecast_3months": 3621,
+          "market_confidence": "Low",
+          "seasonal_factor": 0.8793632201021274
+        },
+        "Tomato": {
+          "current_price": 2114,
+          "price_trend": "Decreasing",
+          "demand": "Medium",
+          "forecast_3months": 2874,
+          "market_confidence": "High",
+          "seasonal_factor": 0.8493429692092445
+        }
+      }
+    }
+  },
+  {
+    "id": 138,
+    "user_id": "Sarthak",
+    "timestamp": "2026-04-24T07:35:11.615135",
+    "analysis_type": "plant",
+    "image_path": "uploads\\fc2dc78e-16e5-4abe-bd3a-519735aa3c9b.jpg",
+    "results": {
+      "plant_info": {
+        "name": "Tomato",
+        "scientific_name": "Solanum lycopersicum",
+        "probability": 100.0
+      },
+      "water_content": {
+        "percentage": 78,
+        "status": "Optimal"
+      },
+      "diseases": {
+        "detected": false,
+        "diseases": [],
+        "healthy": true,
+        "health_confidence": 87.76345449228627
+      },
+      "pests": {
+        "detected": false,
+        "pests": []
+      },
+      "preventive_measures": [
+        "Install reflective mulch to repel aphids and whiteflies (50% reduction)",
+        "Stake plants at 45\u00b0 angle for maximum sun exposure and air flow",
+        "Use floating row covers until flowering to prevent early pest damage",
+        "Water at the base in early morning (reduces leaf wetness duration by 60%)",
+        "Implement strict sanitation: disinfect tools with 70% alcohol between plants",
+        "Use drip irrigation instead of overhead (reduces disease spread by 40%)",
+        "Rotate crops following scientific rotation schedules (minimum 3-year cycle)",
+        "Apply 2-3 inches of organic mulch (reduces soil-borne disease splash by 75%)"
+      ],
+      "fertilizer_recommendations": [
+        {
+          "type": "general",
+          "name": "Balanced NPK (10-10-10)",
+          "npk": "10-10-10",
+          "description": "Provides equal parts nitrogen (N), phosphorus (P), and potassium (K). Nitrogen promotes leaf growth, phosphorus supports root and flower development, potassium enhances overall plant health.",
+          "application": "Apply 2-3 lbs per 100 sq ft before planting and side-dress during active growth. Water thoroughly after application.",
+          "conditions": "General purpose for most plants during vegetative growth",
+          "scientific_backing": "University studies show balanced NPK improves yield by 15-20% over unfertilized controls"
+        },
+        {
+          "type": "vegetative",
+          "name": "Calcium Nitrate",
+          "npk": "15-0-0 + 19% Ca",
+          "description": "Provides readily available nitrogen and prevents blossom end rot by supplying calcium during fruit development.",
+          "application": "Apply 1-2 tbsp/gal as foliar spray or 1 lb/100 sq ft as soil application every 2 weeks during fruiting.",
+          "conditions": "For fruiting stage, especially when blossom end rot is a concern",
+          "scientific_backing": "Reduces blossom end rot incidence by up to 80% in field trials"
+        },
+        {
+          "type": "flowering",
+          "name": "Phosphorus-Potassium Booster",
+          "npk": "3-15-15",
+          "description": "Lower nitrogen with higher phosphorus and potassium to encourage flowering and fruit development instead of excessive vegetative growth.",
+          "application": "Apply 1 lb/100 sq ft at first flower cluster formation and repeat every 3-4 weeks.",
+          "conditions": "When plants are transitioning from vegetative to flowering stage",
+          "scientific_backing": "Improves fruit set by 25-30% compared to high-nitrogen fertilizers"
+        }
+      ],
+      "plant_details": {
+        "crop_type": "Tomato",
+        "plant_age": "Vegetative",
+        "symptoms": null,
+        "planting_date": null,
+        "irrigation_method": null,
+        "previous_treatments": null
+      }
+    }
+  },
+  {
+    "id": 139,
+    "user_id": "Sarthak",
+    "timestamp": "2026-04-24T10:14:47.945919",
+    "analysis_type": "plant",
+    "image_path": "uploads\\d75e8586-2cdc-4ef7-a350-da3441dcdf7c.jpg",
+    "results": {
+      "plant_info": {
+        "name": "Onion",
+        "scientific_name": "",
+        "probability": 100.0
+      },
+      "water_content": {
+        "percentage": 44,
+        "status": "Low"
+      },
+      "diseases": {
+        "detected": false,
+        "diseases": []
+      },
+      "pests": {
+        "detected": false,
+        "pests": []
+      },
+      "preventive_measures": [
+        "Plant disease-free sets or transplants from certified sources",
+        "Practice shallow cultivation to avoid damaging shallow root systems",
+        "Cure harvested bulbs properly with good ventilation to prevent storage diseases",
+        "Implement strict sanitation: disinfect tools with 70% alcohol between plants",
+        "Use drip irrigation instead of overhead (reduces disease spread by 40%)",
+        "Introduce beneficial insects 2 weeks before expected pest outbreaks",
+        "Apply 2-3 inches of organic mulch (reduces soil-borne disease splash by 75%)",
+        "Rotate crops following scientific rotation schedules (minimum 3-year cycle)"
+      ],
+      "fertilizer_recommendations": [
+        {
+          "type": "organic",
+          "name": "Compost Tea",
+          "npk": "Varies (typically 1-1-1)",
+          "description": "Liquid extract of compost containing beneficial microbes, nutrients, and organic compounds that improve soil biology and plant health.",
+          "application": "Apply as soil drench (5 gal/100 sq ft) or foliar spray (diluted 1:5) every 2-4 weeks.",
+          "conditions": "All plants, especially when microbial activity is desired",
+          "scientific_backing": "Research demonstrates 30-50% increase in beneficial soil microbes after application"
+        },
+        {
+          "type": "vegetative",
+          "name": "Nitrogen-Sulfur Blend",
+          "npk": "21-0-0-24S",
+          "description": "Provides nitrogen for leaf growth and sulfur which is essential for onion flavor development and disease resistance.",
+          "application": "Side-dress 1 lb/100 ft row at 3-leaf stage and again 3-4 weeks later.",
+          "conditions": "Early to mid-growth stage onions",
+          "scientific_backing": "Sulfur application increases pyruvic acid content by 30%, enhancing flavor"
+        },
+        {
+          "type": "bulbing",
+          "name": "Low-N, High-K Blend",
+          "npk": "5-10-20",
+          "description": "Lower nitrogen with higher potassium for bulb development phase. Reducing nitrogen prevents excess leaf growth that can delay bulbing.",
+          "application": "Apply 1 lb/100 ft row when bulbs begin to form, typically 6-8 weeks after planting.",
+          "conditions": "During bulb formation stage",
+          "scientific_backing": "Potassium application at bulbing improves storage quality by 25-40%"
+        }
+      ],
+      "plant_details": {
+        "crop_type": "Onion",
+        "plant_age": "Mature",
+        "symptoms": null,
+        "planting_date": "2026-01-01",
+        "irrigation_method": "Flood",
+        "previous_treatments": null
+      }
+    }
+  },
+  {
+    "id": 140,
+    "user_id": "Sarthak",
+    "timestamp": "2026-04-24T10:18:09.632687",
+    "analysis_type": "soil",
+    "image_path": "uploads\\e9407219-9d47-48c7-a473-01f8a33be3b7.jpg",
+    "results": {
+      "characteristics": "\n            - High sand content (>70%)\n            - Very low water retention\n            - Poor in organic matter and nutrients\n            - Excellent drainage (often excessive)\n            - May have salinity issues\n            - pH range: 7.0-8.5 (neutral to alkaline)\n            ",
+      "suitability": {
+        "onion": "Poor suitability for onions without significant amendments. Requires intensive management.",
+        "tomato": "Moderate suitability with irrigation, mulching, and nutrient management."
+      },
+      "recommendations": [
+        {
+          "name": "Corn",
+          "score": 62,
+          "reasons": [
+            "\u2713 Attention level matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Temperature marginally suitable",
+            "\u2713 Rainfall suitable",
+            "\u2713 Fits within time duration",
+            "\u2713 Increasing price trend",
+            "\u2713 High market demand",
+            "\u2713 Good ROI potential (76.3%)"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 pH may need adjustment",
+            "\u26a0 May exceed budget"
+          ],
+          "details": {
+            "name": "Corn",
+            "soil_types": [
+              "Loamy",
+              "Sandy Loam",
+              "Alluvial Soil",
+              "Red Soil"
+            ],
+            "ph_range": [
+              5.8,
+              7.0
+            ],
+            "duration_months": 3,
+            "investment_per_acre": 18000,
+            "attention_level": "Medium",
+            "risk_factor": "Medium",
+            "water_requirement": "Moderate",
+            "season": "Kharif",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              18,
+              32
+            ],
+            "rainfall_range": [
+              50,
+              200
+            ],
+            "weather_sensitivity": "Medium",
+            "market_volatility": "Medium",
+            "profit_margin": "Medium"
+          },
+          "price_prediction": {
+            "current_price": 1884,
+            "predicted_price": 3321.1,
+            "confidence": 0.65,
+            "trend": "Increasing",
+            "demand": "High",
+            "roi_potential": 76.3,
+            "factors": {
+              "trend_impact": 1.1,
+              "weather_impact": 1.15,
+              "demand_impact": 1.2,
+              "seasonal_factor": 1.161259574185763
+            }
+          }
+        },
+        {
+          "name": "Soybean",
+          "score": 58,
+          "reasons": [
+            "\u2713 Budget slightly low but possible",
+            "\u2713 Attention level matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Temperature marginally suitable",
+            "\u2713 Fits within time duration",
+            "\u2713 Increasing price trend",
+            "\u2713 Medium market demand",
+            "\u2713 Good ROI potential (41.2%)"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 pH may need adjustment",
+            "\u26a0 Excess rainfall risk"
+          ],
+          "details": {
+            "name": "Soybean",
+            "soil_types": [
+              "Loamy",
+              "Silty",
+              "Black Soil"
+            ],
+            "ph_range": [
+              6.0,
+              7.0
+            ],
+            "duration_months": 3,
+            "investment_per_acre": 12000,
+            "attention_level": "Medium",
+            "risk_factor": "Medium",
+            "water_requirement": "Moderate",
+            "season": "Kharif",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              20,
+              30
+            ],
+            "rainfall_range": [
+              40,
+              120
+            ],
+            "weather_sensitivity": "Medium",
+            "market_volatility": "Medium",
+            "profit_margin": "High"
+          },
+          "price_prediction": {
+            "current_price": 3731,
+            "predicted_price": 5269.22,
+            "confidence": 0.65,
+            "trend": "Increasing",
+            "demand": "Medium",
+            "roi_potential": 41.2,
+            "factors": {
+              "trend_impact": 1.1,
+              "weather_impact": 1.15,
+              "demand_impact": 1.0,
+              "seasonal_factor": 1.116427873311027
+            }
+          }
+        },
+        {
+          "name": "Wheat",
+          "score": 50,
+          "reasons": [
+            "\u2713 pH marginally suitable",
+            "\u2713 Attention level matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Rainfall marginally suitable",
+            "\u2713 Slightly exceeds duration",
+            "\u2713 Increasing price trend",
+            "\u2713 Moderate ROI potential (5.5%)"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 May exceed budget",
+            "\u26a0 Temperature may be suboptimal"
+          ],
+          "details": {
+            "name": "Wheat",
+            "soil_types": [
+              "Loamy",
+              "Clay Loam",
+              "Silty",
+              "Black Soil",
+              "Alluvial Soil"
+            ],
+            "ph_range": [
+              6.0,
+              7.5
+            ],
+            "duration_months": 4,
+            "investment_per_acre": 15000,
+            "attention_level": "Medium",
+            "risk_factor": "Low",
+            "water_requirement": "Moderate",
+            "season": "Rabi",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              15,
+              25
+            ],
+            "rainfall_range": [
+              50,
+              150
+            ],
+            "weather_sensitivity": "Medium",
+            "market_volatility": "Low",
+            "profit_margin": "Medium"
+          },
+          "price_prediction": {
+            "current_price": 2068,
+            "predicted_price": 2181.2,
+            "confidence": 0.45,
+            "trend": "Increasing",
+            "demand": "Low",
+            "roi_potential": 5.5,
+            "factors": {
+              "trend_impact": 1.1,
+              "weather_impact": 1.15,
+              "demand_impact": 0.8,
+              "seasonal_factor": 1.0422308993313223
+            }
+          }
+        }
+      ],
+      "properties": {
+        "ph": "7.7",
+        "organic_matter": "Very Low",
+        "drainage": "Excessive",
+        "nitrogen": "Medium",
+        "phosphorus": "Medium",
+        "potassium": "Medium"
+      },
+      "farmer_inputs": {
+        "soil_depth": "Surface (0-10cm)",
+        "recent_rainfall": "None",
+        "sampling_location": "",
+        "previous_crop": "None",
+        "interested_crops": [
+          "Corn",
+          "Wheat",
+          "Soybean"
+        ],
+        "budget": {
+          "amount": 9000,
+          "unit": "Per Acre"
+        },
+        "attention_level": "Low (weekly check-ins)",
+        "risk_tolerance": "Low (prefer safe options)",
+        "time_duration": {
+          "value": 3,
+          "unit": "Months"
+        },
+        "organic_preference": false,
+        "irrigation_available": "Good",
+        "market_preference": "Local market",
+        "labor_availability": "Adequate",
+        "weather_api_key": null
+      },
+      "weather_data": {
+        "current_temp": 31,
+        "forecast_3month": [
+          {
+            "month": "2026-04",
+            "avg_temp": 34,
+            "total_rain": 7,
+            "rain_days": 7
+          },
+          {
+            "month": "2026-05",
+            "avg_temp": 38,
+            "total_rain": 20,
+            "rain_days": 13
+          },
+          {
+            "month": "2026-06",
+            "avg_temp": 35,
+            "total_rain": 154,
+            "rain_days": 25
+          }
+        ],
+        "rainfall_prediction": {},
+        "season_suitability": {
+          "2026-04": {
+            "temp": "hot",
+            "rain": "dry",
+            "description": "hot and dry"
+          },
+          "2026-05": {
+            "temp": "hot",
+            "rain": "dry",
+            "description": "hot and dry"
+          },
+          "2026-06": {
+            "temp": "hot",
+            "rain": "heavy",
+            "description": "hot and heavy"
+          }
+        },
+        "extreme_events": [
+          "Heat wave possible"
+        ],
+        "summary": "Next 3 months: Average temperature 35.7\u00b0C with low rainfall (approx 181mm total)."
+      },
+      "market_data": {
+        "Wheat": {
+          "current_price": 2068,
+          "price_trend": "Increasing",
+          "demand": "Low",
+          "forecast_3months": 2270,
+          "market_confidence": "Low",
+          "seasonal_factor": 1.0422308993313223
+        },
+        "Corn": {
+          "current_price": 1884,
+          "price_trend": "Increasing",
+          "demand": "High",
+          "forecast_3months": 1763,
+          "market_confidence": "Medium",
+          "seasonal_factor": 1.161259574185763
+        },
+        "Soybean": {
+          "current_price": 3731,
+          "price_trend": "Increasing",
+          "demand": "Medium",
+          "forecast_3months": 4169,
+          "market_confidence": "Medium",
+          "seasonal_factor": 1.116427873311027
+        }
+      }
+    }
+  },
+  {
+    "id": 141,
+    "user_id": "Sarthak",
+    "timestamp": "2026-04-27T05:54:35.178373",
+    "analysis_type": "plant",
+    "image_path": "uploads\\e1dc1e27-eaa8-4cfc-abec-09a8254551cd.jpg",
+    "results": {
+      "plant_info": {
+        "name": "Tomato",
+        "scientific_name": "Solanum lycopersicum",
+        "probability": 100.0
+      },
+      "water_content": {
+        "percentage": 78,
+        "status": "Optimal"
+      },
+      "diseases": {
+        "detected": false,
+        "diseases": [],
+        "healthy": true,
+        "health_confidence": 87.76345449228627
+      },
+      "pests": {
+        "detected": false,
+        "pests": []
+      },
+      "preventive_measures": [
+        "Prune to 2-3 main stems for optimal airflow (reduces disease pressure 30%)",
+        "Apply calcium nitrate foliar spray weekly to prevent blossom end rot",
+        "Stake plants at 45\u00b0 angle for maximum sun exposure and air flow",
+        "Implement strict sanitation: disinfect tools with 70% alcohol between plants",
+        "Record pest/disease occurrences to predict and prevent future outbreaks",
+        "Apply 2-3 inches of organic mulch (reduces soil-borne disease splash by 75%)",
+        "Use drip irrigation instead of overhead (reduces disease spread by 40%)",
+        "Introduce beneficial insects 2 weeks before expected pest outbreaks"
+      ],
+      "fertilizer_recommendations": [
+        {
+          "type": "mineral",
+          "name": "Rock Phosphate",
+          "npk": "0-20-0",
+          "description": "Slow-release source of phosphorus that becomes available over 2-3 years. Ideal for building long-term soil phosphorus reserves.",
+          "application": "Apply 5-10 lbs per 100 sq ft and incorporate into soil before planting. Does not dissolve in water.",
+          "conditions": "Soils testing low in phosphorus, perennial crops",
+          "scientific_backing": "Long-term studies show cumulative benefits over 3-5 year period"
+        },
+        {
+          "type": "vegetative",
+          "name": "Calcium Nitrate",
+          "npk": "15-0-0 + 19% Ca",
+          "description": "Provides readily available nitrogen and prevents blossom end rot by supplying calcium during fruit development.",
+          "application": "Apply 1-2 tbsp/gal as foliar spray or 1 lb/100 sq ft as soil application every 2 weeks during fruiting.",
+          "conditions": "For fruiting stage, especially when blossom end rot is a concern",
+          "scientific_backing": "Reduces blossom end rot incidence by up to 80% in field trials"
+        },
+        {
+          "type": "flowering",
+          "name": "Phosphorus-Potassium Booster",
+          "npk": "3-15-15",
+          "description": "Lower nitrogen with higher phosphorus and potassium to encourage flowering and fruit development instead of excessive vegetative growth.",
+          "application": "Apply 1 lb/100 sq ft at first flower cluster formation and repeat every 3-4 weeks.",
+          "conditions": "When plants are transitioning from vegetative to flowering stage",
+          "scientific_backing": "Improves fruit set by 25-30% compared to high-nitrogen fertilizers"
+        }
+      ],
+      "plant_details": {
+        "crop_type": "Tomato",
+        "plant_age": "Flowering",
+        "symptoms": null,
+        "planting_date": "2026-01-08",
+        "irrigation_method": "Drip",
+        "previous_treatments": null
+      }
+    }
+  },
+  {
+    "id": 142,
+    "user_id": "Sarthak",
+    "timestamp": "2026-04-27T05:56:35.280251",
+    "analysis_type": "plant",
+    "image_path": "uploads\\a5d5af21-93f0-4aba-89e0-f513fb0739de.jpg",
+    "results": {
+      "plant_info": {
+        "name": "Tomato",
+        "scientific_name": "Solanum lycopersicum",
+        "probability": 100.0
+      },
+      "water_content": {
+        "percentage": 78,
+        "status": "Optimal"
+      },
+      "diseases": {
+        "detected": true,
+        "diseases": [
+          {
+            "name": "Fusarium Wilt",
+            "confidence": 91.76345449228627,
+            "scientific_name": "Fusarium oxysporum f.sp. lycopersici",
+            "description": "Yellowing and wilting of lower leaves, often on one side of the plant, vascular discoloration",
+            "treatment": "Apply: Propiconazole, Thiophanate-methyl",
+            "detailed_info": {
+              "symptoms": "Yellowing and wilting of leaves, often on one side of the plant. Brown discoloration of vascular tissue when stems are cut",
+              "causes": "Soil-borne fungus Fusarium oxysporum enters through roots and blocks water transport",
+              "treatment": "Use biofertilizers like Pseudomonas fluorescens, Neem Cake + Farm Yard Manure (FYM)",
+              "prevention": "Plant resistant tomato varieties, practice crop rotation with non-host plants, remove and destroy infected plants"
+            }
+          }
+        ]
+      },
+      "pests": {
+        "detected": false,
+        "pests": []
+      },
+      "preventive_measures": [
+        "Use Trichoderma asperellum as biological control agent",
+        "Graft onto resistant rootstocks where available",
+        "Install reflective mulch to repel aphids and whiteflies (50% reduction)",
+        "Use floating row covers until flowering to prevent early pest damage",
+        "Prune to 2-3 main stems for optimal airflow (reduces disease pressure 30%)",
+        "Apply 2-3 inches of organic mulch (reduces soil-borne disease splash by 75%)",
+        "Rotate crops following scientific rotation schedules (minimum 3-year cycle)",
+        "Record pest/disease occurrences to predict and prevent future outbreaks"
+      ],
+      "fertilizer_recommendations": [
+        {
+          "type": "organic",
+          "name": "Compost Tea",
+          "npk": "Varies (typically 1-1-1)",
+          "description": "Liquid extract of compost containing beneficial microbes, nutrients, and organic compounds that improve soil biology and plant health.",
+          "application": "Apply as soil drench (5 gal/100 sq ft) or foliar spray (diluted 1:5) every 2-4 weeks.",
+          "conditions": "All plants, especially when microbial activity is desired",
+          "scientific_backing": "Research demonstrates 30-50% increase in beneficial soil microbes after application"
+        },
+        {
+          "type": "vegetative",
+          "name": "Calcium Nitrate",
+          "npk": "15-0-0 + 19% Ca",
+          "description": "Provides readily available nitrogen and prevents blossom end rot by supplying calcium during fruit development.",
+          "application": "Apply 1-2 tbsp/gal as foliar spray or 1 lb/100 sq ft as soil application every 2 weeks during fruiting.",
+          "conditions": "For fruiting stage, especially when blossom end rot is a concern",
+          "scientific_backing": "Reduces blossom end rot incidence by up to 80% in field trials"
+        },
+        {
+          "type": "flowering",
+          "name": "Phosphorus-Potassium Booster",
+          "npk": "3-15-15",
+          "description": "Lower nitrogen with higher phosphorus and potassium to encourage flowering and fruit development instead of excessive vegetative growth.",
+          "application": "Apply 1 lb/100 sq ft at first flower cluster formation and repeat every 3-4 weeks.",
+          "conditions": "When plants are transitioning from vegetative to flowering stage",
+          "scientific_backing": "Improves fruit set by 25-30% compared to high-nitrogen fertilizers"
+        }
+      ],
+      "plant_details": {
+        "crop_type": "Tomato",
+        "plant_age": "Flowering",
+        "symptoms": "yellow leaves",
+        "planting_date": "2026-01-08",
+        "irrigation_method": "Drip",
+        "previous_treatments": null
+      }
+    }
+  },
+  {
+    "id": 143,
+    "user_id": "Sarthak",
+    "timestamp": "2026-04-27T05:57:44.570823",
+    "analysis_type": "plant",
+    "image_path": "uploads\\c8328d41-0cc5-4b8e-a1d7-409eafd915cc.jpg",
+    "results": {
+      "plant_info": {
+        "name": "Tomato",
+        "scientific_name": "Solanum lycopersicum",
+        "probability": 100.0
+      },
+      "water_content": {
+        "percentage": 78,
+        "status": "Optimal"
+      },
+      "diseases": {
+        "detected": true,
+        "diseases": [
+          {
+            "name": "Early Blight",
+            "confidence": 85.76345449228627,
+            "scientific_name": "Alternaria solani",
+            "description": "Dark brown lesions with concentric rings (target-like) on lower leaves spreading upward",
+            "treatment": "Apply: Chlorothalonil, Azoxystrobin",
+            "detailed_info": {
+              "symptoms": "Dark brown spots with concentric rings on older leaves ('target board' appearance). Yellowing of leaves leading to defoliation",
+              "causes": "Fungus (Alternaria solani) persists in soil and plant debris. Spread facilitated by splashing water and wind",
+              "treatment": "Spray Chlorothalonil or Mancozeb @ 2\u20132.5 g/L. Use Azoxystrobin as systemic option",
+              "prevention": "Practice crop rotation, remove plant debris after harvest, ensure balanced fertilization (especially nitrogen and potassium)"
+            }
+          },
+          {
+            "name": "Bacterial Spot",
+            "confidence": 85.76345449228627,
+            "scientific_name": "Xanthomonas campestris pv. vesicatoria",
+            "description": "Small, dark, water-soaked spots on leaves, stems, and fruits that enlarge and turn brownish-red",
+            "treatment": "Apply: Copper hydroxide, Streptomycin (limited use)"
+          }
+        ]
+      },
+      "pests": {
+        "detected": false,
+        "pests": []
+      },
+      "preventive_measures": [
+        "Remove and destroy infected plant parts immediately",
+        "Apply appropriate fungicide/bactericide for the specific pathogen",
+        "Improve growing conditions to reduce disease pressure",
+        "Prune to 2-3 main stems for optimal airflow (reduces disease pressure 30%)",
+        "Stake plants at 45\u00b0 angle for maximum sun exposure and air flow",
+        "Apply calcium nitrate foliar spray weekly to prevent blossom end rot",
+        "Water at the base in early morning (reduces leaf wetness duration by 60%)",
+        "Implement strict sanitation: disinfect tools with 70% alcohol between plants",
+        "Maintain soil pH between 6.0-6.8 for optimal nutrient availability"
+      ],
+      "fertilizer_recommendations": [
+        {
+          "type": "mineral",
+          "name": "Rock Phosphate",
+          "npk": "0-20-0",
+          "description": "Slow-release source of phosphorus that becomes available over 2-3 years. Ideal for building long-term soil phosphorus reserves.",
+          "application": "Apply 5-10 lbs per 100 sq ft and incorporate into soil before planting. Does not dissolve in water.",
+          "conditions": "Soils testing low in phosphorus, perennial crops",
+          "scientific_backing": "Long-term studies show cumulative benefits over 3-5 year period"
+        },
+        {
+          "type": "vegetative",
+          "name": "Calcium Nitrate",
+          "npk": "15-0-0 + 19% Ca",
+          "description": "Provides readily available nitrogen and prevents blossom end rot by supplying calcium during fruit development.",
+          "application": "Apply 1-2 tbsp/gal as foliar spray or 1 lb/100 sq ft as soil application every 2 weeks during fruiting.",
+          "conditions": "For fruiting stage, especially when blossom end rot is a concern",
+          "scientific_backing": "Reduces blossom end rot incidence by up to 80% in field trials"
+        },
+        {
+          "type": "flowering",
+          "name": "Phosphorus-Potassium Booster",
+          "npk": "3-15-15",
+          "description": "Lower nitrogen with higher phosphorus and potassium to encourage flowering and fruit development instead of excessive vegetative growth.",
+          "application": "Apply 1 lb/100 sq ft at first flower cluster formation and repeat every 3-4 weeks.",
+          "conditions": "When plants are transitioning from vegetative to flowering stage",
+          "scientific_backing": "Improves fruit set by 25-30% compared to high-nitrogen fertilizers"
+        }
+      ],
+      "plant_details": {
+        "crop_type": "Tomato",
+        "plant_age": "Flowering",
+        "symptoms": "brown leaves",
+        "planting_date": "2026-01-08",
+        "irrigation_method": "Drip",
+        "previous_treatments": null
+      }
+    }
+  },
+  {
+    "id": 144,
+    "user_id": "Sarthak",
+    "timestamp": "2026-04-27T06:00:05.045829",
+    "analysis_type": "soil",
+    "image_path": "uploads\\687cb7e8-fbab-46ee-b261-7705d0f17c56.jpg",
+    "results": {
+      "characteristics": "\n            - High sand content (>70%)\n            - Very low water retention\n            - Poor in organic matter and nutrients\n            - Excellent drainage (often excessive)\n            - May have salinity issues\n            - pH range: 7.0-8.5 (neutral to alkaline)\n            ",
+      "suitability": {
+        "onion": "Poor suitability for onions without significant amendments. Requires intensive management.",
+        "tomato": "Moderate suitability with irrigation, mulching, and nutrient management."
+      },
+      "recommendations": [
+        {
+          "name": "Pumpkin",
+          "score": 73,
+          "reasons": [
+            "\u2713 pH marginally suitable",
+            "\u2713 Within budget",
+            "\u2713 Attention level matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Temperature suitable",
+            "\u2713 Fits within time duration",
+            "\u2713 Stable price trend",
+            "\u2713 Medium market demand",
+            "\u2713 Good ROI potential (16.0%)"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 Drought risk"
+          ],
+          "details": {
+            "name": "Pumpkin",
+            "soil_types": [
+              "Sandy Loam",
+              "Loamy",
+              "Silty Loam"
+            ],
+            "ph_range": [
+              6.0,
+              7.5
+            ],
+            "duration_months": 3,
+            "investment_per_acre": 15000,
+            "attention_level": "Low",
+            "risk_factor": "Low",
+            "water_requirement": "Moderate",
+            "season": "Kharif",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              20,
+              30
+            ],
+            "rainfall_range": [
+              50,
+              100
+            ],
+            "weather_sensitivity": "Low",
+            "market_volatility": "Low",
+            "profit_margin": "Medium"
+          },
+          "price_prediction": {
+            "current_price": 511,
+            "predicted_price": 592.61,
+            "confidence": 0.85,
+            "trend": "Stable",
+            "demand": "Medium",
+            "roi_potential": 16.0,
+            "factors": {
+              "trend_impact": 1.0,
+              "weather_impact": 1.0,
+              "demand_impact": 1.0,
+              "seasonal_factor": 1.1597031267825728
+            }
+          }
+        },
+        {
+          "name": "Wheat",
+          "score": 58,
+          "reasons": [
+            "\u2713 pH marginally suitable",
+            "\u2713 Within budget",
+            "\u2713 Attention level matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Temperature marginally suitable",
+            "\u2713 Slightly exceeds duration",
+            "\u2713 Increasing price trend"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 Drought risk"
+          ],
+          "details": {
+            "name": "Wheat",
+            "soil_types": [
+              "Loamy",
+              "Clay Loam",
+              "Silty",
+              "Black Soil",
+              "Alluvial Soil"
+            ],
+            "ph_range": [
+              6.0,
+              7.5
+            ],
+            "duration_months": 4,
+            "investment_per_acre": 15000,
+            "attention_level": "Medium",
+            "risk_factor": "Low",
+            "water_requirement": "Moderate",
+            "season": "Rabi",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              15,
+              25
+            ],
+            "rainfall_range": [
+              50,
+              150
+            ],
+            "weather_sensitivity": "Medium",
+            "market_volatility": "Low",
+            "profit_margin": "Medium"
+          },
+          "price_prediction": {
+            "current_price": 2177,
+            "predicted_price": 2008.41,
+            "confidence": 0.65,
+            "trend": "Increasing",
+            "demand": "Low",
+            "roi_potential": -7.7,
+            "factors": {
+              "trend_impact": 1.1,
+              "weather_impact": 1.0,
+              "demand_impact": 0.8,
+              "seasonal_factor": 1.0483598289711646
+            }
+          }
+        },
+        {
+          "name": "Cucumber",
+          "score": 52,
+          "reasons": [
+            "\u2713 Within budget",
+            "\u2713 Attention level moderately matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Temperature suitable",
+            "\u2713 Fits within time duration",
+            "\u2713 Stable price trend"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 pH may need adjustment",
+            "\u26a0 Drought risk"
+          ],
+          "details": {
+            "name": "Cucumber",
+            "soil_types": [
+              "Sandy Loam",
+              "Loamy",
+              "Silty Loam"
+            ],
+            "ph_range": [
+              6.0,
+              7.0
+            ],
+            "duration_months": 2,
+            "investment_per_acre": 20000,
+            "attention_level": "High",
+            "risk_factor": "Medium",
+            "water_requirement": "High",
+            "season": "Summer",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              20,
+              30
+            ],
+            "rainfall_range": [
+              50,
+              80
+            ],
+            "weather_sensitivity": "High",
+            "market_volatility": "Medium",
+            "profit_margin": "Medium"
+          },
+          "price_prediction": {
+            "current_price": 1539,
+            "predicted_price": 1248.06,
+            "confidence": 0.45,
+            "trend": "Stable",
+            "demand": "Low",
+            "roi_potential": -18.9,
+            "factors": {
+              "trend_impact": 1.0,
+              "weather_impact": 1.0,
+              "demand_impact": 0.8,
+              "seasonal_factor": 1.0136899731504252
+            }
+          }
+        },
+        {
+          "name": "Tomato",
+          "score": 39,
+          "reasons": [
+            "\u2713 Attention level moderately matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Temperature suitable",
+            "\u2713 Fits within time duration"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 pH may need adjustment",
+            "\u26a0 May exceed budget",
+            "\u26a0 Drought risk"
+          ],
+          "details": {
+            "name": "Tomato",
+            "soil_types": [
+              "Loamy",
+              "Sandy Loam",
+              "Red Soil",
+              "Black Soil"
+            ],
+            "ph_range": [
+              6.0,
+              6.8
+            ],
+            "duration_months": 3,
+            "investment_per_acre": 30000,
+            "attention_level": "Very High",
+            "risk_factor": "High",
+            "water_requirement": "High",
+            "season": "All seasons",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              20,
+              30
+            ],
+            "rainfall_range": [
+              40,
+              100
+            ],
+            "weather_sensitivity": "Very High",
+            "market_volatility": "High",
+            "profit_margin": "Very High"
+          },
+          "price_prediction": {
+            "current_price": 2309,
+            "predicted_price": 1656.12,
+            "confidence": 0.85,
+            "trend": "Decreasing",
+            "demand": "Low",
+            "roi_potential": -28.3,
+            "factors": {
+              "trend_impact": 0.9,
+              "weather_impact": 1.0,
+              "demand_impact": 0.8,
+              "seasonal_factor": 0.9961749402967957
+            }
+          }
+        }
+      ],
+      "properties": {
+        "ph": "7.7",
+        "organic_matter": "Very Low",
+        "drainage": "Excessive",
+        "nitrogen": "Medium",
+        "phosphorus": "Medium",
+        "potassium": "Medium"
+      },
+      "farmer_inputs": {
+        "soil_depth": "Surface (0-10cm)",
+        "recent_rainfall": "None",
+        "sampling_location": "Nashik,In",
+        "previous_crop": "None",
+        "interested_crops": [
+          "Tomato",
+          "Wheat",
+          "Cucumber",
+          "Pumpkin"
+        ],
+        "budget": {
+          "amount": 20000,
+          "unit": "Per Acre"
+        },
+        "attention_level": "Low (weekly check-ins)",
+        "risk_tolerance": "Low (prefer safe options)",
+        "time_duration": {
+          "value": 3,
+          "unit": "Months"
+        },
+        "organic_preference": true,
+        "irrigation_available": "Limited",
+        "market_preference": "Local market",
+        "labor_availability": "Limited",
+        "weather_api_key": null
+      },
+      "weather_data": {
+        "current_temp": 37.82,
+        "forecast_3month": [
+          {
+            "month": "2026-04",
+            "avg_temp": 27.2,
+            "total_rain": 0,
+            "rain_days": 4
+          },
+          {
+            "month": "2026-05",
+            "avg_temp": 21.7,
+            "total_rain": 0,
+            "rain_days": 2
+          }
+        ],
+        "rainfall_prediction": {},
+        "season_suitability": {
+          "2026-04": {
+            "temp": "hot",
+            "rain": "dry",
+            "description": "hot and dry"
+          },
+          "2026-05": {
+            "temp": "warm",
+            "rain": "dry",
+            "description": "warm and dry"
+          }
+        },
+        "extreme_events": [],
+        "summary": "Expect **falling temperatures** averaging around 24.4\u00b0C. Conditions will likely be **mostly dry**."
+      },
+      "market_data": {
+        "Wheat": {
+          "current_price": 2177,
+          "price_trend": "Increasing",
+          "demand": "Low",
+          "forecast_3months": 1919,
+          "market_confidence": "Medium",
+          "seasonal_factor": 1.0483598289711646
+        },
+        "Tomato": {
+          "current_price": 2309,
+          "price_trend": "Decreasing",
+          "demand": "Low",
+          "forecast_3months": 2292,
+          "market_confidence": "High",
+          "seasonal_factor": 0.9961749402967957
+        },
+        "Cucumber": {
+          "current_price": 1539,
+          "price_trend": "Stable",
+          "demand": "Low",
+          "forecast_3months": 1349,
+          "market_confidence": "Low",
+          "seasonal_factor": 1.0136899731504252
+        },
+        "Pumpkin": {
+          "current_price": 511,
+          "price_trend": "Stable",
+          "demand": "Medium",
+          "forecast_3months": 1348,
+          "market_confidence": "High",
+          "seasonal_factor": 1.1597031267825728
+        }
+      }
+    }
+  },
+  {
+    "id": 145,
+    "user_id": "Sarthak",
+    "timestamp": "2026-06-13T04:15:03.940252",
+    "analysis_type": "plant",
+    "image_path": "uploads\\f2bafe77-1ecf-4f6e-844a-aa7dc3bdedf1.jpg",
+    "results": {
+      "plant_info": {
+        "name": "Tomato",
+        "scientific_name": "Solanum lycopersicum",
+        "probability": 100.0
+      },
+      "water_content": {
+        "percentage": 78,
+        "status": "Optimal"
+      },
+      "diseases": {
+        "detected": false,
+        "diseases": [],
+        "healthy": true,
+        "health_confidence": 87.76345449228627
+      },
+      "pests": {
+        "detected": false,
+        "pests": []
+      },
+      "preventive_measures": [
+        "Stake plants at 45\u00b0 angle for maximum sun exposure and air flow",
+        "Use floating row covers until flowering to prevent early pest damage",
+        "Prune to 2-3 main stems for optimal airflow (reduces disease pressure 30%)",
+        "Maintain optimal plant spacing for good air circulation (prevents 85% of fungal issues)",
+        "Record pest/disease occurrences to predict and prevent future outbreaks",
+        "Rotate crops following scientific rotation schedules (minimum 3-year cycle)",
+        "Maintain soil pH between 6.0-6.8 for optimal nutrient availability",
+        "Apply 2-3 inches of organic mulch (reduces soil-borne disease splash by 75%)"
+      ],
+      "fertilizer_recommendations": [
+        {
+          "type": "mineral",
+          "name": "Rock Phosphate",
+          "npk": "0-20-0",
+          "description": "Slow-release source of phosphorus that becomes available over 2-3 years. Ideal for building long-term soil phosphorus reserves.",
+          "application": "Apply 5-10 lbs per 100 sq ft and incorporate into soil before planting. Does not dissolve in water.",
+          "conditions": "Soils testing low in phosphorus, perennial crops",
+          "scientific_backing": "Long-term studies show cumulative benefits over 3-5 year period"
+        },
+        {
+          "type": "vegetative",
+          "name": "Calcium Nitrate",
+          "npk": "15-0-0 + 19% Ca",
+          "description": "Provides readily available nitrogen and prevents blossom end rot by supplying calcium during fruit development.",
+          "application": "Apply 1-2 tbsp/gal as foliar spray or 1 lb/100 sq ft as soil application every 2 weeks during fruiting.",
+          "conditions": "For fruiting stage, especially when blossom end rot is a concern",
+          "scientific_backing": "Reduces blossom end rot incidence by up to 80% in field trials"
+        },
+        {
+          "type": "flowering",
+          "name": "Phosphorus-Potassium Booster",
+          "npk": "3-15-15",
+          "description": "Lower nitrogen with higher phosphorus and potassium to encourage flowering and fruit development instead of excessive vegetative growth.",
+          "application": "Apply 1 lb/100 sq ft at first flower cluster formation and repeat every 3-4 weeks.",
+          "conditions": "When plants are transitioning from vegetative to flowering stage",
+          "scientific_backing": "Improves fruit set by 25-30% compared to high-nitrogen fertilizers"
+        }
+      ],
+      "plant_details": {
+        "crop_type": "Tomato",
+        "plant_age": "Vegetative",
+        "symptoms": null,
+        "planting_date": "2026-06-02",
+        "irrigation_method": "Drip",
+        "previous_treatments": null
+      }
+    }
+  },
+  {
+    "id": 146,
+    "user_id": "Sarthak",
+    "timestamp": "2026-06-13T04:16:35.081317",
+    "analysis_type": "soil",
+    "image_path": "uploads\\383e36ca-89de-40d0-8222-811fc07efcfc.jpg",
+    "results": {
+      "characteristics": "\n            - High sand content (>70%)\n            - Very low water retention\n            - Poor in organic matter and nutrients\n            - Excellent drainage (often excessive)\n            - May have salinity issues\n            - pH range: 7.0-8.5 (neutral to alkaline)\n            ",
+      "suitability": {
+        "onion": "Poor suitability for onions without significant amendments. Requires intensive management.",
+        "tomato": "Moderate suitability with irrigation, mulching, and nutrient management."
+      },
+      "recommendations": [
+        {
+          "name": "Wheat",
+          "score": 58,
+          "reasons": [
+            "\u2713 pH marginally suitable",
+            "\u2713 Within budget",
+            "\u2713 Attention level matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Slightly exceeds duration",
+            "\u2713 Stable price trend",
+            "\u2713 Medium market demand",
+            "\u2713 Moderate ROI potential (12.9%)"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 Temperature may be suboptimal",
+            "\u26a0 Excess rainfall risk"
+          ],
+          "details": {
+            "name": "Wheat",
+            "soil_types": [
+              "Loamy",
+              "Clay Loam",
+              "Silty",
+              "Black Soil",
+              "Alluvial Soil"
+            ],
+            "ph_range": [
+              6.0,
+              7.5
+            ],
+            "duration_months": 4,
+            "investment_per_acre": 15000,
+            "attention_level": "Medium",
+            "risk_factor": "Low",
+            "water_requirement": "Moderate",
+            "season": "Rabi",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              15,
+              25
+            ],
+            "rainfall_range": [
+              50,
+              150
+            ],
+            "weather_sensitivity": "Medium",
+            "market_volatility": "Low",
+            "profit_margin": "Medium"
+          },
+          "price_prediction": {
+            "current_price": 1826,
+            "predicted_price": 2061.87,
+            "confidence": 0.65,
+            "trend": "Stable",
+            "demand": "Medium",
+            "roi_potential": 12.9,
+            "factors": {
+              "trend_impact": 1.0,
+              "weather_impact": 1.0,
+              "demand_impact": 1.0,
+              "seasonal_factor": 1.129171142468159
+            }
+          }
+        },
+        {
+          "name": "Tomato",
+          "score": 49,
+          "reasons": [
+            "\u2713 Within budget",
+            "\u2713 Attention level moderately matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Fits within time duration",
+            "\u2713 Increasing price trend",
+            "\u2713 Medium market demand"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 pH may need adjustment",
+            "\u26a0 Temperature may be suboptimal",
+            "\u26a0 Excess rainfall risk"
+          ],
+          "details": {
+            "name": "Tomato",
+            "soil_types": [
+              "Loamy",
+              "Sandy Loam",
+              "Red Soil",
+              "Black Soil"
+            ],
+            "ph_range": [
+              6.0,
+              6.8
+            ],
+            "duration_months": 3,
+            "investment_per_acre": 30000,
+            "attention_level": "Very High",
+            "risk_factor": "High",
+            "water_requirement": "High",
+            "season": "All seasons",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              20,
+              30
+            ],
+            "rainfall_range": [
+              40,
+              100
+            ],
+            "weather_sensitivity": "Very High",
+            "market_volatility": "High",
+            "profit_margin": "Very High"
+          },
+          "price_prediction": {
+            "current_price": 2599,
+            "predicted_price": 2505.85,
+            "confidence": 0.65,
+            "trend": "Increasing",
+            "demand": "Medium",
+            "roi_potential": -3.6,
+            "factors": {
+              "trend_impact": 1.1,
+              "weather_impact": 1.0,
+              "demand_impact": 1.0,
+              "seasonal_factor": 0.8765072062582236
+            }
+          }
+        }
+      ],
+      "properties": {
+        "ph": "7.7",
+        "organic_matter": "Very Low",
+        "drainage": "Excessive",
+        "nitrogen": "Medium",
+        "phosphorus": "Medium",
+        "potassium": "Medium"
+      },
+      "farmer_inputs": {
+        "soil_depth": "Surface (0-10cm)",
+        "recent_rainfall": "None",
+        "sampling_location": "",
+        "previous_crop": "None",
+        "interested_crops": [
+          "Tomato",
+          "Wheat"
+        ],
+        "budget": {
+          "amount": 49000,
+          "unit": "Per Acre"
+        },
+        "attention_level": "Low (weekly check-ins)",
+        "risk_tolerance": "High (willing to take chances)",
+        "time_duration": {
+          "value": 3,
+          "unit": "Months"
+        },
+        "organic_preference": true,
+        "irrigation_available": "Limited",
+        "market_preference": "Local market",
+        "labor_availability": "Adequate",
+        "weather_api_key": null
+      },
+      "weather_data": {
+        "current_temp": 33,
+        "forecast_3month": [
+          {
+            "month": "2026-06",
+            "avg_temp": 35,
+            "total_rain": 176,
+            "rain_days": 17
+          },
+          {
+            "month": "2026-07",
+            "avg_temp": 34,
+            "total_rain": 216,
+            "rain_days": 22
+          },
+          {
+            "month": "2026-08",
+            "avg_temp": 33,
+            "total_rain": 164,
+            "rain_days": 25
+          }
+        ],
+        "rainfall_prediction": {},
+        "season_suitability": {
+          "2026-06": {
+            "temp": "hot",
+            "rain": "heavy",
+            "description": "hot and heavy"
+          },
+          "2026-07": {
+            "temp": "hot",
+            "rain": "heavy",
+            "description": "hot and heavy"
+          },
+          "2026-08": {
+            "temp": "hot",
+            "rain": "heavy",
+            "description": "hot and heavy"
+          }
+        },
+        "extreme_events": [],
+        "summary": "Next 3 months: Average temperature 34.0\u00b0C with heavy rainfall (approx 556mm total)."
+      },
+      "market_data": {
+        "Wheat": {
+          "current_price": 1826,
+          "price_trend": "Stable",
+          "demand": "Medium",
+          "forecast_3months": 2396,
+          "market_confidence": "Medium",
+          "seasonal_factor": 1.129171142468159
+        },
+        "Tomato": {
+          "current_price": 2599,
+          "price_trend": "Increasing",
+          "demand": "Medium",
+          "forecast_3months": 2075,
+          "market_confidence": "Medium",
+          "seasonal_factor": 0.8765072062582236
+        }
+      }
+    }
   }
 ]

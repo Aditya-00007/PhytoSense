@@ -14021,5 +14021,461 @@
         }
       }
     }
+  },
+  {
+    "id": 147,
+    "user_id": "Sarthak",
+    "timestamp": "2026-08-30T03:48:57.558602",
+    "analysis_type": "plant",
+    "image_path": "uploads\\0dddff77-f9d3-4839-aae7-86b1b51ffabd.jpg",
+    "results": {
+      "plant_info": {
+        "name": "Tomato",
+        "scientific_name": "Solanum lycopersicum",
+        "probability": 100.0
+      },
+      "water_content": {
+        "percentage": 75,
+        "status": "Optimal"
+      },
+      "diseases": {
+        "detected": true,
+        "diseases": [
+          {
+            "name": "Tomato Mosaic Virus (ToMV)",
+            "scientific_name": "Tobamovirus",
+            "confidence": 85,
+            "description": "The image shows distinct mottling with light green and yellow patches on the leaf surface, accompanied by leaf distortion and puckering. This 'mosaic' pattern is a classic symptom of viral infection.",
+            "treatment": "There is no cure for viral infections. Infected plants should be removed and destroyed immediately to prevent spread. Disinfect tools and hands between plants. Use virus-free seeds and resistant varieties in the future.",
+            "detailed_info": {
+              "symptoms": "Mosaic patterns (light and dark green/yellow patches), leaf distortion, puckering, and stunted growth. In severe cases, leaves may curl and die.",
+              "causes": "Tobamovirus, a highly stable virus transmitted through contact with infected plants, contaminated tools, seeds, or hands. It is not spread by insects.",
+              "treatment": "Immediate removal of infected plants. Strict sanitation protocols (disinfecting tools with bleach or alcohol). Avoid handling healthy plants after touching infected ones.",
+              "prevention": "Use certified virus-free seeds. Plant resistant varieties (marked with 'Tm' resistance). Control weeds that may harbor the virus. Avoid smoking near plants (tobacco can carry the virus)."
+            }
+          }
+        ]
+      },
+      "pests": {
+        "detected": false,
+        "pests": []
+      },
+      "preventive_measures": [
+        "Remove and destroy infected plant parts immediately",
+        "Apply appropriate fungicide/bactericide for the specific pathogen",
+        "Improve growing conditions to reduce disease pressure",
+        "Stake plants at 45\u00b0 angle for maximum sun exposure and air flow",
+        "Prune to 2-3 main stems for optimal airflow (reduces disease pressure 30%)",
+        "Use floating row covers until flowering to prevent early pest damage",
+        "Maintain soil pH between 6.0-6.8 for optimal nutrient availability",
+        "Record pest/disease occurrences to predict and prevent future outbreaks",
+        "Implement strict sanitation: disinfect tools with 70% alcohol between plants"
+      ],
+      "fertilizer_recommendations": [
+        {
+          "type": "general",
+          "name": "Balanced NPK (10-10-10)",
+          "npk": "10-10-10",
+          "description": "Provides equal parts nitrogen (N), phosphorus (P), and potassium (K). Nitrogen promotes leaf growth, phosphorus supports root and flower development, potassium enhances overall plant health.",
+          "application": "Apply 2-3 lbs per 100 sq ft before planting and side-dress during active growth. Water thoroughly after application.",
+          "conditions": "General purpose for most plants during vegetative growth",
+          "scientific_backing": "University studies show balanced NPK improves yield by 15-20% over unfertilized controls"
+        },
+        {
+          "type": "vegetative",
+          "name": "Calcium Nitrate",
+          "npk": "15-0-0 + 19% Ca",
+          "description": "Provides readily available nitrogen and prevents blossom end rot by supplying calcium during fruit development.",
+          "application": "Apply 1-2 tbsp/gal as foliar spray or 1 lb/100 sq ft as soil application every 2 weeks during fruiting.",
+          "conditions": "For fruiting stage, especially when blossom end rot is a concern",
+          "scientific_backing": "Reduces blossom end rot incidence by up to 80% in field trials"
+        },
+        {
+          "type": "flowering",
+          "name": "Phosphorus-Potassium Booster",
+          "npk": "3-15-15",
+          "description": "Lower nitrogen with higher phosphorus and potassium to encourage flowering and fruit development instead of excessive vegetative growth.",
+          "application": "Apply 1 lb/100 sq ft at first flower cluster formation and repeat every 3-4 weeks.",
+          "conditions": "When plants are transitioning from vegetative to flowering stage",
+          "scientific_backing": "Improves fruit set by 25-30% compared to high-nitrogen fertilizers"
+        }
+      ],
+      "plant_details": {
+        "crop_type": "Tomato",
+        "plant_age": "Fruiting",
+        "symptoms": null,
+        "planting_date": "2026-06-18",
+        "irrigation_method": "Drip",
+        "previous_treatments": null
+      }
+    }
+  },
+  {
+    "id": 148,
+    "user_id": "Sarthak",
+    "timestamp": "2026-08-30T03:50:21.313473",
+    "analysis_type": "plant",
+    "image_path": "uploads\\abf083f0-3d5d-42cf-9d76-08a1d85b2292.jpg",
+    "results": {
+      "plant_info": {
+        "name": "Onion",
+        "scientific_name": "",
+        "probability": 100.0
+      },
+      "water_content": {
+        "percentage": 44,
+        "status": "Low"
+      },
+      "diseases": {
+        "detected": false,
+        "diseases": []
+      },
+      "pests": {
+        "detected": false,
+        "pests": []
+      },
+      "preventive_measures": [
+        "Cure harvested bulbs properly with good ventilation to prevent storage diseases",
+        "Apply sulfur-containing fertilizers to enhance pungency and disease resistance",
+        "Maintain consistent soil moisture to prevent splitting and secondary infections",
+        "Use drip irrigation instead of overhead (reduces disease spread by 40%)",
+        "Implement strict sanitation: disinfect tools with 70% alcohol between plants",
+        "Rotate crops following scientific rotation schedules (minimum 3-year cycle)",
+        "Record pest/disease occurrences to predict and prevent future outbreaks",
+        "Apply 2-3 inches of organic mulch (reduces soil-borne disease splash by 75%)"
+      ],
+      "fertilizer_recommendations": [
+        {
+          "type": "organic",
+          "name": "Compost Tea",
+          "npk": "Varies (typically 1-1-1)",
+          "description": "Liquid extract of compost containing beneficial microbes, nutrients, and organic compounds that improve soil biology and plant health.",
+          "application": "Apply as soil drench (5 gal/100 sq ft) or foliar spray (diluted 1:5) every 2-4 weeks.",
+          "conditions": "All plants, especially when microbial activity is desired",
+          "scientific_backing": "Research demonstrates 30-50% increase in beneficial soil microbes after application"
+        },
+        {
+          "type": "vegetative",
+          "name": "Nitrogen-Sulfur Blend",
+          "npk": "21-0-0-24S",
+          "description": "Provides nitrogen for leaf growth and sulfur which is essential for onion flavor development and disease resistance.",
+          "application": "Side-dress 1 lb/100 ft row at 3-leaf stage and again 3-4 weeks later.",
+          "conditions": "Early to mid-growth stage onions",
+          "scientific_backing": "Sulfur application increases pyruvic acid content by 30%, enhancing flavor"
+        },
+        {
+          "type": "bulbing",
+          "name": "Low-N, High-K Blend",
+          "npk": "5-10-20",
+          "description": "Lower nitrogen with higher potassium for bulb development phase. Reducing nitrogen prevents excess leaf growth that can delay bulbing.",
+          "application": "Apply 1 lb/100 ft row when bulbs begin to form, typically 6-8 weeks after planting.",
+          "conditions": "During bulb formation stage",
+          "scientific_backing": "Potassium application at bulbing improves storage quality by 25-40%"
+        }
+      ],
+      "plant_details": {
+        "crop_type": "Onion",
+        "plant_age": "Mature",
+        "symptoms": null,
+        "planting_date": "2026-05-21",
+        "irrigation_method": "Flood",
+        "previous_treatments": null
+      }
+    }
+  },
+  {
+    "id": 149,
+    "user_id": "Sarthak",
+    "timestamp": "2026-08-30T04:19:37.198631",
+    "analysis_type": "soil",
+    "image_path": "uploads\\1a6acaca-dbef-4132-849d-601fa3a2326f.jpg",
+    "results": {
+      "characteristics": "\n            - High sand content (>70%)\n            - Very low water retention\n            - Poor in organic matter and nutrients\n            - Excellent drainage (often excessive)\n            - May have salinity issues\n            - pH range: 7.0-8.5 (neutral to alkaline)\n            ",
+      "suitability": {
+        "onion": "Poor suitability for onions without significant amendments. Requires intensive management.",
+        "tomato": "Moderate suitability with irrigation, mulching, and nutrient management."
+      },
+      "recommendations": [
+        {
+          "name": "Cabbage",
+          "score": 62,
+          "reasons": [
+            "\u2713 Within budget",
+            "\u2713 Attention level moderately matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Temperature suitable",
+            "\u2713 Fits within time duration",
+            "\u2713 Stable price trend",
+            "\u2713 High market demand",
+            "\u2713 Good ROI potential (41.5%)"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 pH may need adjustment",
+            "\u26a0 Drought risk"
+          ],
+          "details": {
+            "name": "Cabbage",
+            "soil_types": [
+              "Sandy Loam",
+              "Loamy",
+              "Clay Loam"
+            ],
+            "ph_range": [
+              6.0,
+              6.8
+            ],
+            "duration_months": 3,
+            "investment_per_acre": 25000,
+            "attention_level": "High",
+            "risk_factor": "Medium",
+            "water_requirement": "High",
+            "season": "Winter",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              15,
+              25
+            ],
+            "rainfall_range": [
+              60,
+              100
+            ],
+            "weather_sensitivity": "High",
+            "market_volatility": "Medium",
+            "profit_margin": "Medium"
+          },
+          "price_prediction": {
+            "current_price": 1828,
+            "predicted_price": 2586.33,
+            "confidence": 0.65,
+            "trend": "Stable",
+            "demand": "High",
+            "roi_potential": 41.5,
+            "factors": {
+              "trend_impact": 1.0,
+              "weather_impact": 1.0,
+              "demand_impact": 1.2,
+              "seasonal_factor": 1.1790364871824461
+            }
+          }
+        },
+        {
+          "name": "Tomato",
+          "score": 54,
+          "reasons": [
+            "\u2713 Within budget",
+            "\u2713 Attention level moderately matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Temperature suitable",
+            "\u2713 Fits within time duration",
+            "\u2713 Increasing price trend"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 pH may need adjustment",
+            "\u26a0 Drought risk"
+          ],
+          "details": {
+            "name": "Tomato",
+            "soil_types": [
+              "Loamy",
+              "Sandy Loam",
+              "Red Soil",
+              "Black Soil"
+            ],
+            "ph_range": [
+              6.0,
+              6.8
+            ],
+            "duration_months": 3,
+            "investment_per_acre": 30000,
+            "attention_level": "Very High",
+            "risk_factor": "High",
+            "water_requirement": "High",
+            "season": "All seasons",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              20,
+              30
+            ],
+            "rainfall_range": [
+              40,
+              100
+            ],
+            "weather_sensitivity": "Very High",
+            "market_volatility": "High",
+            "profit_margin": "Very High"
+          },
+          "price_prediction": {
+            "current_price": 2652,
+            "predicted_price": 2498.85,
+            "confidence": 0.85,
+            "trend": "Increasing",
+            "demand": "Low",
+            "roi_potential": -5.8,
+            "factors": {
+              "trend_impact": 1.1,
+              "weather_impact": 1.0,
+              "demand_impact": 0.8,
+              "seasonal_factor": 1.0707403454456557
+            }
+          }
+        },
+        {
+          "name": "Rice",
+          "score": 44,
+          "reasons": [
+            "\u2713 Within budget",
+            "\u2713 Attention level moderately matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Temperature suitable",
+            "\u2713 Increasing price trend"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 pH may need adjustment",
+            "\u26a0 Drought risk",
+            "\u26a0 Requires more time than available"
+          ],
+          "details": {
+            "name": "Rice",
+            "soil_types": [
+              "Clay",
+              "Clay Loam",
+              "Alluvial Soil",
+              "Laterite Soil"
+            ],
+            "ph_range": [
+              5.5,
+              6.5
+            ],
+            "duration_months": 5,
+            "investment_per_acre": 20000,
+            "attention_level": "High",
+            "risk_factor": "Medium",
+            "water_requirement": "High",
+            "season": "Kharif",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              20,
+              35
+            ],
+            "rainfall_range": [
+              150,
+              300
+            ],
+            "weather_sensitivity": "High",
+            "market_volatility": "Low",
+            "profit_margin": "Low"
+          },
+          "price_prediction": {
+            "current_price": 2683,
+            "predicted_price": 2383.93,
+            "confidence": 0.65,
+            "trend": "Increasing",
+            "demand": "Low",
+            "roi_potential": -11.1,
+            "factors": {
+              "trend_impact": 1.1,
+              "weather_impact": 1.0,
+              "demand_impact": 0.8,
+              "seasonal_factor": 1.0096955930835867
+            }
+          }
+        }
+      ],
+      "properties": {
+        "ph": "7.7",
+        "organic_matter": "Very Low",
+        "drainage": "Excessive",
+        "nitrogen": "Medium",
+        "phosphorus": "Medium",
+        "potassium": "Medium"
+      },
+      "farmer_inputs": {
+        "soil_depth": "Surface (0-10cm)",
+        "recent_rainfall": "Light",
+        "sampling_location": "Nashik,IN",
+        "previous_crop": "Wheat",
+        "interested_crops": [
+          "Tomato",
+          "Rice",
+          "Cabbage"
+        ],
+        "budget": {
+          "amount": 50000,
+          "unit": "Per Acre"
+        },
+        "attention_level": "Medium (regular attention)",
+        "risk_tolerance": "Medium (balanced approach)",
+        "time_duration": {
+          "value": 3,
+          "unit": "Months"
+        },
+        "organic_preference": true,
+        "irrigation_available": "Limited",
+        "market_preference": "Local market",
+        "labor_availability": "Adequate",
+        "weather_api_key": null
+      },
+      "weather_data": {
+        "current_temp": 24.89,
+        "forecast_3month": [
+          {
+            "month": "2026-08",
+            "avg_temp": 23.1,
+            "total_rain": 0.2,
+            "rain_days": 2
+          },
+          {
+            "month": "2026-09",
+            "avg_temp": 21.4,
+            "total_rain": 0,
+            "rain_days": 4
+          }
+        ],
+        "rainfall_prediction": {},
+        "season_suitability": {
+          "2026-08": {
+            "temp": "warm",
+            "rain": "dry",
+            "description": "warm and dry"
+          },
+          "2026-09": {
+            "temp": "warm",
+            "rain": "dry",
+            "description": "warm and dry"
+          }
+        },
+        "extreme_events": [],
+        "summary": "Expect **stable temperatures** averaging around 22.2\u00b0C. Conditions will likely be **mostly dry**."
+      },
+      "market_data": {
+        "Rice": {
+          "current_price": 2683,
+          "price_trend": "Increasing",
+          "demand": "Low",
+          "forecast_3months": 2840,
+          "market_confidence": "Medium",
+          "seasonal_factor": 1.0096955930835867
+        },
+        "Tomato": {
+          "current_price": 2652,
+          "price_trend": "Increasing",
+          "demand": "Low",
+          "forecast_3months": 1747,
+          "market_confidence": "High",
+          "seasonal_factor": 1.0707403454456557
+        },
+        "Cabbage": {
+          "current_price": 1828,
+          "price_trend": "Stable",
+          "demand": "High",
+          "forecast_3months": 1841,
+          "market_confidence": "Medium",
+          "seasonal_factor": 1.1790364871824461
+        }
+      }
+    }
   }
 ]

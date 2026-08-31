@@ -5,6 +5,7 @@ import json
 import os
 import streamlit as st
 from image_processing import preprocess_image, extract_features
+from utils import get_secret
 from model_handler import identify_plant, detect_water_content, detect_diseases, detect_pests
 from maharashtra import get_local_recommendations
 from crop_database import get_crop_info, get_crop_disease_info, get_crop_pest_info, get_crop_deficiency_info
@@ -32,7 +33,7 @@ def refine_analysis_with_llm(image, heuristic_results, plant_details):
     if not HAS_GROQ:
         return heuristic_results
         
-    api_key = os.getenv("GROQ_API_KEY") or st.secrets.get("GROQ_API_KEY")
+    api_key = get_secret("GROQ_API_KEY")
     if not api_key:
         return heuristic_results
         

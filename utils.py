@@ -11,6 +11,25 @@ import uuid
 from datetime import datetime
 from PIL import Image
 
+def get_secret(key, default=None):
+    """
+    Safely retrieve a secret from Streamlit secrets, falling back to environment variables.
+    """
+    # 1. Try environment variables first (allows easy overrides)
+    val = os.environ.get(key)
+    if val is not None:
+        return val
+        
+    # 2. Try Streamlit secrets
+    try:
+        import streamlit as st
+        if key in st.secrets:
+            return st.secrets[key]
+    except Exception:
+        pass
+        
+    return default
+
 def load_svg(file_path):
     """
     Load SVG file contents as a string

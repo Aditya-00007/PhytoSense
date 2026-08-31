@@ -15,7 +15,7 @@ import random
 from image_processing import preprocess_image, extract_features
 from model_handler import identify_plant, detect_water_content, detect_diseases, detect_pests
 from recommendations import get_preventive_measures, get_fertilizer_recommendations
-from utils import load_svg, get_example_images, generate_report_markdown, format_probability, save_uploaded_image
+from utils import load_svg, get_example_images, generate_report_markdown, format_probability, save_uploaded_image, get_secret
 from db_adapter import create_user, verify_user, update_user_profile, save_analysis, get_user_analyses, get_user_by_id, get_user_profile, save_session, get_active_session, clear_session, verify_forgot_password, reset_password
 from maharashtra import get_local_recommendations
 from profile_utils import get_profile_field, get_select_index, get_season_details
@@ -3807,7 +3807,7 @@ Promote balanced use of fertilizers.
         st.markdown(t("Real-time commodities market price tracking in Maharashtra Mandis, powered by Agmarknet APIs."))
         
         # Fetch live data
-        api_key = st.secrets.get("AGMARKNET_API_KEY") or "579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b"
+        api_key = get_secret("AGMARKNET_API_KEY") or "579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b"
         live_records = []
         if api_key:
             with st.spinner(t("Loading market prices...")):

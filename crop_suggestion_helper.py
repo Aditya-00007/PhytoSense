@@ -16,7 +16,7 @@ import pandas as pd
 from image_processing import preprocess_image, extract_features
 from model_handler import identify_plant, detect_water_content, detect_diseases, detect_pests
 from recommendations import get_preventive_measures, get_fertilizer_recommendations
-from utils import load_svg, get_example_images, generate_report_markdown, format_probability, save_uploaded_image
+from utils import load_svg, get_example_images, generate_report_markdown, format_probability, save_uploaded_image, get_secret
 from db_adapter import create_user, verify_user, update_user_profile, save_analysis, get_user_analyses, get_user_by_id, get_user_profile
 from maharashtra import get_local_recommendations
 from profile_utils import get_profile_field, get_select_index
@@ -37,7 +37,7 @@ def get_weather_data(location, api_key=None):
     # For demo purposes - you can replace with actual API call
     # Sign up for free API key at https://openweathermap.org/api
     
-    api_key =st.secrets.get("WEATHER_API_KEY")
+    api_key = get_secret("WEATHER_API_KEY")
 
     if api_key and location and location != t("Field name or coordinates"):
         try:
@@ -424,7 +424,7 @@ def get_market_prices(crop_names=None, api_key=None):
     DEFAULT_API_KEY = "579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b"
     
     # Use provided key, secrets key, or default
-    api_key = api_key or st.secrets.get("AGMARKNET_API_KEY") or DEFAULT_API_KEY
+    api_key = api_key or get_secret("AGMARKNET_API_KEY") or DEFAULT_API_KEY
     
     try:
         # We'll try to fetch data for Maharashtra (since it's the focus) to get some real data
@@ -574,7 +574,7 @@ def generate_crop_recommendations(soil_results, farmer_inputs):
 
     # Fetch weather data
     location = farmer_inputs.get('sampling_location', '')
-    weather_api_key =st.secrets.get("WEATHER_API_KEY", None)
+    weather_api_key = get_secret("WEATHER_API_KEY", None)
     weather_data = get_weather_data(location, weather_api_key)
     
     # Display weather summary (Personalized)

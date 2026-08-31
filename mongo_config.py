@@ -1,6 +1,7 @@
 import os
 import streamlit as st
 from pymongo import MongoClient
+from utils import get_secret
 import urllib.parse
 
 def get_mongo_client():
@@ -8,7 +9,7 @@ def get_mongo_client():
     Get MongoDB client connection
     """
     # Try to get URI from secrets or environment
-    mongo_uri = st.secrets.get("MONGO_URI") or os.environ.get("MONGO_URI")
+    mongo_uri = get_secret("MONGO_URI")
     
     if not mongo_uri:
         return None
@@ -29,6 +30,6 @@ def get_database():
     client = get_mongo_client()
     if client:
         # Get database name from URI or default
-        db_name = st.secrets.get("MONGO_DB_NAME") or os.environ.get("MONGO_DB_NAME") or "phytosense_db"
+        db_name = get_secret("MONGO_DB_NAME") or "phytosense_db"
         return client[db_name]
     return None

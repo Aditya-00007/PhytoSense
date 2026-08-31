@@ -2,6 +2,7 @@ import streamlit as st
 import json
 import os
 import datetime
+from utils import get_secret
 from language_support import t
 from profile_utils import get_profile_field
 from weather_service import fetch_weather_data, fetch_forecast_data
@@ -18,15 +19,8 @@ class KrishiMitra:
     def __init__(self):
         self.history_file = "farmer_history.json"
         
-        # Try to get API key from secrets or environment
-        self.api_key = os.getenv("GROQ_API_KEY")
-
-        # If not found, safely try Streamlit secrets (local dev)
-        if not self.api_key:
-            try:
-                self.api_key = st.secrets["GROQ_API_KEY"]
-            except Exception:
-                self.api_key = None
+        # Try to get API key from secrets or environment safely
+        self.api_key = get_secret("GROQ_API_KEY")
         
         self.client = None
         if HAS_GROQ and self.api_key:
@@ -293,7 +287,7 @@ def show_chatbot_page():
 
     # Check Key
     # Priority: Session State > Secrets > Environment
-    api_key =os.getenv("GROQ_API_KEY") or st.session_state.get("GROQ_API_KEY") or st.secrets.get("GROQ_API_KEY") or os.environ.get("GROQ_API_KEY")
+    api_key = st.session_state.get("GROQ_API_KEY") or get_secret("GROQ_API_KEY")
     
     if not api_key:
         api_key_input = st.text_input(t("Enter Groq API Key to activate Krishi Mitra"), type="password")

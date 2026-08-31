@@ -423,8 +423,8 @@ def get_market_prices(crop_names=None, api_key=None):
     BASE_URL = f"https://api.data.gov.in/resource/{RESOURCE_ID}"
     DEFAULT_API_KEY = "579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b"
     
-    # Use provided key or default
-    api_key = api_key or DEFAULT_API_KEY
+    # Use provided key, secrets key, or default
+    api_key = api_key or st.secrets.get("AGMARKNET_API_KEY") or DEFAULT_API_KEY
     
     try:
         # We'll try to fetch data for Maharashtra (since it's the focus) to get some real data
@@ -439,7 +439,7 @@ def get_market_prices(crop_names=None, api_key=None):
         headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
         }
-        response = requests.get(BASE_URL, params=params, headers=headers, timeout=5)
+        response = requests.get(BASE_URL, params=params, headers=headers, timeout=10)
 
         
         if response.status_code == 200:

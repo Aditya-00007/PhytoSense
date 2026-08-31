@@ -2928,7 +2928,7 @@ def fetch_agmarknet_prices_cached(api_key):
         headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
         }
-        response = requests.get(url, params=params, headers=headers, timeout=5)
+        response = requests.get(url, params=params, headers=headers, timeout=10)
 
         if response.status_code == 200:
             return response.json().get("records", []), None
@@ -3807,7 +3807,7 @@ Promote balanced use of fertilizers.
         st.markdown(t("Real-time commodities market price tracking in Maharashtra Mandis, powered by Agmarknet APIs."))
         
         # Fetch live data
-        api_key = st.secrets.get("AGMARKNET_API_KEY")
+        api_key = st.secrets.get("AGMARKNET_API_KEY") or "579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b"
         live_records = []
         if api_key:
             with st.spinner(t("Loading market prices...")):

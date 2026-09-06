@@ -14477,5 +14477,901 @@
         }
       }
     }
+  },
+  {
+    "id": 150,
+    "user_id": "Sarthak",
+    "timestamp": "2026-09-06T18:23:40.947920",
+    "analysis_type": "soil",
+    "image_path": "uploads\\0bbd0baf-cf35-4e50-98d1-8418f356ab23.jpg",
+    "results": {
+      "characteristics": "\n            - Highly weathered soil with sesquioxides\n            - Poor in organic matter and nutrients\n            - Porous and well-drained\n            - High iron and aluminum content\n            - Acidic in nature\n            - pH range: 4.5-6.0 (acidic)\n            ",
+      "suitability": {
+        "onion": "Poor suitability for onions. Requires significant soil amendments and pH correction.",
+        "tomato": "Moderate suitability with proper liming and nutrient management."
+      },
+      "recommendations": [
+        {
+          "name": "Cabbage",
+          "score": 51,
+          "reasons": [
+            "\u2713 Budget slightly low but possible",
+            "\u2713 Attention level moderately matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Fits within time duration",
+            "\u2713 Increasing price trend",
+            "\u2713 High market demand",
+            "\u2713 Good ROI potential (42.8%)"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 pH may need adjustment",
+            "\u26a0 Temperature may be suboptimal",
+            "\u26a0 Excess rainfall risk"
+          ],
+          "details": {
+            "name": "Cabbage",
+            "soil_types": [
+              "Sandy Loam",
+              "Loamy",
+              "Clay Loam"
+            ],
+            "ph_range": [
+              6.0,
+              6.8
+            ],
+            "duration_months": 3,
+            "investment_per_acre": 25000,
+            "attention_level": "High",
+            "risk_factor": "Medium",
+            "water_requirement": "High",
+            "season": "Winter",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              15,
+              25
+            ],
+            "rainfall_range": [
+              60,
+              100
+            ],
+            "weather_sensitivity": "High",
+            "market_volatility": "Medium",
+            "profit_margin": "Medium"
+          },
+          "price_prediction": {
+            "current_price": 1101,
+            "predicted_price": 1572.14,
+            "confidence": 0.65,
+            "trend": "Increasing",
+            "demand": "High",
+            "roi_potential": 42.8,
+            "factors": {
+              "trend_impact": 1.1,
+              "weather_impact": 1.0,
+              "demand_impact": 1.2,
+              "seasonal_factor": 1.081756319908822
+            }
+          }
+        },
+        {
+          "name": "Rice",
+          "score": 50,
+          "reasons": [
+            "\u2713 pH marginally suitable",
+            "\u2713 Within budget",
+            "\u2713 Attention level moderately matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Temperature suitable",
+            "\u2713 Medium market demand"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 Excess rainfall risk",
+            "\u26a0 Requires more time than available"
+          ],
+          "details": {
+            "name": "Rice",
+            "soil_types": [
+              "Clay",
+              "Clay Loam",
+              "Alluvial Soil",
+              "Laterite Soil"
+            ],
+            "ph_range": [
+              5.5,
+              6.5
+            ],
+            "duration_months": 5,
+            "investment_per_acre": 20000,
+            "attention_level": "High",
+            "risk_factor": "Medium",
+            "water_requirement": "High",
+            "season": "Kharif",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              20,
+              35
+            ],
+            "rainfall_range": [
+              150,
+              300
+            ],
+            "weather_sensitivity": "High",
+            "market_volatility": "Low",
+            "profit_margin": "Low"
+          },
+          "price_prediction": {
+            "current_price": 2902,
+            "predicted_price": 2550.26,
+            "confidence": 0.45,
+            "trend": "Decreasing",
+            "demand": "Medium",
+            "roi_potential": -12.1,
+            "factors": {
+              "trend_impact": 0.9,
+              "weather_impact": 1.0,
+              "demand_impact": 1.0,
+              "seasonal_factor": 0.9764390321066676
+            }
+          }
+        },
+        {
+          "name": "Cucumber",
+          "score": 50,
+          "reasons": [
+            "\u2713 Within budget",
+            "\u2713 Attention level moderately matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Fits within time duration",
+            "\u2713 Stable price trend",
+            "\u2713 Medium market demand",
+            "\u2713 Moderate ROI potential (12.7%)"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 pH may need adjustment",
+            "\u26a0 Temperature may be suboptimal",
+            "\u26a0 Excess rainfall risk"
+          ],
+          "details": {
+            "name": "Cucumber",
+            "soil_types": [
+              "Sandy Loam",
+              "Loamy",
+              "Silty Loam"
+            ],
+            "ph_range": [
+              6.0,
+              7.0
+            ],
+            "duration_months": 2,
+            "investment_per_acre": 20000,
+            "attention_level": "High",
+            "risk_factor": "Medium",
+            "water_requirement": "High",
+            "season": "Summer",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              20,
+              30
+            ],
+            "rainfall_range": [
+              50,
+              80
+            ],
+            "weather_sensitivity": "High",
+            "market_volatility": "Medium",
+            "profit_margin": "Medium"
+          },
+          "price_prediction": {
+            "current_price": 1154,
+            "predicted_price": 1301.02,
+            "confidence": 0.45,
+            "trend": "Stable",
+            "demand": "Medium",
+            "roi_potential": 12.7,
+            "factors": {
+              "trend_impact": 1.0,
+              "weather_impact": 1.0,
+              "demand_impact": 1.0,
+              "seasonal_factor": 1.1274003672432262
+            }
+          }
+        },
+        {
+          "name": "Tomato",
+          "score": 34,
+          "reasons": [
+            "\u2713 Attention level moderately matches",
+            "\u2713 Risk level acceptable",
+            "\u2713 Fits within time duration",
+            "\u2713 Stable price trend"
+          ],
+          "warnings": [
+            "\u26a0 Soil type may not be ideal",
+            "\u26a0 pH may need adjustment",
+            "\u26a0 May exceed budget",
+            "\u26a0 Temperature may be suboptimal",
+            "\u26a0 Excess rainfall risk"
+          ],
+          "details": {
+            "name": "Tomato",
+            "soil_types": [
+              "Loamy",
+              "Sandy Loam",
+              "Red Soil",
+              "Black Soil"
+            ],
+            "ph_range": [
+              6.0,
+              6.8
+            ],
+            "duration_months": 3,
+            "investment_per_acre": 30000,
+            "attention_level": "Very High",
+            "risk_factor": "High",
+            "water_requirement": "High",
+            "season": "All seasons",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              20,
+              30
+            ],
+            "rainfall_range": [
+              40,
+              100
+            ],
+            "weather_sensitivity": "Very High",
+            "market_volatility": "High",
+            "profit_margin": "Very High"
+          },
+          "price_prediction": {
+            "current_price": 2727,
+            "predicted_price": 2503.36,
+            "confidence": 0.65,
+            "trend": "Stable",
+            "demand": "Low",
+            "roi_potential": -8.2,
+            "factors": {
+              "trend_impact": 1.0,
+              "weather_impact": 1.0,
+              "demand_impact": 0.8,
+              "seasonal_factor": 1.1474871861625433
+            }
+          }
+        }
+      ],
+      "properties": {
+        "ph": "5.3",
+        "organic_matter": "Very Low",
+        "drainage": "Excessive",
+        "nitrogen": "Medium",
+        "phosphorus": "Medium",
+        "potassium": "Medium"
+      },
+      "farmer_inputs": {
+        "soil_depth": "Surface (0-10cm)",
+        "recent_rainfall": "Light",
+        "sampling_location": "Nashik,IN",
+        "previous_crop": "Wheat",
+        "interested_crops": [
+          "Rice",
+          "Tomato",
+          "Cabbage",
+          "Cucumber"
+        ],
+        "budget": {
+          "amount": 20000,
+          "unit": "Per Acre"
+        },
+        "attention_level": "Very High (intensive management)",
+        "risk_tolerance": "Very Low (can't afford failure)",
+        "time_duration": {
+          "value": 3,
+          "unit": "Months"
+        },
+        "organic_preference": true,
+        "irrigation_available": "Limited",
+        "market_preference": "Local market",
+        "labor_availability": "Adequate",
+        "weather_api_key": null
+      },
+      "weather_data": {
+        "current_temp": 24,
+        "forecast_3month": [
+          {
+            "month": "2026-09",
+            "avg_temp": 35,
+            "total_rain": 203,
+            "rain_days": 18
+          },
+          {
+            "month": "2026-10",
+            "avg_temp": 32,
+            "total_rain": 110,
+            "rain_days": 7
+          },
+          {
+            "month": "2026-11",
+            "avg_temp": 30,
+            "total_rain": 105,
+            "rain_days": 12
+          }
+        ],
+        "rainfall_prediction": {},
+        "season_suitability": {
+          "2026-09": {
+            "temp": "hot",
+            "rain": "heavy",
+            "description": "hot and heavy"
+          },
+          "2026-10": {
+            "temp": "warm",
+            "rain": "moderate",
+            "description": "warm and moderate"
+          },
+          "2026-11": {
+            "temp": "warm",
+            "rain": "moderate",
+            "description": "warm and moderate"
+          }
+        },
+        "extreme_events": [],
+        "summary": "Next 3 months: Average temperature 32.3\u00b0C with heavy rainfall (approx 418mm total)."
+      },
+      "market_data": {
+        "Rice": {
+          "current_price": 2902,
+          "price_trend": "Decreasing",
+          "demand": "Medium",
+          "forecast_3months": 2882,
+          "market_confidence": "Low",
+          "seasonal_factor": 0.9764390321066676
+        },
+        "Tomato": {
+          "current_price": 2727,
+          "price_trend": "Stable",
+          "demand": "Low",
+          "forecast_3months": 1701,
+          "market_confidence": "Medium",
+          "seasonal_factor": 1.1474871861625433
+        },
+        "Cabbage": {
+          "current_price": 1101,
+          "price_trend": "Increasing",
+          "demand": "High",
+          "forecast_3months": 1661,
+          "market_confidence": "Medium",
+          "seasonal_factor": 1.081756319908822
+        },
+        "Cucumber": {
+          "current_price": 1154,
+          "price_trend": "Stable",
+          "demand": "Medium",
+          "forecast_3months": 2729,
+          "market_confidence": "Low",
+          "seasonal_factor": 1.1274003672432262
+        }
+      }
+    }
+  },
+  {
+    "id": 151,
+    "user_id": "Sarthak",
+    "timestamp": "2026-09-06T19:31:07.535127",
+    "analysis_type": "soil",
+    "image_path": "uploads\\21cd1958-77ad-43d9-8f80-d6399ec905c5.jpg",
+    "results": {
+      "soil_type": "Laterite Soil",
+      "soil_texture": "Sandy Loam",
+      "texture_description": "Slightly gritty feel with good drainage, adequate aeration, and fair moisture holding.",
+      "texture_composition": {
+        "sand": 60,
+        "silt": 25,
+        "clay": 15
+      },
+      "characteristics": "\n            - Intensively leached soil rich in iron and aluminum sesquioxides\n            - Acidic in nature with high phosphorus fixation capacity\n            - Low organic carbon, calcium, magnesium, and available nitrogen\n            - Highly porous and well-drained, with gravelly or gritty subsoil\n            - pH range: 4.8-5.8 (acidic)\n            ",
+      "suitability": {
+        "cashew": "Naturally thriving in laterite soils with high drought resistance.",
+        "mango": "Excellent for Alphonso and regional mango varieties on laterite slopes.",
+        "rice": "Suitable in terraced valley bottoms with liming and organic amendments.",
+        "tomato": "Moderate suitability; requires agricultural lime and phosphorus correction.",
+        "onion": "Suboptimal without heavy liming and organic matter enrichment."
+      },
+      "recommendations": [
+        {
+          "name": "Tomato",
+          "score": 82,
+          "reasons": [
+            "\ud83c\udfaf Matches your indicated crop preference",
+            "\u2713 Soil compatibility is high for Sandy Loam / Laterite Soil",
+            "\u2713 Forecast temperature (26.7\u00b0C) within ideal growth range (20-30\u00b0C)",
+            "\u2713 Higher rainfall (376mm) manageable due to good soil drainage",
+            "\u2713 Stable weather forecast without extreme risk alerts",
+            "\u2713 Good rotation compatibility following Wheat",
+            "\u2713 Cultivation cost fits comfortably within budget",
+            "\u2713 Stable market pricing",
+            "\u2713 High wholesale market demand",
+            "\u2713 Excellent ROI outlook (26.8%)",
+            "\u2713 Crop duration fits within your available timeline",
+            "\u2713 Risk profile aligns with your tolerance"
+          ],
+          "warnings": [
+            "\u26a0 pH (5.2) outside ideal band (6.0-6.8); soil amendment recommended"
+          ],
+          "details": {
+            "name": "Tomato",
+            "soil_types": [
+              "Loamy",
+              "Sandy Loam",
+              "Red Soil",
+              "Black Soil"
+            ],
+            "ph_range": [
+              6.0,
+              6.8
+            ],
+            "duration_months": 3,
+            "investment_per_acre": 30000,
+            "attention_level": "Very High",
+            "risk_factor": "High",
+            "water_requirement": "High",
+            "season": "All seasons",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              20,
+              30
+            ],
+            "rainfall_range": [
+              40,
+              100
+            ],
+            "weather_sensitivity": "Very High",
+            "market_volatility": "High",
+            "profit_margin": "Very High"
+          },
+          "price_prediction": {
+            "current_price": 2885,
+            "predicted_price": 3659.3,
+            "confidence": 0.65,
+            "trend": "Stable",
+            "demand": "High",
+            "roi_potential": 26.8,
+            "factors": {
+              "trend_impact": 1.0,
+              "weather_impact": 1.0,
+              "demand_impact": 1.2,
+              "seasonal_factor": 1.0569894327446745
+            }
+          },
+          "is_user_interested": true,
+          "sub_scores": {
+            "soil": 53,
+            "weather": 88,
+            "market": 90,
+            "rotation": 80,
+            "management": 86
+          }
+        },
+        {
+          "name": "Cucumber",
+          "score": 82,
+          "reasons": [
+            "\ud83c\udfaf Matches your indicated crop preference",
+            "\u2713 Soil compatibility is high for Sandy Loam / Laterite Soil",
+            "\u2713 Forecast temperature (27.0\u00b0C) within ideal growth range (20-30\u00b0C)",
+            "\u2713 Higher rainfall (310mm) manageable due to good soil drainage",
+            "\u2713 Stable weather forecast without extreme risk alerts",
+            "\u2713 Good rotation compatibility following Wheat",
+            "\u2713 Cultivation cost fits comfortably within budget",
+            "\u2713 Favorable upward market price trend",
+            "\u2713 High wholesale market demand",
+            "\u2713 Moderate ROI outlook (7.6%)",
+            "\u2713 Crop duration fits within your available timeline",
+            "\u2713 Risk profile aligns with your tolerance"
+          ],
+          "warnings": [
+            "\u26a0 pH (5.2) outside ideal band (6.0-7.0); soil amendment recommended"
+          ],
+          "details": {
+            "name": "Cucumber",
+            "soil_types": [
+              "Sandy Loam",
+              "Loamy",
+              "Silty Loam"
+            ],
+            "ph_range": [
+              6.0,
+              7.0
+            ],
+            "duration_months": 2,
+            "investment_per_acre": 20000,
+            "attention_level": "High",
+            "risk_factor": "Medium",
+            "water_requirement": "High",
+            "season": "Summer",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              20,
+              30
+            ],
+            "rainfall_range": [
+              50,
+              80
+            ],
+            "weather_sensitivity": "High",
+            "market_volatility": "Medium",
+            "profit_margin": "Medium"
+          },
+          "price_prediction": {
+            "current_price": 1295,
+            "predicted_price": 1393.89,
+            "confidence": 0.65,
+            "trend": "Increasing",
+            "demand": "High",
+            "roi_potential": 7.6,
+            "factors": {
+              "trend_impact": 1.1,
+              "weather_impact": 1.0,
+              "demand_impact": 1.2,
+              "seasonal_factor": 0.8154268104368689
+            }
+          },
+          "is_user_interested": true,
+          "sub_scores": {
+            "soil": 53,
+            "weather": 88,
+            "market": 90,
+            "rotation": 80,
+            "management": 86
+          }
+        },
+        {
+          "name": "Rice",
+          "score": 81,
+          "reasons": [
+            "\ud83c\udfaf Matches your indicated crop preference",
+            "\u2713 Soil compatibility is high for Sandy Loam / Laterite Soil",
+            "\u2713 Soil pH (5.2) is marginally suitable",
+            "\u2713 Forecast temperature (26.7\u00b0C) within ideal growth range (20-35\u00b0C)",
+            "\u2713 Higher rainfall (376mm) manageable due to good soil drainage",
+            "\u2713 Stable weather forecast without extreme risk alerts",
+            "\u2713 Good rotation compatibility following Wheat",
+            "\u2713 Cultivation cost fits comfortably within budget",
+            "\u2713 Stable market pricing",
+            "\u2713 High wholesale market demand",
+            "\u2713 Excellent ROI outlook (23.5%)",
+            "\u2713 Risk profile aligns with your tolerance"
+          ],
+          "warnings": [
+            "\u26a0 Requires 5 months, exceeding planned time"
+          ],
+          "details": {
+            "name": "Rice",
+            "soil_types": [
+              "Clay",
+              "Clay Loam",
+              "Alluvial Soil",
+              "Laterite Soil"
+            ],
+            "ph_range": [
+              5.5,
+              6.5
+            ],
+            "duration_months": 5,
+            "investment_per_acre": 20000,
+            "attention_level": "High",
+            "risk_factor": "Medium",
+            "water_requirement": "High",
+            "season": "Kharif",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              20,
+              35
+            ],
+            "rainfall_range": [
+              150,
+              300
+            ],
+            "weather_sensitivity": "High",
+            "market_volatility": "Low",
+            "profit_margin": "Low"
+          },
+          "price_prediction": {
+            "current_price": 2642,
+            "predicted_price": 3263.6,
+            "confidence": 0.85,
+            "trend": "Stable",
+            "demand": "High",
+            "roi_potential": 23.5,
+            "factors": {
+              "trend_impact": 1.0,
+              "weather_impact": 1.0,
+              "demand_impact": 1.2,
+              "seasonal_factor": 1.0293970666356214
+            }
+          },
+          "is_user_interested": true,
+          "sub_scores": {
+            "soil": 66,
+            "weather": 88,
+            "market": 90,
+            "rotation": 80,
+            "management": 53
+          }
+        },
+        {
+          "name": "Bottle Gourd",
+          "score": 78,
+          "reasons": [
+            "\ud83c\udfaf Matches your indicated crop preference",
+            "\u2713 Soil compatibility is high for Sandy Loam / Laterite Soil",
+            "\u2713 Forecast temperature (26.7\u00b0C) within ideal growth range (20-35\u00b0C)",
+            "\u2713 Higher rainfall (376mm) manageable due to good soil drainage",
+            "\u2713 Stable weather forecast without extreme risk alerts",
+            "\u2713 Good rotation compatibility following Wheat",
+            "\u2713 Cultivation cost fits comfortably within budget",
+            "\u2713 Favorable upward market price trend",
+            "\u2713 Crop duration fits within your available timeline",
+            "\u2713 Labor & attention commitment matches your preference",
+            "\u2713 Risk profile aligns with your tolerance"
+          ],
+          "warnings": [
+            "\u26a0 pH (5.2) outside ideal band (6.0-7.5); soil amendment recommended"
+          ],
+          "details": {
+            "name": "Bottle Gourd",
+            "soil_types": [
+              "Sandy Loam",
+              "Loamy",
+              "Silty Loam"
+            ],
+            "ph_range": [
+              6.0,
+              7.5
+            ],
+            "duration_months": 3,
+            "investment_per_acre": 15000,
+            "attention_level": "Low",
+            "risk_factor": "Low",
+            "water_requirement": "Moderate",
+            "season": "Zaid",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              20,
+              35
+            ],
+            "rainfall_range": [
+              60,
+              100
+            ],
+            "weather_sensitivity": "Low",
+            "market_volatility": "Low",
+            "profit_margin": "Medium"
+          },
+          "price_prediction": {
+            "current_price": 1273,
+            "predicted_price": 1151.28,
+            "confidence": 0.85,
+            "trend": "Increasing",
+            "demand": "Low",
+            "roi_potential": -9.6,
+            "factors": {
+              "trend_impact": 1.1,
+              "weather_impact": 1.0,
+              "demand_impact": 0.8,
+              "seasonal_factor": 1.0277102087353678
+            }
+          },
+          "is_user_interested": true,
+          "sub_scores": {
+            "soil": 53,
+            "weather": 88,
+            "market": 60,
+            "rotation": 80,
+            "management": 100
+          }
+        },
+        {
+          "name": "Cabbage",
+          "score": 71,
+          "reasons": [
+            "\ud83c\udfaf Matches your indicated crop preference",
+            "\u2713 Soil compatibility is high for Sandy Loam / Laterite Soil",
+            "\u2713 Forecast temperature (26.7\u00b0C) is tolerable for crop cycle",
+            "\u2713 Higher rainfall (376mm) manageable due to good soil drainage",
+            "\u2713 Stable weather forecast without extreme risk alerts",
+            "\u2713 Good rotation compatibility following Wheat",
+            "\u2713 Cultivation cost fits comfortably within budget",
+            "\u2713 Steady market demand",
+            "\u2713 Crop duration fits within your available timeline",
+            "\u2713 Risk profile aligns with your tolerance"
+          ],
+          "warnings": [
+            "\u26a0 pH (5.2) outside ideal band (6.0-6.8); soil amendment recommended"
+          ],
+          "details": {
+            "name": "Cabbage",
+            "soil_types": [
+              "Sandy Loam",
+              "Loamy",
+              "Clay Loam"
+            ],
+            "ph_range": [
+              6.0,
+              6.8
+            ],
+            "duration_months": 3,
+            "investment_per_acre": 25000,
+            "attention_level": "High",
+            "risk_factor": "Medium",
+            "water_requirement": "High",
+            "season": "Winter",
+            "suitable_for_organic": true,
+            "temperature_range": [
+              15,
+              25
+            ],
+            "rainfall_range": [
+              60,
+              100
+            ],
+            "weather_sensitivity": "High",
+            "market_volatility": "Medium",
+            "profit_margin": "Medium"
+          },
+          "price_prediction": {
+            "current_price": 1350,
+            "predicted_price": 1121.47,
+            "confidence": 0.85,
+            "trend": "Decreasing",
+            "demand": "Medium",
+            "roi_potential": -16.9,
+            "factors": {
+              "trend_impact": 0.9,
+              "weather_impact": 1.0,
+              "demand_impact": 1.0,
+              "seasonal_factor": 0.923021744820889
+            }
+          },
+          "is_user_interested": true,
+          "sub_scores": {
+            "soil": 53,
+            "weather": 76,
+            "market": 50,
+            "rotation": 80,
+            "management": 86
+          }
+        }
+      ],
+      "properties": {
+        "ph": "5.2",
+        "organic_matter": "Very Low",
+        "drainage": "Excessive to Good",
+        "nitrogen": "Low",
+        "phosphorus": "Very Low",
+        "potassium": "Low"
+      },
+      "ai_enhanced": false,
+      "ai_provider": "Heuristic Computer Vision Engine",
+      "ai_audit_notes": "AI layer inactive (No Grok/Groq API key configured). Running calibrated computer-vision heuristic analysis.",
+      "ai_confidence": 82,
+      "farmer_inputs": {
+        "soil_depth": "Surface (0-10cm)",
+        "recent_rainfall": "Light",
+        "sampling_location": "Nashik,IN",
+        "previous_crop": "Wheat",
+        "user_observed_texture": "Auto-detect from image (Default)",
+        "interested_crops": [
+          "Tomato",
+          "Rice",
+          "Cabbage",
+          "Cucumber",
+          "Bottle Gourd"
+        ],
+        "budget": {
+          "amount": 30000,
+          "unit": "Per Acre"
+        },
+        "attention_level": "High (daily care)",
+        "risk_tolerance": "Low (prefer safe options)",
+        "time_duration": {
+          "value": 3,
+          "unit": "Months"
+        },
+        "organic_preference": true,
+        "irrigation_available": "Good",
+        "market_preference": "Local market",
+        "labor_availability": "Limited",
+        "weather_api_key": null,
+        "groq_api_key": null
+      },
+      "weather_data": {
+        "current_temp": 33,
+        "forecast_3month": [
+          {
+            "month": "2026-09",
+            "avg_temp": 29,
+            "total_rain": 232,
+            "rain_days": 21
+          },
+          {
+            "month": "2026-10",
+            "avg_temp": 25,
+            "total_rain": 78,
+            "rain_days": 9
+          },
+          {
+            "month": "2026-11",
+            "avg_temp": 26,
+            "total_rain": 66,
+            "rain_days": 14
+          }
+        ],
+        "rainfall_prediction": {},
+        "season_suitability": {
+          "2026-09": {
+            "temp": "hot",
+            "rain": "heavy",
+            "description": "hot and heavy"
+          },
+          "2026-10": {
+            "temp": "warm",
+            "rain": "moderate",
+            "description": "warm and moderate"
+          },
+          "2026-11": {
+            "temp": "warm",
+            "rain": "moderate",
+            "description": "warm and moderate"
+          }
+        },
+        "extreme_events": [],
+        "summary": "Next 3 months: Average temperature 26.7\u00b0C with moderate rainfall (approx 376mm total)."
+      },
+      "market_data": {
+        "Rice": {
+          "current_price": 2642,
+          "price_trend": "Stable",
+          "demand": "High",
+          "forecast_3months": 2827,
+          "market_confidence": "High",
+          "seasonal_factor": 1.0293970666356214
+        },
+        "Tomato": {
+          "current_price": 2885,
+          "price_trend": "Stable",
+          "demand": "High",
+          "forecast_3months": 2691,
+          "market_confidence": "Medium",
+          "seasonal_factor": 1.0569894327446745
+        },
+        "Cabbage": {
+          "current_price": 1350,
+          "price_trend": "Decreasing",
+          "demand": "Medium",
+          "forecast_3months": 1398,
+          "market_confidence": "High",
+          "seasonal_factor": 0.923021744820889
+        },
+        "Cucumber": {
+          "current_price": 1295,
+          "price_trend": "Increasing",
+          "demand": "High",
+          "forecast_3months": 2777,
+          "market_confidence": "Medium",
+          "seasonal_factor": 0.8154268104368689
+        },
+        "Bottle Gourd": {
+          "current_price": 1273,
+          "price_trend": "Increasing",
+          "demand": "Low",
+          "forecast_3months": 1482,
+          "market_confidence": "High",
+          "seasonal_factor": 1.0277102087353678
+        }
+      }
+    }
   }
 ]

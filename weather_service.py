@@ -1061,7 +1061,8 @@ def generate_comprehensive_advisory(weather_data, forecast_data):
         advisory.append(f"- **{t('Winter Preparation')}**:")
         advisory.append(f"  - {t('Protect sensitive plants from frost')}")
         advisory.append(f"  - {t('Service farm equipment during downtime')}")
-        advisory.append(f"  - {t('Plan next season\'s crop rotation')}")
+        crop_rot_text = t("Plan next season's crop rotation")
+        advisory.append(f"  - {crop_rot_text}")
     
     return "\n".join(advisory)
 

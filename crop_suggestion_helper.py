@@ -953,7 +953,8 @@ def generate_crop_recommendations(soil_results, farmer_inputs):
     ]
     
     # Parse soil properties
-    soil_type = soil_results.get("soil_type", "").lower()
+    soil_type = str(soil_results.get("soil_type", "")).lower()
+    soil_texture = str(soil_results.get("soil_texture", "")).lower()
     soil_properties = soil_results.get("properties", {})
     
     # Get pH value
@@ -972,6 +973,9 @@ def generate_crop_recommendations(soil_results, farmer_inputs):
         
     attention_level = farmer_inputs['attention_level']
     risk_tolerance = farmer_inputs['risk_tolerance']
+    labor_availability = farmer_inputs.get('labor_availability', t('Adequate'))
+    previous_crop = str(farmer_inputs.get('previous_crop', 'None')).lower()
+    irrigation_available = farmer_inputs.get('irrigation_available', t('Limited'))
     
     # Calculate duration in months based on unit
     if farmer_inputs['time_duration']['unit'] == t("Months"):
@@ -981,12 +985,34 @@ def generate_crop_recommendations(soil_results, farmer_inputs):
     else:  # Seasons
         time_duration_months = farmer_inputs['time_duration']['value'] * 4  # Assuming 4 months per season approx
     
-    interested_crops = farmer_inputs['interested_crops']
+    interested_crops = farmer_inputs.get('interested_crops', [])
     organic_preference = farmer_inputs.get('organic_preference', False)
     
+    # Texture affinity matrix (Score out of 15 for texture match)
+    texture_affinity = {
+        "Wheat": {"loamy": 15, "clay loam": 15, "silty": 14, "clayey": 11, "sandy loam": 11, "sandy": 4},
+        "Rice": {"clayey": 15, "clay loam": 15, "silty": 13, "loamy": 10, "sandy loam": 6, "sandy": 2},
+        "Corn": {"loamy": 15, "sandy loam": 14, "clay loam": 12, "silty": 11, "clayey": 8, "sandy": 7},
+        "Soybean": {"loamy": 15, "clay loam": 15, "clayey": 13, "silty": 13, "sandy loam": 10, "sandy": 5},
+        "Cotton": {"clayey": 15, "clay loam": 15, "loamy": 12, "silty": 10, "sandy loam": 8, "sandy": 4},
+        "Tomato": {"loamy": 15, "sandy loam": 15, "clay loam": 11, "silty": 11, "sandy": 8, "clayey": 5},
+        "Potato": {"sandy loam": 15, "loamy": 14, "silty": 12, "sandy": 10, "clay loam": 8, "clayey": 3},
+        "Onion": {"loamy": 15, "sandy loam": 15, "silty": 13, "clay loam": 11, "clayey": 7, "sandy": 7},
+        "Cabbage": {"loamy": 15, "sandy loam": 14, "clay loam": 14, "silty": 12, "sandy": 6, "clayey": 7},
+        "Watermelon": {"sandy": 15, "sandy loam": 15, "loamy": 12, "silty": 8, "clay loam": 6, "clayey": 3},
+        "Pomegranate": {"loamy": 15, "sandy loam": 14, "clay loam": 12, "sandy": 10, "clayey": 7, "silty": 8},
+        "Cluster Beans": {"sandy": 15, "sandy loam": 15, "loamy": 13, "clay loam": 8, "silty": 8, "clayey": 5},
+        "Grapes": {"sandy loam": 15, "loamy": 15, "clay loam": 12, "silty": 10, "sandy": 8, "clayey": 4},
+        "Cucumber": {"sandy loam": 15, "loamy": 15, "silty": 12, "sandy": 10, "clay loam": 8, "clayey": 4},
+        "Bitter Gourd": {"sandy loam": 15, "loamy": 15, "silty": 12, "sandy": 10, "clay loam": 9, "clayey": 4},
+        "Pumpkin": {"sandy loam": 15, "loamy": 15, "silty": 12, "sandy": 10, "clay loam": 9, "clayey": 4},
+        "Bottle Gourd": {"sandy loam": 15, "loamy": 15, "silty": 12, "sandy": 10, "clay loam": 9, "clayey": 4},
+        "Cauliflower": {"loamy": 15, "sandy loam": 14, "clay loam": 14, "silty": 12, "sandy": 6, "clayey": 7},
+        "Lady Finger": {"sandy loam": 15, "loamy": 15, "clay loam": 12, "silty": 10, "sandy": 9, "clayey": 6}
+    }
+    
     # Check cache to ensure stability
-    # Use a simplified inputs representation for caching key
-    current_state_key = str(farmer_inputs) + str(soil_results.get('soil_type', ''))
+    current_state_key = str(farmer_inputs) + str(soil_results.get('soil_type', '')) + str(soil_results.get('soil_texture', ''))
     
     crops_to_score = crop_database
     if 'cached_recommendations' in st.session_state and \
@@ -1002,183 +1028,274 @@ def generate_crop_recommendations(soil_results, farmer_inputs):
         reasons = []
         warnings = []
         
-        # Check if crop is in interested list (if specified)
-        if interested_crops and crop['name'] not in interested_crops:
-            continue
+        # 1. SOIL & TEXTURE FACTORS (30% of total score)
+        # Check texture affinity
+        crop_tex_map = texture_affinity.get(crop['name'], {})
+        base_tex_pts = crop_tex_map.get(soil_texture, 10)
         
-        # SOIL FACTORS (40% of total score)
+        # Check regional soil type match
+        has_regional_match = any(s.lower() in soil_type for s in crop['soil_types'])
         
-        # Soil type match (15%)
-        # Fix: Check if any of the crop's suitable soil types are in the detected soil type string
-        # e.g. "Black" in "Black Soil" -> True
-        if any(s.lower() in soil_type for s in crop['soil_types']):
-            score += 15
-            reasons.append(t("✓ Soil type compatible"))
+        if has_regional_match and base_tex_pts >= 12:
+            soil_type_score = 15
+            reasons.append(t(f"✓ Soil type ({soil_type.title()}) and texture ({soil_texture.title()}) are optimal"))
+        elif has_regional_match or base_tex_pts >= 12:
+            soil_type_score = 12
+            reasons.append(t(f"✓ Soil compatibility is high for {soil_texture.title()} / {soil_type.title()}"))
+        elif base_tex_pts >= 8:
+            soil_type_score = 8
+            reasons.append(t(f"✓ Soil texture ({soil_texture.title()}) is moderately suitable"))
         else:
-            warnings.append(t("⚠ Soil type may not be ideal"))
-        
-        # pH match (15%)
+            soil_type_score = 3
+            warnings.append(t(f"⚠ Soil texture ({soil_texture.title()}) or type may require conditioning for {crop['name']}"))
+
+        # pH match (10%)
         if crop['ph_range'][0] <= ph_value <= crop['ph_range'][1]:
-            score += 15
-            reasons.append(t("✓ pH within optimal range"))
+            ph_score = 10
+            reasons.append(t(f"✓ Soil pH ({ph_value:.1f}) is within optimal range ({crop['ph_range'][0]}-{crop['ph_range'][1]})"))
         elif crop['ph_range'][0] - 0.5 <= ph_value <= crop['ph_range'][1] + 0.5:
-            score += 8
-            reasons.append(t("✓ pH marginally suitable"))
+            ph_score = 6
+            reasons.append(t(f"✓ Soil pH ({ph_value:.1f}) is marginally suitable"))
         else:
-            warnings.append(t("⚠ pH may need adjustment"))
-        
-        # NPK levels (10%)
+            ph_score = 2
+            warnings.append(t(f"⚠ pH ({ph_value:.1f}) outside ideal band ({crop['ph_range'][0]}-{crop['ph_range'][1]}); soil amendment recommended"))
+
+        # NPK levels (5%)
         npk_score = 0
         for nutrient in ['nitrogen', 'phosphorus', 'potassium']:
-            level = soil_properties.get(nutrient, 'Medium')
-            if level in ['High', 'Very High']:
-                npk_score += 3.5
-            elif level == 'Medium':
-                npk_score += 2
-        score += min(npk_score, 10)
+            level = str(soil_properties.get(nutrient, 'Medium')).lower()
+            if 'high' in level:
+                npk_score += 1.7
+            elif 'medium' in level:
+                npk_score += 1.2
+            else:
+                npk_score += 0.5
+        npk_score = min(5, round(npk_score))
         
-        # FARMER PREFERENCES (30% of total score)
+        soil_sub_score = min(30, soil_type_score + ph_score + npk_score)
+
+        # 2. WEATHER & CLIMATE FACTORS (25% of total score)
+        # Temperature match (10%)
+        forecast_months = weather_data.get('forecast_3month', [])
+        cycle_temps = [m['avg_temp'] for m in forecast_months[:crop['duration_months']]]
+        avg_temp = sum(cycle_temps) / len(cycle_temps) if cycle_temps else weather_data.get('current_temp', 25)
         
-        # Budget match (10%)
-        if budget_amount >= crop['investment_per_acre']:
-            score += 10
-            reasons.append(t("✓ Within budget"))
-        elif budget_amount >= crop['investment_per_acre'] * 0.7:
-            score += 5
-            reasons.append(t("✓ Budget slightly low but possible"))
+        t_min, t_max = crop['temperature_range']
+        if t_min <= avg_temp <= t_max:
+            temp_score = 10
+            reasons.append(t(f"✓ Forecast temperature ({avg_temp:.1f}°C) within ideal growth range ({t_min}-{t_max}°C)"))
+        elif abs(avg_temp - t_min) <= 3 or abs(avg_temp - t_max) <= 3:
+            temp_score = 7
+            reasons.append(t(f"✓ Forecast temperature ({avg_temp:.1f}°C) is tolerable for crop cycle"))
+        elif abs(avg_temp - t_min) <= 6 or abs(avg_temp - t_max) <= 6:
+            temp_score = 4
+            warnings.append(t(f"⚠ Temperature ({avg_temp:.1f}°C) marginally suboptimal for vegetative growth"))
         else:
-            warnings.append(t("⚠ May exceed budget"))
+            temp_score = 1
+            warnings.append(t(f"⚠ Temperature forecast ({avg_temp:.1f}°C) outside comfort zone ({t_min}-{t_max}°C)"))
+
+        # Rainfall & Irrigation Synergy (10%)
+        total_rain = sum(m['total_rain'] for m in forecast_months[:crop['duration_months']])
+        r_min, r_max = crop['rainfall_range']
+        drainage_val = str(soil_properties.get('drainage', 'Good')).lower()
         
-        # Attention level match (10%)
-        attention_map = {
-            t("Very Low"): 0.2,
-            t("Low"): 0.4,
-            t("Medium"): 0.6,
-            t("High"): 0.8,
-            t("Very High"): 1.0
-        }
-        crop_attention_map = {
-            "Very Low": 0.2,
-            "Low": 0.4,
-            "Medium": 0.6,
-            "High": 0.8,
-            "Very High": 1.0
-        }
-        
-        user_attention_score = attention_map.get(attention_level, 0.6)
-        crop_attention_score = crop_attention_map.get(crop['attention_level'], 0.6)
-        
-        attention_diff = abs(user_attention_score - crop_attention_score)
-        if attention_diff <= 0.2:
-            score += 10
-            reasons.append(t("✓ Attention level matches"))
-        elif attention_diff <= 0.4:
-            score += 5
-            reasons.append(t("✓ Attention level moderately matches"))
-        
-        # Risk tolerance match (10%)
-        risk_map = {
-            t("Very Low"): 0.2,
-            t("Low"): 0.4,
-            t("Medium"): 0.6,
-            t("High"): 0.8,
-            t("Very High"): 1.0
-        }
-        crop_risk_map = {
-            "Very Low": 0.2,
-            "Low": 0.4,
-            "Medium": 0.6,
-            "High": 0.8,
-            "Very High": 1.0
-        }
-        
-        user_risk_score = risk_map.get(risk_tolerance, 0.6)
-        crop_risk_score = crop_risk_map.get(crop['risk_factor'], 0.6)
-        
-        if crop_risk_score <= user_risk_score + 0.2:
-            score += 10
-            reasons.append(t("✓ Risk level acceptable"))
+        if r_min <= total_rain <= r_max:
+            rain_score = 10
+            reasons.append(t(f"✓ Forecast rainfall ({total_rain:.0f}mm) matches crop moisture demand ({r_min}-{r_max}mm)"))
+        elif total_rain < r_min:
+            # Deficit: Check irrigation compensation
+            if any(term in str(irrigation_available).lower() for term in ['good', 'excellent']):
+                rain_score = 9
+                reasons.append(t(f"✓ Lower rainfall ({total_rain:.0f}mm) effectively compensated by {irrigation_available.lower()} irrigation"))
+            elif 'limited' in str(irrigation_available).lower():
+                rain_score = 4
+                warnings.append(t(f"⚠ Rainfall deficit ({total_rain:.0f}mm vs need {r_min}mm); limited irrigation may restrict yield"))
+            else:  # Rainfed only
+                rain_score = 1
+                warnings.append(t(f"⚠ High drought risk: rainfed conditions with low forecast rainfall ({total_rain:.0f}mm vs need {r_min}mm)"))
+        else:  # Excess rainfall
+            if any(d in drainage_val for d in ['good', 'excessive']):
+                rain_score = 7
+                reasons.append(t(f"✓ Higher rainfall ({total_rain:.0f}mm) manageable due to good soil drainage"))
+            else:
+                rain_score = 2
+                warnings.append(t(f"⚠ Heavy rainfall ({total_rain:.0f}mm) carries waterlogging risk in slow-draining soil"))
+
+        # Extreme Weather Resilience (5%)
+        extreme_events = weather_data.get('extreme_events', [])
+        if extreme_events:
+            if crop.get('weather_sensitivity') == 'Low':
+                extreme_score = 5
+                reasons.append(t(f"✓ High climate resilience against active weather alerts ({', '.join(extreme_events)})"))
+            elif crop.get('weather_sensitivity') == 'Medium':
+                extreme_score = 3
+                warnings.append(t(f"⚠ Moderate sensitivity to weather alerts ({', '.join(extreme_events)})"))
+            else:
+                extreme_score = 1
+                warnings.append(t(f"⚠ High sensitivity to active weather alerts ({', '.join(extreme_events)})"))
         else:
-            warnings.append(t("⚠ Higher risk than preferred"))
+            extreme_score = 5
+            reasons.append(t("✓ Stable weather forecast without extreme risk alerts"))
+
+        weather_sub_score = min(25, temp_score + rain_score + extreme_score)
+
+        # 3. CROP ROTATION & AGRONOMIC SYNERGY (10% of total score)
+        legume_terms = ['soybean', 'pulse', 'gram', 'bean', 'groundnut', 'peas', 'cluster beans']
+        cereal_terms = ['wheat', 'rice', 'corn', 'cotton', 'sugarcane']
+        solanaceae_terms = ['tomato', 'potato', 'brinjal', 'eggplant', 'chilli']
         
-        # WEATHER FACTORS (15% of total score)
+        crop_name_lower = crop['name'].lower()
         
-        # Temperature match (8%)
-        avg_temp = weather_data['forecast_3month'][0]['avg_temp'] if weather_data['forecast_3month'] else 25
-        if crop['temperature_range'][0] <= avg_temp <= crop['temperature_range'][1]:
-            score += 8
-            reasons.append(t("✓ Temperature suitable"))
-        elif abs(avg_temp - crop['temperature_range'][0]) < 5 or abs(avg_temp - crop['temperature_range'][1]) < 5:
-            score += 4
-            reasons.append(t("✓ Temperature marginally suitable"))
+        if any(leg in previous_crop for leg in legume_terms) and not any(leg in crop_name_lower for leg in legume_terms):
+            rot_score = 10
+            reasons.append(t("✓ Synergistic rotation: benefits from nitrogen fixed by previous legume crop"))
+        elif any(cer in previous_crop for cer in cereal_terms) and any(leg in crop_name_lower for leg in legume_terms):
+            rot_score = 10
+            reasons.append(t("✓ Restorative rotation: replenishes soil nitrogen after heavy-feeding cereal"))
+        elif any(sol in previous_crop for sol in solanaceae_terms) and any(sol in crop_name_lower for sol in solanaceae_terms):
+            rot_score = 2
+            warnings.append(t("⚠ Pest & disease carryover risk: consecutive Solanaceous crop cultivation"))
+        elif previous_crop in [t("None"), "none", "unknown", ""]:
+            rot_score = 7
         else:
-            warnings.append(t("⚠ Temperature may be suboptimal"))
-        
-        # Rainfall match (7%)
-        total_rain = sum(m['total_rain'] for m in weather_data['forecast_3month'][:crop['duration_months']])
-        if crop['rainfall_range'][0] <= total_rain <= crop['rainfall_range'][1]:
-            score += 7
-            reasons.append(t("✓ Rainfall suitable"))
-        elif total_rain > crop['rainfall_range'][1] * 1.3:
-            warnings.append(t("⚠ Excess rainfall risk"))
-        elif total_rain < crop['rainfall_range'][0] * 0.7:
-            warnings.append(t("⚠ Drought risk"))
-        else:
-            score += 3
-            reasons.append(t("✓ Rainfall marginally suitable"))
+            rot_score = 8
+            reasons.append(t(f"✓ Good rotation compatibility following {previous_crop.title()}"))
             
-        # Duration match (10%)
-        if crop['duration_months'] <= time_duration_months:
-            score += 10
-            reasons.append(t("✓ Fits within time duration"))
-        elif crop['duration_months'] <= time_duration_months + 1:
-            score += 5
-            reasons.append(t("✓ Slightly exceeds duration"))
+        rotation_sub_score = min(10, rot_score)
+
+        # 4. MARKET & ECONOMIC FACTORS (20% of total score)
+        # Budget match (7%)
+        if budget_amount >= crop['investment_per_acre']:
+            budget_score = 7
+            reasons.append(t("✓ Cultivation cost fits comfortably within budget"))
+        elif budget_amount >= crop['investment_per_acre'] * 0.75:
+            budget_score = 4
+            reasons.append(t("✓ Budget is slightly tight but manageable"))
         else:
-            warnings.append(t("⚠ Requires more time than available"))
-        
-        # MARKET FACTORS (15% of total score)
-        
-        # Get price prediction
+            budget_score = 1
+            warnings.append(t(f"⚠ Estimated investment (₹{crop['investment_per_acre']}/acre) exceeds your allocated budget"))
+
+        # Price prediction lookup
         price_pred = get_price_prediction(crop['name'], market_data, weather_data)
+        trend_score = 0
+        demand_score = 0
+        roi_score = 0
         
         if price_pred:
-            # Price trend (5%)
+            # Trend (4%)
             if price_pred['trend'] == "Increasing":
-                score += 5
-                reasons.append(t("✓ Increasing price trend"))
+                trend_score = 4
+                reasons.append(t("✓ Favorable upward market price trend"))
             elif price_pred['trend'] == "Stable":
-                score += 3
-                reasons.append(t("✓ Stable price trend"))
+                trend_score = 2
+                reasons.append(t("✓ Stable market pricing"))
             
-            # Demand (5%)
+            # Demand (4%)
             if price_pred['demand'] == "High":
-                score += 5
-                reasons.append(t("✓ High market demand"))
+                demand_score = 4
+                reasons.append(t("✓ High wholesale market demand"))
             elif price_pred['demand'] == "Medium":
-                score += 3
-                reasons.append(t("✓ Medium market demand"))
+                demand_score = 2
+                reasons.append(t("✓ Steady market demand"))
             
-            # ROI potential (5%)
+            # ROI (5%)
             if price_pred['roi_potential'] > 15:
-                score += 5
-                reasons.append(t(f"✓ Good ROI potential ({price_pred['roi_potential']}%)"))
+                roi_score = 5
+                reasons.append(t(f"✓ Excellent ROI outlook ({price_pred['roi_potential']}%)"))
             elif price_pred['roi_potential'] > 5:
-                score += 3
-                reasons.append(t(f"✓ Moderate ROI potential ({price_pred['roi_potential']}%)"))
+                roi_score = 3
+                reasons.append(t(f"✓ Moderate ROI outlook ({price_pred['roi_potential']}%)"))
+            else:
+                roi_score = 1
+        else:
+            trend_score = 2
+            demand_score = 2
+            roi_score = 2
+            
+        market_sub_score = min(20, budget_score + trend_score + demand_score + roi_score)
+
+        # 5. FARMER MANAGEMENT & RISK FIT (15% of total score)
+        # Duration match (5%)
+        if crop['duration_months'] <= time_duration_months:
+            duration_score = 5
+            reasons.append(t("✓ Crop duration fits within your available timeline"))
+        elif crop['duration_months'] <= time_duration_months + 1:
+            duration_score = 3
+            reasons.append(t("✓ Slightly exceeds duration by ~1 month"))
+        else:
+            duration_score = 0
+            warnings.append(t(f"⚠ Requires {crop['duration_months']} months, exceeding planned time"))
+
+        # Attention level match (5%)
+        attention_map = {t("Very Low"): 0.2, t("Low"): 0.4, t("Medium"): 0.6, t("High"): 0.8, t("Very High"): 1.0}
+        crop_att_map = {"Very Low": 0.2, "Low": 0.4, "Medium": 0.6, "High": 0.8, "Very High": 1.0}
+        user_att = attention_map.get(attention_level, 0.6)
+        crop_att = crop_att_map.get(crop.get('attention_level', 'Medium'), 0.6)
         
+        att_diff = abs(user_att - crop_att)
+        if att_diff <= 0.2:
+            attention_score = 5
+            reasons.append(t("✓ Labor & attention commitment matches your preference"))
+        elif att_diff <= 0.4:
+            attention_score = 3
+        else:
+            attention_score = 1
+            warnings.append(t(f"⚠ Crop requires {crop.get('attention_level')} management intensity"))
+
+        # Risk tolerance match (5%)
+        risk_map = {t("Very Low"): 0.2, t("Low"): 0.4, t("Medium"): 0.6, t("High"): 0.8, t("Very High"): 1.0}
+        crop_risk_map = {"Very Low": 0.2, "Low": 0.4, "Medium": 0.6, "High": 0.8, "Very High": 1.0}
+        user_risk = risk_map.get(risk_tolerance, 0.6)
+        crop_risk = crop_risk_map.get(crop.get('risk_factor', 'Medium'), 0.6)
+        
+        if crop_risk <= user_risk + 0.2:
+            risk_score = 5
+            reasons.append(t("✓ Risk profile aligns with your tolerance"))
+        else:
+            risk_score = 1
+            warnings.append(t("⚠ Higher financial/market risk than preferred"))
+
+        management_sub_score = min(15, duration_score + attention_score + risk_score)
+
+        # Calculate Total Score (Out of 100)
+        total_score = soil_sub_score + weather_sub_score + rotation_sub_score + market_sub_score + management_sub_score
+        
+        # Check if user specifically showed interest in this crop
+        is_user_interested = False
+        if interested_crops:
+            for ic in interested_crops:
+                if crop['name'].lower() in str(ic).lower() or str(ic).lower() in crop['name'].lower():
+                    is_user_interested = True
+                    break
+                    
+        if is_user_interested:
+            # Priority boost for farmer-indicated interest
+            total_score = min(100, total_score + 5)
+            reasons.insert(0, t("🎯 Matches your indicated crop preference"))
+
+        # Clamp total score between 15% and 99%
+        final_score = max(15, min(99, int(round(total_score))))
+
         # Add to scored list
         scored_crops.append({
             "name": crop['name'],
-            "score": score,
+            "score": final_score,
             "reasons": reasons,
             "warnings": warnings,
             "details": crop,
-            "price_prediction": price_pred
+            "price_prediction": price_pred,
+            "is_user_interested": is_user_interested,
+            "sub_scores": {
+                "soil": int((soil_sub_score / 30.0) * 100),
+                "weather": int((weather_sub_score / 25.0) * 100),
+                "market": int((market_sub_score / 20.0) * 100),
+                "rotation": int((rotation_sub_score / 10.0) * 100),
+                "management": int((management_sub_score / 15.0) * 100)
+            }
         })
     
-    # Sort by score
-    scored_crops.sort(key=lambda x: x['score'], reverse=True)
+    # Sort by score descending (with user-interested crops having slight tiebreaker advantage)
+    scored_crops.sort(key=lambda x: (x.get('is_user_interested', False), x['score']), reverse=True)
     
     # Cache the results
     st.session_state.cached_recommendations = scored_crops
@@ -1212,13 +1329,26 @@ def generate_crop_recommendations(soil_results, farmer_inputs):
                         st.markdown(f"<div style='background-color: #f0f2f6; padding: 15px; border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 24px;'>{i+1}</div>", unsafe_allow_html=True)
                 
                 with col2:
-                    st.markdown(f"### {crop['name']}")
+                    # Title and optional user interest tag
+                    title_cols = st.columns([3, 1])
+                    with title_cols[0]:
+                        st.markdown(f"### {crop['name']}")
+                    with title_cols[1]:
+                        if crop.get('is_user_interested'):
+                            st.markdown(f"<span style='background-color: #E8F5E9; color: #2E7D32; padding: 4px 8px; border-radius: 6px; font-weight: bold; font-size: 12px; border: 1px solid #81C784;'>🎯 {t('Your Preference')}</span>", unsafe_allow_html=True)
                     
-                    # Match score with color
-                    score_color = "#4CAF50" if crop['score'] >= 70 else "#FF9800" if crop['score'] >= 50 else "#f44336"
+                    # Match score with color and sub-score metrics
+                    score_color = "#2E7D32" if crop['score'] >= 75 else "#F57C00" if crop['score'] >= 50 else "#D32F2F"
+                    subs = crop.get('sub_scores', {})
                     st.markdown(f"""
-                    <div style='background-color: {score_color}; padding: 5px 10px; border-radius: 5px; color: white; width: 120px; text-align: center;'>
-                        Match Score: {crop['score']}%
+                    <div style='display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 12px;'>
+                        <div style='background-color: {score_color}; padding: 6px 12px; border-radius: 6px; color: white; font-weight: bold; font-size: 14px;'>
+                            {t('Match Score')}: {crop['score']}%
+                        </div>
+                        <span style='background-color: #f0f4f8; padding: 4px 8px; border-radius: 4px; font-size: 12px;'>🌿 {t('Soil')}: {subs.get('soil', 85)}%</span>
+                        <span style='background-color: #f0f4f8; padding: 4px 8px; border-radius: 4px; font-size: 12px;'>🌦️ {t('Weather')}: {subs.get('weather', 85)}%</span>
+                        <span style='background-color: #f0f4f8; padding: 4px 8px; border-radius: 4px; font-size: 12px;'>💰 {t('Market')}: {subs.get('market', 80)}%</span>
+                        <span style='background-color: #f0f4f8; padding: 4px 8px; border-radius: 4px; font-size: 12px;'>🔄 {t('Rotation')}: {subs.get('rotation', 80)}%</span>
                     </div>
                     """, unsafe_allow_html=True)
                     
@@ -1273,7 +1403,7 @@ def generate_crop_recommendations(soil_results, farmer_inputs):
                     
                     with start_col1:
                         # Toggle button for details
-                        if st.button(t("� Detailed Analysis"), key=f"btn_details_{crop['name']}_{i}", use_container_width=True):
+                        if st.button(t("🔍 Detailed Analysis"), key=f"btn_details_{crop['name']}_{i}", use_container_width=True):
                             st.session_state[details_key] = not st.session_state.get(details_key, False)
                             # Close profit if opening details (optional UX choice)
                             if st.session_state[details_key]:

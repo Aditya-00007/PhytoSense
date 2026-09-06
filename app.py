@@ -2023,6 +2023,24 @@ def show_soil_analysis_page():
             if previous_crop == t("Other"):
                 previous_crop_other = st.text_input(t("Please specify previous crop"))
                 previous_crop = previous_crop_other if previous_crop_other else previous_crop
+
+            # Soil texture observation (Optional)
+            user_observed_texture = st.selectbox(
+                t("Observed Soil Texture / Feel (Optional)"),
+                options=[
+                    t("Auto-detect from image (Default)"),
+                    t("Sandy (Gritty, loose, doesn't stick)"),
+                    t("Sandy Loam (Slightly gritty, forms weak cast)"),
+                    t("Loamy (Crumbly, velvety, ideal balance)"),
+                    t("Clay Loam (Sticky & plastic when moist, holds shape)"),
+                    t("Clayey (Heavy, very sticky, cracks when dry)"),
+                    t("Silty (Smooth, powdery/floury feel)")
+                ],
+                index=0,
+                key="user_observed_texture",
+                help=t("Optional tactile ribbon/feel observation. Auto-detect uses computer-vision texture features.")
+            )
+
         
         with farmer_tab:
             st.markdown(f"### {t('Farmer Preferences & Constraints')}")
@@ -2145,6 +2163,7 @@ def show_soil_analysis_page():
             "recent_rainfall": recent_rainfall,
             "sampling_location": sampling_location,
             "previous_crop": previous_crop,
+            "user_observed_texture": user_observed_texture if 'user_observed_texture' in locals() else t("Auto-detect from image (Default)"),
             "interested_crops": interested_crops,
             "budget": {
                 "amount": budget_amount,
@@ -2160,7 +2179,8 @@ def show_soil_analysis_page():
             "irrigation_available": irrigation_available if 'irrigation_available' in locals() else t("Limited"),
             "market_preference": market_preference if 'market_preference' in locals() else t("No preference"),
             "labor_availability": labor_availability if 'labor_availability' in locals() else t("Adequate"),
-            "weather_api_key": weather_api_key_input if 'weather_api_key_input' in locals() else None
+            "weather_api_key": weather_api_key_input if 'weather_api_key_input' in locals() else None,
+            "groq_api_key": st.session_state.get("GROQ_API_KEY") or get_secret("GROQ_API_KEY")
         }
         
         # Analyze button
@@ -2172,8 +2192,18 @@ def show_soil_analysis_page():
                         image = st.session_state.uploaded_soil_image
                         preprocessed_soil_image = preprocess_image(image)
                         
-                        # Get soil analysis results
-                        soil_results = analyze_soil(None, np.array(preprocessed_soil_image))
+                        # Automatically use the same Groq key as Krishi Mitra
+                        groq_key = st.session_state.get("GROQ_API_KEY") or get_secret("GROQ_API_KEY")
+                        
+                        # Get soil analysis results with AI layer and texture detection
+                        soil_results = analyze_soil(
+                            None, 
+                            np.array(preprocessed_soil_image),
+                            raw_pil_image=image,
+                            farmer_inputs=st.session_state.farmer_inputs,
+                            api_key=groq_key,
+                            user_texture=st.session_state.farmer_inputs.get("user_observed_texture")
+                        )
                         
                         # Ensure results are in proper dictionary format
                         if isinstance(soil_results, str):
@@ -2249,12 +2279,51 @@ def show_soil_analysis_page():
             if st.session_state.uploaded_soil_image is not None:
                 st.image(st.session_state.uploaded_soil_image, caption=t("Soil Sample"), use_container_width=True)
             
-            # Soil type and characteristics
-            st.markdown(f"### {t('Soil Classification')}")
+            # Soil type and texture classification
+            st.markdown(f"### {t('Soil Classification & Texture')}")
             
-            # Get soil type safely
-            soil_type = soil_results.get("soil_type") if isinstance(soil_results, dict) else str(soil_results)
-            st.markdown(f"**{t('Identified Soil Type')}:** {t(soil_type) if isinstance(soil_type, str) else soil_type}")
+            # Get soil type and texture safely
+            soil_type = soil_results.get("soil_type", t("Unknown")) if isinstance(soil_results, dict) else str(soil_results)
+            soil_texture = soil_results.get("soil_texture", t("Loamy")) if isinstance(soil_results, dict) else t("Loamy")
+            
+            # AI status badge
+            if isinstance(soil_results, dict) and soil_results.get("ai_enhanced"):
+                provider = soil_results.get("ai_provider", "Grok / Groq AI")
+                conf = soil_results.get("ai_confidence", 94)
+                st.markdown(f"""
+                <div style='background-color: #E8F5E9; border-left: 4px solid #2E7D32; padding: 10px 14px; border-radius: 6px; margin-bottom: 12px;'>
+                    <strong style='color: #2E7D32;'>🤖 {t('AI Verified & Enhanced')} ({provider})</strong>
+                    <span style='color: #555; font-size: 13px;'> | {t('Confidence')}: {conf}%</span>
+                </div>
+                """, unsafe_allow_html=True)
+                if soil_results.get("ai_audit_notes"):
+                    st.info(f"**{t('AI Soil Scientist Audit')}**: {soil_results.get('ai_audit_notes')}")
+            else:
+                st.markdown(f"""
+                <div style='background-color: #f0f4f8; border-left: 4px solid #607D8B; padding: 8px 12px; border-radius: 6px; margin-bottom: 12px; font-size: 13px; color: #455A64;'>
+                    🔬 {t('Computer-Vision Texture & Heuristic Classification')}
+                </div>
+                """, unsafe_allow_html=True)
+
+            col_class1, col_class2 = st.columns(2)
+            with col_class1:
+                st.markdown(f"**{t('Identified Soil Type')}:**  \n<span style='font-size: 16px; font-weight: bold; color: #2E7D32;'>{t(soil_type) if isinstance(soil_type, str) else soil_type}</span>", unsafe_allow_html=True)
+            with col_class2:
+                st.markdown(f"**{t('Identified Soil Texture')}:**  \n<span style='font-size: 16px; font-weight: bold; color: #1565C0;'>{t(soil_texture) if isinstance(soil_texture, str) else soil_texture}</span>", unsafe_allow_html=True)
+            
+            # Texture description and particle composition
+            if isinstance(soil_results, dict) and soil_results.get("texture_description"):
+                st.caption(f"ℹ️ {soil_results.get('texture_description')}")
+                
+            if isinstance(soil_results, dict) and "texture_composition" in soil_results:
+                comp = soil_results["texture_composition"]
+                st.markdown(f"""
+                <div style='background-color: #FAFAFA; border: 1px solid #E0E0E0; border-radius: 6px; padding: 8px 12px; margin-top: 6px; margin-bottom: 14px; font-size: 12px; display: flex; justify-content: space-around;'>
+                    <span>🏖️ <strong>{t('Sand')}</strong>: {comp.get('sand', 40)}%</span>
+                    <span>🌊 <strong>{t('Silt')}</strong>: {comp.get('silt', 40)}%</span>
+                    <span>🧱 <strong>{t('Clay')}</strong>: {comp.get('clay', 20)}%</span>
+                </div>
+                """, unsafe_allow_html=True)
             
             # Display soil properties
             st.markdown(f"### {t('Soil Properties')}")
@@ -2288,18 +2357,19 @@ def show_soil_analysis_page():
             # Create a summary card
             st.markdown(f"""
             <div style='background-color: #f0f2f6; padding: 15px; border-radius: 10px; margin-bottom: 20px;'>
-                <p><strong>{t('Previous Crop')}:</strong> {farmer_inputs['previous_crop']}</p>
-                <p><strong>{t('Budget')}:</strong> {farmer_inputs['budget']['amount']} {farmer_inputs['budget']['unit']}</p>
-                <p><strong>{t('Attention Level')}:</strong> {farmer_inputs['attention_level']}</p>
-                <p><strong>{t('Risk Tolerance')}:</strong> {farmer_inputs['risk_tolerance']}</p>
-                <p><strong>{t('Time Duration')}:</strong> {farmer_inputs['time_duration']['value']} {farmer_inputs['time_duration']['unit']}</p>
-                <p><strong>{t('Irrigation')}:</strong> {farmer_inputs['irrigation_available']}</p>
-                <p><strong>{t('Interested Crops')}:</strong> {', '.join(farmer_inputs['interested_crops']) if farmer_inputs['interested_crops'] else t('All suitable crops')}</p>
+                <p><strong>{t('Previous Crop')}:</strong> {farmer_inputs.get('previous_crop', 'None')}</p>
+                <p><strong>{t('Observed Texture')}:</strong> {farmer_inputs.get('user_observed_texture', t('Auto-detect'))}</p>
+                <p><strong>{t('Budget')}:</strong> {farmer_inputs.get('budget', {}).get('amount', 0)} {farmer_inputs.get('budget', {}).get('unit', '')}</p>
+                <p><strong>{t('Attention Level')}:</strong> {farmer_inputs.get('attention_level', '')}</p>
+                <p><strong>{t('Risk Tolerance')}:</strong> {farmer_inputs.get('risk_tolerance', '')}</p>
+                <p><strong>{t('Time Duration')}:</strong> {farmer_inputs.get('time_duration', {}).get('value', 3)} {farmer_inputs.get('time_duration', {}).get('unit', '')}</p>
+                <p><strong>{t('Irrigation')}:</strong> {farmer_inputs.get('irrigation_available', '')}</p>
+                <p><strong>{t('Interested Crops')}:</strong> {', '.join(farmer_inputs.get('interested_crops', [])) if farmer_inputs.get('interested_crops') else t('All suitable crops')}</p>
             </div>
             """, unsafe_allow_html=True)
             
             # Soil characteristics
-            st.markdown(f"### {t('Soil Characteristics')}")
+            st.markdown(f"### {t('Soil Characteristics & Management')}")
             
             if isinstance(soil_results, dict):
                 characteristics = soil_results.get("characteristics", t("Information not available."))
@@ -2307,6 +2377,11 @@ def show_soil_analysis_page():
                 characteristics = t("Basic analysis completed. Detailed characteristics not available.")
             
             st.markdown(t(characteristics) if isinstance(characteristics, str) else characteristics)
+            
+            # Display recommendations if available
+            if isinstance(soil_results, dict) and soil_results.get("recommendations"):
+                with st.expander(t("🚜 Recommended Soil Amendments & Practices"), expanded=False):
+                    st.markdown(soil_results.get("recommendations"))
         
         # Generate recommendations based on all inputs
         st.markdown("---")
@@ -3116,7 +3191,7 @@ def show_resources_page():
                 ### {t('Other Activities')}
                 - {t('Prepare nurseries for transplanted crops')}
                 - {t('Clean and repair farm equipment and tools')}
-                - {t('Plan your season\'s crop layout and rotation')}
+                - {t("Plan your season's crop layout and rotation")}
                 """)
             elif season in [t("Summer"), t("Summer (Zaid)")]:
                 st.markdown(f"""
@@ -3178,7 +3253,7 @@ def show_resources_page():
                 
                 ### {t('Other Activities')}
                 - {t('Service irrigation systems before winter')}
-                - {t('Review the season\'s records and plan improvements')}
+                - {t("Review the season's records and plan improvements")}
                 - {t('Attend agricultural training programs during off-season')}
                 """)
             elif season == t("Monsoon (Kharif)"):
@@ -3232,7 +3307,7 @@ def show_resources_page():
                 ### {t('Other Activities')}
                 - {t('Maintain and repair farm equipment and tools')}
                 - {t('Attend agricultural workshops and trainings')}
-                - {t('Review previous year\'s records and plan for coming season')}
+                - {t("Review previous year's records and plan for coming season")}
                 - {t('Order seeds and supplies for spring planting')}
                 """)
         

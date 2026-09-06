@@ -1100,8 +1100,12 @@ def generate_crop_recommendations(soil_results, farmer_inputs):
         drainage_val = str(soil_properties.get('drainage', 'Good')).lower()
         
         if r_min <= total_rain <= r_max:
-            rain_score = 10
-            reasons.append(t(f"✓ Forecast rainfall ({total_rain:.0f}mm) matches crop moisture demand ({r_min}-{r_max}mm)"))
+            if crop.get('water_requirement') == 'High' and any(term in str(irrigation_available).lower() for term in ['rainfed', 'none']):
+                rain_score = 5
+                warnings.append(t(f"⚠ Rainfed risk: High water requirement crop ({total_rain:.0f}mm rain) lacks irrigation backup"))
+            else:
+                rain_score = 10
+                reasons.append(t(f"✓ Forecast rainfall ({total_rain:.0f}mm) matches crop moisture demand ({r_min}-{r_max}mm)"))
         elif total_rain < r_min:
             # Deficit: Check irrigation compensation
             if any(term in str(irrigation_available).lower() for term in ['good', 'excellent']):
@@ -1317,16 +1321,11 @@ def generate_crop_recommendations(soil_results, farmer_inputs):
                 col1, col2 = st.columns([1, 4])
                 
                 with col1:
-                    # Rank badge
+                    # Clean rank indicator
                     if i == 0:
-                        st.markdown(f"<div style='background-color: #FFD700; padding: 15px; border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 24px;'>🥇</div>", unsafe_allow_html=True)
-                        st.markdown(f"<p style='text-align: center; font-weight: bold;'>Top Pick</p>", unsafe_allow_html=True)
-                    elif i == 1:
-                        st.markdown(f"<div style='background-color: #C0C0C0; padding: 15px; border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 24px;'>🥈</div>", unsafe_allow_html=True)
-                    elif i == 2:
-                        st.markdown(f"<div style='background-color: #CD7F32; padding: 15px; border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 24px;'>🥉</div>", unsafe_allow_html=True)
+                        st.markdown(f"<div style='background-color: #2E7D32; color: white; padding: 8px 4px; border-radius: 6px; text-align: center; font-weight: bold; font-size: 14px;'>#1 Pick</div>", unsafe_allow_html=True)
                     else:
-                        st.markdown(f"<div style='background-color: #f0f2f6; padding: 15px; border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 24px;'>{i+1}</div>", unsafe_allow_html=True)
+                        st.markdown(f"<div style='background-color: #f0f2f6; color: #424242; padding: 8px 4px; border-radius: 6px; text-align: center; font-weight: bold; font-size: 14px;'>#{i+1}</div>", unsafe_allow_html=True)
                 
                 with col2:
                     # Title and optional user interest tag
@@ -1335,20 +1334,20 @@ def generate_crop_recommendations(soil_results, farmer_inputs):
                         st.markdown(f"### {crop['name']}")
                     with title_cols[1]:
                         if crop.get('is_user_interested'):
-                            st.markdown(f"<span style='background-color: #E8F5E9; color: #2E7D32; padding: 4px 8px; border-radius: 6px; font-weight: bold; font-size: 12px; border: 1px solid #81C784;'>🎯 {t('Your Preference')}</span>", unsafe_allow_html=True)
+                            st.markdown(f"<span style='background-color: #E8F5E9; color: #2E7D32; padding: 3px 8px; border-radius: 4px; font-weight: 600; font-size: 12px; border: 1px solid #C8E6C9;'>{t('Your Preference')}</span>", unsafe_allow_html=True)
                     
-                    # Match score with color and sub-score metrics
+                    # Match score with clean badge and sub-score metrics
                     score_color = "#2E7D32" if crop['score'] >= 75 else "#F57C00" if crop['score'] >= 50 else "#D32F2F"
                     subs = crop.get('sub_scores', {})
                     st.markdown(f"""
                     <div style='display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 12px;'>
-                        <div style='background-color: {score_color}; padding: 6px 12px; border-radius: 6px; color: white; font-weight: bold; font-size: 14px;'>
+                        <div style='background-color: {score_color}; padding: 5px 10px; border-radius: 4px; color: white; font-weight: 600; font-size: 13px;'>
                             {t('Match Score')}: {crop['score']}%
                         </div>
-                        <span style='background-color: #f0f4f8; padding: 4px 8px; border-radius: 4px; font-size: 12px;'>🌿 {t('Soil')}: {subs.get('soil', 85)}%</span>
-                        <span style='background-color: #f0f4f8; padding: 4px 8px; border-radius: 4px; font-size: 12px;'>🌦️ {t('Weather')}: {subs.get('weather', 85)}%</span>
-                        <span style='background-color: #f0f4f8; padding: 4px 8px; border-radius: 4px; font-size: 12px;'>💰 {t('Market')}: {subs.get('market', 80)}%</span>
-                        <span style='background-color: #f0f4f8; padding: 4px 8px; border-radius: 4px; font-size: 12px;'>🔄 {t('Rotation')}: {subs.get('rotation', 80)}%</span>
+                        <span style='background-color: #f5f5f5; color: #555; padding: 3px 8px; border-radius: 4px; font-size: 12px;'>{t('Soil')}: {subs.get('soil', 85)}%</span>
+                        <span style='background-color: #f5f5f5; color: #555; padding: 3px 8px; border-radius: 4px; font-size: 12px;'>{t('Weather')}: {subs.get('weather', 85)}%</span>
+                        <span style='background-color: #f5f5f5; color: #555; padding: 3px 8px; border-radius: 4px; font-size: 12px;'>{t('Market')}: {subs.get('market', 80)}%</span>
+                        <span style='background-color: #f5f5f5; color: #555; padding: 3px 8px; border-radius: 4px; font-size: 12px;'>{t('Rotation')}: {subs.get('rotation', 80)}%</span>
                     </div>
                     """, unsafe_allow_html=True)
                     
@@ -1362,18 +1361,16 @@ def generate_crop_recommendations(soil_results, farmer_inputs):
                         st.markdown(f"**{t('Investment')}**  \n₹{crop['details']['investment_per_acre']}/acre")
                     
                     with det_col3:
-                        risk_icon = "🟢" if crop['details']['risk_factor'] == "Low" else "🟡" if crop['details']['risk_factor'] == "Medium" else "🔴"
-                        st.markdown(f"**{t('Risk')}**  \n{risk_icon} {t(crop['details']['risk_factor'])}")
+                        st.markdown(f"**{t('Risk')}**  \n{t(crop['details']['risk_factor'])}")
                     
                     with det_col4:
-                        water_icon = "💧" * (1 if crop['details']['water_requirement'] == "Low" else 2 if crop['details']['water_requirement'] == "Moderate" else 3)
-                        st.markdown(f"**{t('Water Need')}**  \n{water_icon} {t(crop['details']['water_requirement'])}")
+                        st.markdown(f"**{t('Water Need')}**  \n{t(crop['details']['water_requirement'])}")
                     
                     # Price prediction if available
                     if crop['price_prediction']:
                         pred = crop['price_prediction']
                         st.markdown(f"""
-                        <div style='background-color: #e8f5e8; padding: 10px; border-radius: 5px; margin: 10px 0;'>
+                        <div style='background-color: #F1F8E9; border-left: 3px solid #689F38; padding: 8px 12px; border-radius: 4px; margin: 8px 0; font-size: 13px;'>
                             <strong>{t('Price Outlook')}:</strong> ₹{pred['current_price']} → ₹{pred['predicted_price']} 
                             ({'+' if pred['roi_potential'] > 0 else ''}{pred['roi_potential']}%) 
                             | {t('Confidence')}: {pred['confidence']*100:.0f}%
@@ -1382,13 +1379,13 @@ def generate_crop_recommendations(soil_results, farmer_inputs):
                     
                     # Reasons
                     if crop['reasons']:
-                        st.markdown(f"**{t('✅ Why this matches')}:**")
+                        st.markdown(f"**{t('Key Advantages')}:**")
                         for reason in crop['reasons'][:3]:  # Show top 3 reasons
                             st.markdown(f"- {reason}")
                     
                     # Warnings
                     if crop['warnings']:
-                        st.markdown(f"**{t('⚠️ Considerations')}:**")
+                        st.markdown(f"**{t('Considerations')}:**")
                         for warning in crop['warnings'][:2]:  # Show top 2 warnings
                             st.markdown(f"- {warning}")
                     
@@ -1403,15 +1400,15 @@ def generate_crop_recommendations(soil_results, farmer_inputs):
                     
                     with start_col1:
                         # Toggle button for details
-                        if st.button(t("🔍 Detailed Analysis"), key=f"btn_details_{crop['name']}_{i}", use_container_width=True):
+                        if st.button(t("Detailed Analysis"), key=f"btn_details_{crop['name']}_{i}", use_container_width=True):
                             st.session_state[details_key] = not st.session_state.get(details_key, False)
-                            # Close profit if opening details (optional UX choice)
+                            # Close profit if opening details
                             if st.session_state[details_key]:
                                 st.session_state[profit_key] = False
 
                     with start_col2:
                         # Toggle button for profit
-                        if st.button(t("💰 Profit Calculator"), key=f"btn_profit_{crop['name']}_{i}", use_container_width=True):
+                        if st.button(t("Profit Calculator"), key=f"btn_profit_{crop['name']}_{i}", use_container_width=True):
                             st.session_state[profit_key] = not st.session_state.get(profit_key, False)
                             # Close details if opening profit
                             if st.session_state[profit_key]:
@@ -1484,7 +1481,7 @@ def show_crop_details(crop, weather_data, market_data):
              disadvantages.append(f"{t('Extreme weather risks')}: {', '.join(weather_data['extreme_events'])}")
 
         if disadvantages:
-             st.markdown(f"### ⚠️ {t('Weather Risks')}")
+             st.markdown(f"### {t('Weather Risks')}")
              for risk in disadvantages:
                  st.markdown(f"- {risk}")
 
